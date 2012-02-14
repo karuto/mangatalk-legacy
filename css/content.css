@@ -27,6 +27,7 @@
 }
 .mainlist-thumbnail img { /* KM */
 	border: 1px solid #E2E2E2;
+	border: 1px solid #E2E2E2;
 	padding: 2px;
 	/* So the actual width: 1+2+150+2+1 = 156px */
 }

@@ -63,7 +63,9 @@ get_header(); ?>
 			
 		</div><!-- #top3 -->
 
-
+		<div id="gallery">
+		Hello.
+		</div>
 
 		<div id="mainlist">
 		<div class="mainlist-home floatparentfix">

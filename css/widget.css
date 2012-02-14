@@ -1,6 +1,22 @@
 /* =Widgets
 ----------------------------------------------- */
-
+.wtitle {
+	width: 100%;
+	height: 50px;
+	background: #ce5333;
+}
+.funit {
+	margin: 15px 0;
+	border-bottom: 1px dotted #ce5333;
+}
+.funit-thumb {
+	float: left;
+	margin: 0 10px 0 0;
+}
+.funit-title {
+	float: left;
+	width: 50%;
+}
 .widget-area {
 	font-size: 12px;
 }
@@ -34,7 +50,8 @@
 .widget a:hover,
 .widget a:focus,
 .widget a:active {
-	text-decoration: underline;
+	border-bottom: 1px dotted #ce5333;
+	text-decoration: none;
 }
 
 /* Search Widget */

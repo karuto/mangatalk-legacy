@@ -47,8 +47,10 @@ div.animeblock:hover {
 }
 #top3 {
 	background:url('http://i.imgur.com/6jMtk.jpg') center repeat-y;
+	border-bottom: 1px solid #EDE8EA;
 }
-#top3 article {
+#leftcol article, 
+#rightcol article {
 	margin-bottom: 10px;
 }
 /* error404 */
@@ -89,7 +91,9 @@ div.animeblock:hover {
 }
 #centercol {
 	border: 6px solid #EDE8EA;
+/*
 	min-height: 500px;
+*/
 	text-align: center;
 	padding: 15px 0;
 }
@@ -105,6 +109,16 @@ div.animeblock:hover {
 	clear: top;
 	overflow: hidden;
 }
+
+#gallery {
+	width: 100%;
+	height: 110px;
+	padding: 20px 0;
+	border-bottom: 1px solid #EDE8EA;
+	text-align: center;
+/*	background-color: #ce5333;*/
+}
+
 #secondary {
 	float: right;
 	width: 301px; /* 326-15-10 */
