@@ -1,5 +1,11 @@
-= TWENTY ELEVEN =
+= MANGATALK =
+Developer: Karuto
+Designer: Vincent
+Version: 0.0.82
 
-* by the WordPress team, http://wordpress.org/
+A light-weight yet elegant theme developed by Karuto, for http://mangatalk.net.
+Originally based on Twenty Eleven, the default theme made by the WordPress team.
 
-== ABOUT TWENTY ELEVEN ==
+== ABOUT MANGATALK ==
+
+All for a better world.

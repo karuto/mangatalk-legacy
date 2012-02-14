@@ -14,18 +14,19 @@
 
 get_header(); ?>
 
-		<div id="primary">
-			<div id="content" role="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+<div id="mainlist">
+<div class="mainpage floatparentfix">
 
-					<?php get_template_part( 'content', 'page' ); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php comments_template( '', true ); ?>
+		<?php get_template_part( 'content', 'page' ); ?>
+		<?php comments_template( '', true ); ?>
 
-				<?php endwhile; // end of the loop. ?>
+	<?php endwhile; // end of the loop. ?>
 
-			</div><!-- #content -->
-		</div><!-- #primary -->
+</div><!-- .mainlist-regular -->
+</div><!-- #mainlist -->
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

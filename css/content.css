@@ -1,0 +1,742 @@
+/* =Main List
+----------------------------------------------- */
+#main {
+	clear: both;
+	padding: 0;
+}
+.mainlist-home { /* KM */
+	padding: 0px 15px 0px;	/* Actual width: 652-15-15 = 622 */
+}
+.mainlist-regular { /* KM */
+	padding: 0px 20px 0px;	/* Actual width: 652-20-20 = 612 */
+}
+#mainlist article {	/* KM */
+	margin: 20px 0 15px 0;
+	padding: 0 0 10px 0; 
+}
+#mainlist .entry-summary p {
+	margin-bottom: 10px;
+}
+.mainlist-content-home { /* KM */
+	width: 450px; /* 622-156-14 = 452-2 = 450(for the beauty) */
+	margin: 0 0 0 14px;
+}
+.mainlist-content-regular { /* KM */
+	width: 440px; /* 622-156-14 = 452-2 = 450(for the beauty) */
+	margin: 0 0 0 14px;
+}
+.mainlist-thumbnail img { /* KM */
+	border: 1px solid #E2E2E2;
+	padding: 2px;
+	/* So the actual width: 1+2+150+2+1 = 156px */
+}
+#titlebar { /* KM */
+	width: 100%;
+	margin: 0;
+	padding: 20px 0 0 0;
+	line-height: 250%;
+	font-weight: bold;
+	text-shadow: 0 1px 0 rgba(154, 0, 11, .15);
+}
+#titlebar h1 { /* KM */
+	padding: 0 20px;
+	color: #ce5333;
+	font-size: 22px;
+}
+.hentry,
+.no-results {
+	border-bottom: 3px double #EDE8EA;
+	margin: 0 0 0px;
+	padding: 0 0 0px;
+	position: relative;
+}
+.hentry:last-child,
+.no-results {
+	border-bottom: none;
+}
+
+#top3 .entry-summary .author-block {
+	display: none;
+}
+#top3 .entry-summary {
+
+}
+.entry-summary .author-block {
+	float: right;
+	margin: 0 0 10px;
+	border-right: 5px solid #ce5333;
+	/* border-radius: 2px; */
+	background: #666;
+}
+.entry-summary .author-block:hover {
+	background: #ce5333;
+	border-right: 5px solid #444;
+}
+.entry-summary .author-block a{
+	color: white;
+}
+
+
+/* =Content
+----------------------------------------------- */
+
+.entry-content {
+	padding: 0 20px;
+}
+.entry-header {
+	padding: 0 0px 0px;
+}
+.entry-foreplay {
+	border-bottom: 1px solid #EDE8EA;
+	margin: 10px 0 0 0;
+	padding: 20px;
+}
+.blog .sticky .entry-header .entry-meta {	/* WTF IS THIS? */
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+.entry-title { /* KM */
+	color: #444;
+	font-size: 15px;
+	line-height: 170%;
+}
+#top3 .entry-title { /* KM */
+	width: 80%;
+	float: left;
+	clear: right;
+}
+#top3 .entry-title { /* KM */
+	margin-top: 15px;
+}
+#author-description h2,
+.entry-title,
+.entry-title a { /* KM */
+	color: #444;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 2px 1px rgba(154, 0, 11, .15);
+}
+.entry-title a:hover,
+.entry-title a:focus,
+.entry-title a:active {
+	color: #ce5333;
+}
+.entry-prompt { /* KM */
+	font-size: 11px;
+	margin: 16px 0 0 0;
+	padding: 2px 0;
+	float: right;
+	width: 20%;
+	background: #ce5333;
+	color: white;
+	text-align: center;
+	line-height: 1.8em;
+}
+.entry-define { /* KM */
+	font-size: 12px;
+}
+.less-focus { /* KM */
+	color: #999;	
+	font-size: 11px;
+	font-weight: 500;
+}
+.entry-meta {
+	clear: both;
+	padding: 20px;
+	font-size: 12px;
+	line-height: 18px;
+}
+.entry-meta a {
+	font-weight: bold;
+}
+.single-author .entry-meta .by-author {
+	display: none;
+}
+.maincol .entry-thumbnail { /* KM */
+	text-align: center;
+	margin: 0 auto 0;
+	padding: 2px 0 10px 0;
+}
+#top3 .entry-summary {
+	padding: 5px 0 10px;
+}
+.entry-summary {	/* KM */
+	font-size: 12px;
+	line-height: 180%;
+}
+.entry-content h1,
+.entry-content h2,
+.comment-content h1,
+.comment-content h2 {
+	color: #444;
+}
+.entry-content h3,
+.comment-content h3 {
+	font-size: 10px;
+	line-height: 2.6em;
+}
+.entry-content table,
+.comment-content table {
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 1.625em;
+	width: 100%;
+}
+.entry-content th,
+.comment-content th {
+	color: #666;
+	font-size: 10px;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	line-height: 2.6em;
+	text-transform: uppercase;
+}
+.entry-content td,
+.comment-content td {
+	border-top: 1px solid #ddd;
+	padding: 6px 10px 6px 0;
+}
+.entry-content #s {
+	width: 75%;
+}
+.comment-content ul,
+.comment-content ol {
+	margin-bottom: 1.625em;
+}
+.comment-content ul ul,
+.comment-content ol ol,
+.comment-content ul ol,
+.comment-content ol ul {
+	margin-bottom: 0;
+}
+dl.gallery-item {
+	margin: 0;
+}
+.page-link {
+	clear: both;
+	display: block;
+	margin: 0 0 1.625em;
+}
+.page-link a {
+	background: #eee;
+	color: #373737;
+	margin: 0;
+	padding: 2px 3px;
+	text-decoration: none;
+}
+.page-link a:hover {
+	background: #888;
+	color: #fff;
+	font-weight: bold;
+}
+.page-link span {
+	margin-right: 6px;
+}
+.entry-content .edit-link {
+	clear: both;
+	display: block;
+}
+.entry-content p a {
+	padding-bottom: 3px;
+	border-bottom: 1px dotted #ce5333;
+}
+.entry-content p a:hover {
+	color: #943A24;
+	border-bottom: 1px dotted #943A24;
+}
+
+
+
+/* Images */
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+}
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+img.size-full,
+img.size-large {
+	max-width: 97.5%;
+	width: auto; /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+.entry-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+img.alignleft,
+img.alignright,
+img.aligncenter {
+	margin-bottom: 1.625em;
+}
+p img,
+.wp-caption {
+	margin-top: 0.4em;
+}
+.wp-caption {
+	background: #eee;
+	margin-bottom: 1.625em;
+	max-width: 96%;
+	padding: 9px;
+}
+.wp-caption img {
+	display: block;
+	margin: 0 auto;
+	max-width: 98%;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	color: #666;
+	font-family: Georgia, serif;
+	font-size: 12px;
+}
+.wp-caption .wp-caption-text {
+	margin-bottom: 0.6em;
+	padding: 10px 0 5px 40px;
+	position: relative;
+}
+.wp-caption .wp-caption-text:before {
+	color: #666;
+	content: '\2014';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	margin-right: 5px;
+	position: absolute;
+	left: 10px;
+	top: 7px;
+}
+#content .gallery {
+	margin: 0 auto 1.625em;
+}
+#content .gallery a img {
+	border: none;
+}
+img#wpstats {
+	display: block;
+	margin: 0 auto 1.625em;
+}
+#content .gallery-columns-4 .gallery-item {
+	width: 23%;
+	padding-right: 2%;
+}
+#content .gallery-columns-4 .gallery-item img {
+	width: 100%;
+	height: auto;
+}
+
+/* Image borders */
+img[class*="align"],
+img[class*="wp-image-"],
+#content .gallery .gallery-icon img {/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
+	border: 1px solid #ddd;
+	padding: 6px;
+}
+.wp-caption img {
+	border-color: #eee;
+}
+a:focus img[class*="align"],
+a:hover img[class*="align"],
+a:active img[class*="align"],
+a:focus img[class*="wp-image-"],
+a:hover img[class*="wp-image-"],
+a:active img[class*="wp-image-"],
+#content .gallery .gallery-icon a:focus img,
+#content .gallery .gallery-icon a:hover img,
+#content .gallery .gallery-icon a:active img {/* Add some useful style to those fancy borders for linked images ... */
+	background: #eee;
+	border-color: #bbb;
+}
+.wp-caption a:focus img,
+.wp-caption a:active img,
+.wp-caption a:hover img {/* ... including captioned images! */
+	background: #fff;
+	border-color: #ddd;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Password Protected Posts */
+.post-password-required .entry-header .comments-link {
+	margin: 1.625em 0 0;
+}
+.post-password-required input[type=password] {
+	margin: 0.8125em 0;
+}
+.post-password-required input[type=password]:focus {
+	background: #f7f7f7;
+}
+
+/* Author Info */
+#author-info {
+	font-size: 12px;
+	overflow: hidden;
+	background: #FEF5F5;
+	border-top: 1px solid #EDE8EA;
+	border-bottom: 1px solid #EDE8EA;
+	padding: 0 0 10px 0;
+	margin-bottom: 10px;
+}
+.author-fix {
+	width: 100%;
+}
+#author-avatar {
+	float: left;
+	padding: 20px;
+}
+#author-avatar img {
+	background: #fff;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 1px 2px #bbb;
+	-moz-box-shadow: 0 1px 2px #bbb;
+	box-shadow: 0 1px 2px #bbb;
+	padding: 3px;
+}
+.author-block {
+	display: inline-block;
+	clear: right;
+	color: #fff;
+	background-color: #ce5333;
+	padding: 2px 8px;
+	margin: 0 5px 0 0;
+}
+#author-description {
+	float: left;
+	width: 515px; /* 652-114 = 538; 538-20 = 518; */
+/*	margin-left: 114px;	*/
+	margin: 20px 20px 20px 0;
+	line-height: 180%;
+}
+#author-description h2 {
+	display: inline-block;
+	clear: both;
+	font-size: 15px;
+	margin: 0;
+	color: #ce5333;
+}
+#author-link {
+	margin: 5px 0 ;
+}
+.author-link a {
+	color: #444;
+	font-size: 12px;
+}
+.author-link {
+	display: inline-block;
+	padding: 2px 10px;
+	margin: 0 3px 0 0;
+	background-color: #EDE8EA;
+/*	border-radius: 2px;	*/
+}
+#author-link li:hover {
+	background-color: #ce5333;
+}
+
+
+
+/* Comments link */
+.entry-header .comments-link a {
+	background: #eee url(images/comment-bubble.png) no-repeat;
+	color: #666;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 35px;
+	overflow: hidden;
+	padding: 0 0 0;
+	position: absolute;
+	top: 1.5em;
+	right: 0;
+	text-align: center;
+	text-decoration: none;
+	width: 43px;
+	height: 36px;
+}
+.entry-header .comments-link a:hover,
+.entry-header .comments-link a:focus,
+.entry-header .comments-link a:active {
+	background-color: #1982d1;
+	color: #fff;
+	color: rgba(255,255,255,0.8);
+}
+.entry-header .comments-link .leave-reply {
+	visibility: hidden;
+}
+
+/*
+Post Formats Headings
+To hide the headings, display: none the ".entry-header .entry-format" selector,
+and remove the padding rules below.
+*/
+.entry-header .entry-format {
+	color: #666;
+	font-size: 10px;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	line-height: 2.6em;
+	position: absolute;
+	text-transform: uppercase;
+	top: -5px;
+}
+.entry-header hgroup .entry-title {
+	padding-top: 15px;
+}
+.recent-posts .entry-header .entry-format {
+	display: none;
+}
+.recent-posts .entry-header hgroup .entry-title {
+	padding-top: 0;
+}
+
+
+/* Singular content styles for Posts and Pages */
+.singular .hentry {
+	border-bottom: none;
+	padding: 4.875em 0 0;
+	position: relative;
+}
+.singular.page .hentry {
+	padding: 3.5em 0 0;
+}
+.singular .entry-title {
+	color: #000;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 48px;
+}
+blockquote.pull {
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 1.6125em;
+	margin: 0 0 1.625em;
+	text-align: center;
+}
+.singular blockquote.pull {
+	margin: 0 -22.25% 1.625em;
+}
+.pull.alignleft {
+	margin: 0 1.625em 0 0;
+	text-align: right;
+	width: 33%;
+}
+.singular .pull.alignleft {
+	margin: 0 1.625em 0 -22.25%;
+}
+.pull.alignright {
+	margin: 0 0 0 1.625em;
+	text-align: left;
+	width: 33%;
+}
+.singular .pull.alignright {
+	margin: 0 -22.25% 0 1.625em;
+}
+.singular blockquote.pull.alignleft,
+.singular blockquote.pull.alignright {
+	width: 33%;
+}
+
+
+/* =error404
+----------------------------------------------- */
+
+.error404 #main #searchform {
+	background: #f9f9f9;
+	border: 1px solid #ddd;
+	border-width: 1px 0;
+	margin: 0 -8.9% 1.625em;
+	overflow: hidden;
+	padding: 1.625em 8.9%;
+}
+.error404 #main #s {
+	width: 95%;
+}
+.error404 #main .widget {
+	clear: none;
+	float: left;
+	margin-right: 3.7%;
+	width: 30.85%;
+}
+.error404 #main .widget_archive {
+	margin-right: 0;
+}
+.error404 #main .widget_tag_cloud {
+	float: none;
+	margin-right: 0;
+	width: 100%;
+}
+.error404 .widgettitle {
+	font-size: 10px;
+	letter-spacing: 0.1em;
+	line-height: 2.6em;
+	text-transform: uppercase;
+}
+
+
+
+/* Recent Posts */
+section.recent-posts {
+	padding: 0 0 1.625em;
+}
+section.recent-posts .hentry {
+	border: none;
+	margin: 0;
+}
+section.recent-posts .other-recent-posts {
+	border-bottom: 1px solid #ddd;
+	list-style: none;
+	margin: 0;
+}
+section.recent-posts .other-recent-posts li {
+	padding: 0.3125em 0;
+	position: relative;
+}
+section.recent-posts .other-recent-posts .entry-title {
+	border-top: 1px solid #ddd;
+	font-size: 17px;
+}
+section.recent-posts .other-recent-posts a[rel="bookmark"] {
+	color: #373737;
+	float: left;
+	max-width: 84%;
+}
+section.recent-posts .other-recent-posts a[rel="bookmark"]:after {
+	content: '-';
+	color: transparent;
+	font-size: 11px;
+}
+section.recent-posts .other-recent-posts a[rel="bookmark"]:hover {
+}
+section.recent-posts .other-recent-posts .comments-link a,
+section.recent-posts .other-recent-posts .comments-link > span {
+	border-bottom: 2px solid #999;
+	bottom: -2px;
+	color: #444;
+	display: block;
+	font-size: 10px;
+	font-weight: 500;
+	line-height: 2.76333em;
+	padding: 0.3125em 0 0.3125em 1em;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	text-transform: uppercase;
+	z-index: 1;
+}
+section.recent-posts .other-recent-posts .comments-link > span {
+	border-color: #bbb;
+	color: #888;
+}
+section.recent-posts .other-recent-posts .comments-link a:hover {
+	color: #1982d1;
+	border-color: #1982d1;
+}
+section.recent-posts .other-recent-posts li:after {
+	clear: both;
+	content: '.';
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+
+/* =Attachments
+----------------------------------------------- */
+
+.image-attachment div.attachment {
+	background: #f9f9f9;
+	border: 1px solid #ddd;
+	border-width: 1px 0;
+	margin: 0 -8.9% 1.625em;
+	overflow: hidden;
+	padding: 1.625em 1.625em 0;
+	text-align: center;
+}
+.image-attachment div.attachment img {
+	display: block;
+	height: auto;
+	margin: 0 auto 1.625em;
+	max-width: 100%;
+}
+.image-attachment div.attachment a img {
+	border-color: #f9f9f9;
+}
+.image-attachment div.attachment a:focus img,
+.image-attachment div.attachment a:hover img,
+.image-attachment div.attachment a:active img {
+	border-color: #ddd;
+	background: #fff;
+}
+.image-attachment .entry-caption p {
+	font-size: 10px;
+	letter-spacing: 0.1em;
+	line-height: 2.6em;
+	margin: 0 0 2.6em;
+	text-transform: uppercase;
+}
+
+
+/* =Navigation
+-------------------------------------------------------------- */
+
+.nav-previous,
+.nav-next {
+	width: 50%;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 2.2em;
+	margin: 0 0 15px 0;
+}
+.nav-previous {
+	float: left;
+}
+.nav-next {
+	float: right;
+	text-align: right;
+}
+#content nav .meta-nav {
+	font-weight: normal;
+}
+
+/* Useless chunks so far */
+#content nav {
+	clear: both;
+	overflow: hidden;
+	padding: 0 0 1.625em;
+}
+#nav-above {
+	padding: 0 0 1.625em;
+}
+#nav-above {
+	display: none;
+}
+.paged #nav-above {
+	display: block;
+}
+
+/* Singular navigation */
+#nav-single {
+	float: right;
+	position: relative;
+	top: -0.3em;
+	text-align: right;
+	z-index: 1;
+}
+#nav-single .nav-previous,
+#nav-single .nav-next {
+	float: none;
+	width: auto;
+}
+#nav-single .nav-next {
+	padding-left: .5em;
+}

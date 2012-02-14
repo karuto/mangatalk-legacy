@@ -1,0 +1,268 @@
+/* =Header
+----------------------------------------------- */
+
+
+#bannerwrapper {
+	background-color: #777;
+	margin: 0 auto 75px;
+/*	border-top: 5px solid #CCC5C2; */
+}
+.framewrapper {
+	margin: 0 auto;
+	width: 978px;
+	position: relative;
+}
+.t-wrap {
+	text-align: right;
+}
+.t-wrap ul {
+	padding: 5px;
+	margin: 0;
+}
+.t-wrap ul li {
+	font-size: 12px;
+	line-height: 150%;
+	display: inline-block;
+	border-right: 2px solid #ce5333;
+	margin: 5px 0;
+	padding: 0px 10px;
+	
+}
+#toggle-panel {
+	color: #fff;
+	border-bottom: 5px solid #222;
+	background-color: #464646; 
+	background: url("../images/denim.png") repeat;
+}
+a.toggle-anchor {
+	height: 46px;
+	width: 61px;
+	right: 0px;
+	top: -2px;
+	position: absolute;
+	z-index: 200;
+	overflow: hidden;
+	text-indent: -9999px;
+	background-image: url("http://happycog.com/i/sites/toggle-scoop.png");
+	background-color: transparent;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+#topbar {
+	margin: 0.5em auto 0.3em;
+	width: 978px;
+}
+#branding {
+/*	border-top: 2px solid #bbb;
+	z-index: 1;
+*/
+}
+#site-title {
+	padding: 0 0 0;
+	width: 326px;
+	float: left;
+	vertical-align: center;
+	
+}
+#site-title a {
+	padding-left: 20px;
+	color: #111;
+	font-size: 30px;
+	line-height: 50px;
+	text-decoration: none;
+}
+#site-title a:hover,
+#site-title a:focus,
+#site-title a:active {
+	color: #ce5333;
+}
+#site-description {
+	color: #ce5333;
+	font-size: 14px;
+	margin: 0 0px 3.65625em 0;
+}
+#topmenu {
+	width: 652px;
+	display: inline-block;
+	margin-top: 10px;
+	background: #444;
+}
+
+
+
+/* =Feature
+-------------------------------------------------------------- */
+
+#hero {
+
+	position: relative;
+	height: 350px;
+	z-index: 1;
+}
+#hero,
+.grid_8,
+.clearfix,
+.hero-set {
+	overflow-y: visible;
+}
+.feature-box {
+	overflow: hidden;
+}
+.hero-set {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 350px;
+}
+.feature-big {
+	height: 350px;
+}
+.feature-small {
+	height: 175px;
+}
+.hero-set,
+.hero-feature {
+	display: block;
+	cursor: pointer;
+}
+.column {
+	float: left;
+	display: block;
+}
+.grid_4 {
+	width: 326px;
+}
+.grid_8 {
+	width: 652px;
+}
+.image-window, .shadowbox{
+	position: relative;
+}
+.image-window {
+	overflow: hidden;
+}
+.hero-feature .shadowbox:: before {
+	box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+	z-index: 1;
+}
+.image-window::before,
+.shadowbox::before,
+#quickline ::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	box-shadow: inset 0 0 150px rgba(0,0,0,0.4);
+	pointer-events: none;
+	z-index: 1; 
+}
+ .rainbow3::before{
+	background: rgba(206, 81, 59, 0.4); /* red */
+}
+ .rainbow2::before{
+	background: rgba(192, 224, 168, 0.4); /* green */
+}
+ .rainbow1::before{
+	background: rgba(255, 204, 51, 0.4); /* orange */
+}
+ .rainbow4::before{
+	background: rgba(173, 164, 225, 0.4); /* purple */
+}
+.hero-feature img {
+	z-index: 1;
+}
+.feature-meta {
+	position: absolute;
+	padding: 20px 20px;
+	z-index: 3;
+}
+.feature-meta h2 {
+	font-weight: bold;
+	color: #fff;
+	font-size:  30px;
+	line-height: 33px;
+    text-shadow: 1px 1px 2px Black, 0 2px 1px Darkred;
+}
+#quickline {
+	background-color: #999;
+	height: 2px;
+}
+
+/* =Menu
+-------------------------------------------------------------- */
+
+#access {
+	border-top: 2px solid #ce5333;
+	background-color: #464646; 
+	background: url("../images/denim.png") repeat;
+	clear: both;
+	display: block;
+	margin: 0 auto 0px;
+	width: 100%;
+}
+#access ul {
+	list-style: none;
+	margin: 0 0 0 -0.8125em;
+	padding-left: 0;
+}
+#access li {
+	float: left;
+	position: relative;
+}
+#access a {
+	text-align: center;
+	font-weight: bold;
+	color: #eee;
+	font-size: 15px;
+	text-shadow: 0 1px 1px rgba(206, 83, 51, .85);
+	display: block;
+	line-height: 200%;
+	padding: 0.2em 1.2125em 0;
+	text-decoration: none;
+}
+#access ul ul {
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	float: left;
+	margin: 0;
+	position: absolute;
+	top: 3.333em;
+	left: 0;
+	width: 188px;
+	z-index: 99999;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+#access li:hover > a,
+#access ul ul :hover > a,
+#access a:focus {
+	background: #efefef;
+}
+#access li:hover > a,
+#access a:focus {
+	background: #f9f9f9; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
+	color: #373737;
+}
+#access ul li:hover > ul {
+	display: block;
+}
+#access .current-menu-item > a,
+#access .current-menu-ancestor > a,
+#access .current_page_item > a,
+#access .current_page_ancestor > a {
+	font-weight: bold;
+}
+

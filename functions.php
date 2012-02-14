@@ -42,7 +42,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 584;
+	$content_width = 584;	/* KM: This is truly useful for CSS overriding. */
 
 /**
  * Tell WordPress to run twentyeleven_setup() when the 'after_setup_theme' hook is run.
@@ -92,7 +92,7 @@ function twentyeleven_setup() {
 	require( get_template_directory() . '/inc/theme-options.php' );
 
 	// Grab Twenty Eleven's Ephemera widget.
-	require( get_template_directory() . '/inc/widgets.php' );
+	require( get_template_directory() . '/inc/widgets.php' ); //KM: Don't need it in Mangatalk.
 
 	// Add default posts and comments RSS feed links to <head>.
 	add_theme_support( 'automatic-feed-links' );
@@ -101,7 +101,8 @@ function twentyeleven_setup() {
 	register_nav_menu( 'primary', __( 'Primary Menu', 'twentyeleven' ) );
 
 	// Add support for a variety of post formats
-	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
+//	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
+//	KM: Sorry, no use for now, thus disabled.
 
 	// Add support for custom backgrounds
 	add_custom_background();
@@ -324,7 +325,7 @@ add_filter( 'excerpt_length', 'twentyeleven_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function twentyeleven_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) . '</a>';
+	return ' <div class="author-block"><a href="'. esc_url( get_permalink() ) . '">' . __( '阅读全文 ｜ Read More', 'twentyeleven' ) . '</a></div>';
 }
 
 /**
@@ -368,17 +369,26 @@ add_filter( 'wp_page_menu_args', 'twentyeleven_page_menu_args' );
  */
 function twentyeleven_widgets_init() {
 
-	register_widget( 'Twenty_Eleven_Ephemera_Widget' );
+/*	register_widget( 'Twenty_Eleven_Ephemera_Widget' );*/
 
 	register_sidebar( array(
 		'name' => __( 'Main Sidebar', 'twentyeleven' ),
-		'id' => 'sidebar-1',
+		'id' => 'sidebar-main',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
 
+		register_sidebar( array(
+		'name' => __( 'Center Widgets', 'twentyeleven' ),
+		'id' => 'sidebar-center',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	
 	register_sidebar( array(
 		'name' => __( 'Showcase Sidebar', 'twentyeleven' ),
 		'id' => 'sidebar-2',
@@ -391,7 +401,7 @@ function twentyeleven_widgets_init() {
 
 	register_sidebar( array(
 		'name' => __( 'Footer Area One', 'twentyeleven' ),
-		'id' => 'sidebar-3',
+		'id' => 'footerbar-3',
 		'description' => __( 'An optional widget area for your site footer', 'twentyeleven' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
@@ -401,7 +411,7 @@ function twentyeleven_widgets_init() {
 
 	register_sidebar( array(
 		'name' => __( 'Footer Area Two', 'twentyeleven' ),
-		'id' => 'sidebar-4',
+		'id' => 'footerbar-4',
 		'description' => __( 'An optional widget area for your site footer', 'twentyeleven' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
@@ -411,7 +421,7 @@ function twentyeleven_widgets_init() {
 
 	register_sidebar( array(
 		'name' => __( 'Footer Area Three', 'twentyeleven' ),
-		'id' => 'sidebar-5',
+		'id' => 'footerbar-5',
 		'description' => __( 'An optional widget area for your site footer', 'twentyeleven' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
@@ -431,8 +441,8 @@ function twentyeleven_content_nav( $nav_id ) {
 	if ( $wp_query->max_num_pages > 1 ) : ?>
 		<nav id="<?php echo $nav_id; ?>">
 			<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentyeleven' ) ); ?></div>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?></div>
+			<div class="nav-previous roboto"><?php next_posts_link( __( '<span class="meta-nav roboto">&larr;</span> Older posts', 'twentyeleven' ) ); ?></div>
+			<div class="nav-next roboto"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav roboto">&rarr;</span>', 'twentyeleven' ) ); ?></div>
 		</nav><!-- #nav-above -->
 	<?php endif;
 }
@@ -592,3 +602,20 @@ function twentyeleven_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'twentyeleven_body_classes' );
 
+
+/* 
+ * KM: To link all Post Thumbnails on the website to the Post Permalink.
+ */
+add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
+
+function my_post_image_html( $html, $post_id, $post_image_id ) {
+
+  $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
+  return $html;
+
+}
+
+if ( function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 300, 200 );
+}

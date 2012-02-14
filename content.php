@@ -8,6 +8,8 @@
  */
 ?>
 
+<?php /* KM: Worry about this later. Take care of content-single / content-page first!!! */ ?>
+
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			<?php if ( is_sticky() ) : ?>

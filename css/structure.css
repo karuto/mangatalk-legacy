@@ -1,0 +1,189 @@
+
+
+/* =Structure
+----------------------------------------------- */
+
+#bodywrapper {
+	background: url("http://d.thumbs.redditmedia.com/oAjfK3YFDjXXpZYi.png") repeat;
+}
+#topwrapper {
+/*
+	position: absolute;
+	height: 300px;
+	background: url("http://www.thedesigncubicle.com/wp-content/themes/tdc/img/tall-diag.png") repeat;
+*/
+}
+#page {
+	margin: 0 auto 30px;
+	max-width: 978px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow:0 1px 3px rgba(0,0,0,.35);
+	background-color: #fff;
+}
+
+#branding hgroup {
+	margin: 0 20px;
+}
+#access div {
+	margin: 0 20px;
+}
+div.animeblock {
+	-moz-transition: background-color 1s linear;    /* FF3.7+ */
+	-o-transition: background-color 1s linear;      /* Opera 10.5 */
+	-webkit-transition: background-color 1s linear; /* Saf3.2+, Chrome */
+}
+div.animeblock:hover {
+	/*background-color: #f2f2f2;*/
+}
+.primary {
+	width: 100%;
+}
+#special {
+	background: #f4f4f4;
+	padding: 20px auto 0;
+	text-align: center;
+}
+#top3 {
+	background:url('http://i.imgur.com/6jMtk.jpg') center repeat-y;
+}
+#top3 article {
+	margin-bottom: 10px;
+}
+/* error404 */
+.error404 #primary {
+	float: none;
+	margin: 0;
+}
+.error404 #primary #content {
+	margin: 0 20px;
+	width: auto;
+}
+
+/* Main Columns */
+.maincol {
+	width: 326px;
+	overflow: hidden;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.columnbanner {
+	background-color: #ce5333;
+	color: white;
+	height: 20px;
+	text-align: center;
+	width: 100%;
+}
+#leftcol {
+	width: 301px;
+	padding-left: 15px;
+	padding-right: 10px;
+}
+#midcol {	
+	border-left: 1px solid #EDE8EA;
+	border-right: 1px solid #EDE8EA;
+	width: 298px;
+	padding-left: 13px;
+	padding-right: 13px;
+}
+#centercol {
+	border: 6px solid #EDE8EA;
+	min-height: 500px;
+	text-align: center;
+	padding: 15px 0;
+}
+#rightcol {
+	width: 301px;
+	padding-left: 10px;
+	padding-right: 15px;
+}
+#mainlist {
+	float: left;
+	width: 651px; 
+	border-right: 1px solid #EDE8EA;
+	clear: top;
+	overflow: hidden;
+}
+#secondary {
+	float: right;
+	width: 301px; /* 326-15-10 */
+}
+.homepage-sidebar {
+	padding: 15px 15px 10px 10px;
+}
+.regular-sidebar {
+	padding: 20px 5px 20px 20px;
+}
+
+
+
+
+
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.625em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.625em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/* =Footer
+----------------------------------------------- */
+
+#colophon {
+	clear: both;
+	background-color: #444;
+	background: url("../images/denim.png") repeat;
+	border-top: 8px solid #CCC5C2;	
+}
+#supplementary {
+	padding: 1.625em 7.6%;
+	width: 978px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/* Two Footer Widget Areas */
+#supplementary.two .widget-area {
+	float: left;
+	margin-right: 3.7%;
+	width: 48.1%;
+}
+#supplementary.two .widget-area + .widget-area {
+	margin-right: 0;
+}
+
+/* Three Footer Widget Areas */
+#supplementary.three .widget-area {
+/*
+	float: left;
+	margin-right: 3.7%;
+	width: 30.85%;
+*/
+}
+#supplementary.three .widget-area + .widget-area + .widget-area {
+	margin-right: 0;
+}
+
+/* Site Generator Line */
+#site-generator {
+	background: #f9f9f9;
+	color: #666;
+	font-size: 12px;
+	line-height: 1em;
+	text-align: center;
+}
