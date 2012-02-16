@@ -195,6 +195,87 @@ function twentyeleven_setup() {
 }
 endif; // twentyeleven_setup
 
+
+/* 
+	KM: Hacking Dashboards.
+*/
+// example custom dashboard widget
+function custom_dashboard_widget() {
+	echo "<p>Dearest Client, Here&rsquo;s how to do that thing I told you about yesterday...</p>";
+}
+function add_custom_dashboard_widget() {
+	wp_add_dashboard_widget('custom_dashboard_widget', 'How to Do Something in WordPress', 'custom_dashboard_widget');
+}
+add_action('wp_dashboard_setup', 'add_custom_dashboard_widget');
+
+function example_dashboard_widget_function() {
+	// Display whatever it is you want to show
+	echo "Hello World, I'm a great Dashboard Widget";
+} 
+function custom_colors() {
+   echo '<style type="text/css">#wphead{background:#ce5333}</style>';
+}
+add_action('admin_head', 'custom_colors');
+
+
+
+// 1. Remove the Admin Bar
+// WordPress 3.1 introduced a new Twitter-like admin menu bar.
+// If you don’t like it, you can disable it by putting the following in functions.php:
+add_filter( 'show_admin_bar', '__return_false' );
+
+// 2. Specify the Auto-save Interval
+define('AUTOSAVE_INTERVAL', 600); // 60 * 10, auto-saves every 10 minutes
+define('WP_POST_REVISIONS', 5); // Maximum 5 revisions per post
+// define('WP_POST_REVISIONS', false); // Disable revisions
+
+// Remove the Visual Editor
+add_filter('user_can_richedit' , create_function('' , 'return false;') , 50);
+
+// Change the Contact Info Form
+function new_contactmethods( $contactmethods ) {
+  $contactmethods['douban'] = '豆瓣'; // Add Twitter
+  $contactmethods['weibo'] = '微博'; // Add Facebook
+  unset($contactmethods['yim']); // Remove Yahoo IM
+  unset($contactmethods['aim']); // Remove AIM
+  unset($contactmethods['jabber']); // Remove Jabber
+
+return $contactmethods;
+}
+
+add_filter('user_contactmethods','new_contactmethods',10,1);
+
+// Create the function use in the action hook
+function example_add_dashboard_widgets() {
+	wp_add_dashboard_widget('example_dashboard_widget', 'Example Dashboard Widget', 'example_dashboard_widget_function');
+}
+// Hoook into the 'wp_dashboard_setup' action to register our other functions
+add_action('wp_dashboard_setup', 'example_add_dashboard_widgets' );
+
+
+// Disable the “please upgrade now” message
+if ( !current_user_can( 'edit_users' ) ) {
+  add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
+  add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
+}
+
+
+//	Adding custom helper
+add_action('load-post-new.php','custom_help_page');
+add_action('load-page.php','custom_help_page');
+function custom_help_page() {
+  add_filter('contextual_help','custom_page_help');
+}
+function custom_page_help($help) {
+  echo $help; // Uncomment if you just want to append your custom Help text to the default Help text
+  echo "<h5>Custom Help text</h5>";
+  echo "<p> HTML goes here.</p>";
+}
+
+
+
+
+
 if ( ! function_exists( 'twentyeleven_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
@@ -374,6 +455,7 @@ function twentyeleven_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Main Sidebar', 'twentyeleven' ),
 		'id' => 'sidebar-main',
+		'description' => __( 'General sidebar that will appear everywhere besides homepage', 'twentyeleven' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
@@ -381,8 +463,19 @@ function twentyeleven_widgets_init() {
 	) );
 
 		register_sidebar( array(
-		'name' => __( 'Center Widgets', 'twentyeleven' ),
+		'name' => __( 'Homepage Sidebar', 'twentyeleven' ),
+		'id' => 'sidebar-home',
+		'description' => __( 'The sidebar merely for homepage (bottom right corner) due to different margin width', 'twentyeleven' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	
+		register_sidebar( array(
+		'name' => __( 'Center Column Area', 'twentyeleven' ),
 		'id' => 'sidebar-center',
+		'description' => __( 'The area for the homepage center column, display minimal amount of information', 'twentyeleven' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
@@ -619,3 +712,33 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 300, 200 );
 }
+
+// function get_the_thumb() {
+	// global $post, $posts;
+	// $first_img = '';
+	// ob_start();
+	// ob_end_clean();
+ 
+	// //如果设置了特色图像，就把特色图像作为缩略图
+	// if ( has_post_thumbnail($post->ID) ) {
+		// $imgstr = explode('src="', get_the_post_thumbnail($post->ID));
+		// $img = explode('"', $imgstr[1]);
+		// $first_img = $img[0];
+	// } 
+	// else {//读取文章中的第一幅图片，作为缩略图
+		// $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches); 
+		// $first_img = $matches[1][0];
+		// if ($first_img=='') {//读取文章中的第一幅图片，作为缩略图
+			// $tags=get_the_tags($post->ID);
+			// if($tags) {
+				// foreach($tags as $tag) {
+					// $first_img =home_url().'/thumb/'.$tag->name.'.gif';
+				// }
+			// }
+			// else
+				// $first_img =home_url()."/blog/thumb/其他.gif";
+		// }
+	// }
+	// return $first_img;
+// }
+

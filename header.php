@@ -56,6 +56,8 @@
 <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/galleria/galleria-1.2.6.min.js"></script>
 
+
+
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
@@ -115,8 +117,13 @@
 			<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
 			<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
 			<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to secondary content', 'twentyeleven' ); ?></a></div>
-			<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			
+			
+			<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. 
+			KM 20120214: Enhanced version of menu! 
+			*/ ?>
+			<?php wp_nav_menu(array( 'theme_location' => 'primary', 'sort_column' => 'menu_order', 'menu' => 'topmenu', 'container_id' => 'menubox') ); ?>
+			
 		</nav><!-- #access -->
 		
 		<?php wp_reset_query(); ?><!-- Reset query before invoking conditional tags. -->

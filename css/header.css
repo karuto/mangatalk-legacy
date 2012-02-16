@@ -207,7 +207,7 @@ a.toggle-anchor {
 }
 #access ul {
 	list-style: none;
-	margin: 0 0 0 -0.8125em;
+	margin: 0;
 	padding-left: 0;
 }
 #access li {
@@ -222,8 +222,20 @@ a.toggle-anchor {
 	text-shadow: 0 1px 1px rgba(206, 83, 51, .85);
 	display: block;
 	line-height: 200%;
-	padding: 0.2em 1.2125em 0;
+	padding: 3px 18px 0;
 	text-decoration: none;
+}
+#access #menu-item-103 a {
+	/* KM: Hacking for logo menu, though not recommended. */
+	font-size: 35px;
+	text-transform: uppercase;
+}
+#access li:first-child {
+/* KM: For pixel-perfect alignment with vertical elements */
+	padding-left: 2px;
+}
+#access a:hover {
+	border-bottom: none;
 }
 #access ul ul {
 	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);

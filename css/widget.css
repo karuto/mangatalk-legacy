@@ -1,28 +1,130 @@
-/* =Widgets
+/* =Widget: Main Sidebar Featured Post by V
 ----------------------------------------------- */
-.wtitle {
-	width: 100%;
-	height: 50px;
+.wtitle1, .wtitle2 {
+	height: 23px;
+	float: left;
+}
+.wtitle1 {
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	font-weight: normal;
+	width: 81px; /* 1+2+75+2+1 = 81 */
 	background: #ce5333;
+	letter-spacing: 0.2em;
+}
+.wtitle2 {
+	margin-left: 10px;
+	font-style: normal;
+	color: #999;
+}
+.flist {
+}
+.wsep {
+	width: 100%;
+	border-bottom: 2px solid #ce5333;
+	margin: 0 0 15px;
 }
 .funit {
-	margin: 15px 0;
-	border-bottom: 1px dotted #ce5333;
+	margin: 10px 0 0;
+	padding: 0 0 2px;
+	border-bottom: 1px dashed #EDE8EA;
 }
 .funit-thumb {
 	float: left;
 	margin: 0 10px 0 0;
 }
+.funit-thumb img {
+	border: 1px solid #E2E2E2;
+	padding: 2px;
+}
 .funit-title {
 	float: left;
-	width: 50%;
+	/* width: 70%; without img borders */
+	width: 68%;
+	margin-top: -3px;	/* for aligning with images */
 }
+.funit-title a {
+	line-height: 10px;
+}
+
+
+/* =Widget: Center Column News Hub
+----------------------------------------------- */
+#newshub {
+	margin: 10px 0;
+}
+#centerbar .newsunit a {
+	font-size: 15px;
+}
+.newsunit a {	
+	font-weight: bold;
+	text-shadow: 0 2px 1px rgba(154, 0, 11, .15);
+}
+#centerbar .newsnote {
+	margin: 0 0 20px;
+	border-bottom: none;
+}
+.social-note,
+.newsnote {
+	display: block;
+	font: 12px/160% 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+	font-weight: normal;
+	color: #666;
+}
+.newsnote {
+	margin: 0 0 10px;
+	padding: 0 0 10px;
+	border-bottom: 1px dashed #EDE8EA;
+}
+.social-unit a:hover,
+.newsnote:hover {
+	color: #000;
+}
+#centerbar .newsmore {
+	width: 70px;
+	margin: 10px auto 0;
+	padding: 2px 8px;
+	color: white;
+	background: url(../images/denim.png) repeat;
+}
+#centerbar .newsmore:hover {
+	background: #ce5333;
+}
+
+/* =Widget: Center Column Social Hub
+----------------------------------------------- */
+.social-unit {
+	margin: 0 0 5px;
+	border-bottom: 1px dashed #EDE8EA;
+	padding: 0 0 7px;
+	display: block;
+}
+.social-img img {
+	float: left;
+	width: 40px;
+	-webkit-filter: grayscale(1);
+}
+.social-title {
+	display: block;
+	margin-left: 55px;
+}
+.social-note {
+
+}
+
+
+/* =General Widgets Settings
+----------------------------------------------- */
 .widget-area {
 	font-size: 12px;
 }
 .widget {
 	clear: both;
-	margin: 0 0 2.2em;
+	margin: 0 15px 40px 0;
+}
+#centerbar .widget {
+	margin-left: 15px;
 }
 .widget-title {
 	color: #666;

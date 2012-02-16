@@ -42,7 +42,6 @@ get_header(); ?>
 				
 				<div id="centercol">
 				<?php get_sidebar('center'); ?><!-- KM: Customize widgets for this column. -->
-				Hello world.
 				</div><!-- .centercol -->
 				
 			</div>
@@ -81,5 +80,6 @@ get_header(); ?>
 		</div><!-- #mainlist -->
 
 
-<?php get_sidebar(); ?>
+
+<?php get_sidebar('home'); ?><!-- KM: Customize widgets for this column. -->
 <?php get_footer(); ?>

@@ -16,6 +16,7 @@ Tags: editor-style
 @import url("css/widget.css");
 @import url("css/comment.css");
 @import url("css/responsive.css");
+/*@import url("css/coda-slider-2.0.css");*/
 
 
 
@@ -63,7 +64,7 @@ body, input, textarea {
 }
 body {
 	background-color: #f4f1ef;
-	background: url(images/bg.gif) repeat;
+	background: url(images/mtbg.png) repeat;
 	padding: 0;
 }
 

@@ -29,6 +29,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta roboto">
+		<?php the_meta(); ?>
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
@@ -37,8 +38,6 @@
 			$tag_list = get_the_tag_list( '', __( ', ', 'twentyeleven' ) );
 			if ( '' != $tag_list ) {
 				$utility_text = __( 'This entry was posted in %1$s and tagged %2$s by <a href="%6$s">%5$s</a>. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyeleven' );
-			} elseif ( '' != $categories_list ) {
-				$utility_text = __( 'This entry was posted in %1$s by <a href="%6$s">%5$s</a>. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyeleven' );
 			} else {
 				$utility_text = __( 'This entry was posted by <a href="%6$s">%5$s</a>. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyeleven' );
 			}
@@ -75,11 +74,11 @@
 					<?php printf( __( '%s 的漫言文集', 'twentyeleven' ), get_the_author() ); ?></a>
 				</li>
 				<li class="author-link">
-				<a href="<?php echo esc_url( the_author_meta( 'user_url', get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+				<a href="<?php echo esc_url( the_author_meta( 'douban', get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
 					<?php printf( __( '豆瓣', 'twentyeleven' ), get_the_author() ); ?></a>
 				</li>
 				<li class="author-link">
-				<a href="<?php the_author_meta( 'user_url', get_the_author_meta( 'ID' ) ); ?>" rel="author">
+				<a href="<?php the_author_meta( 'weibo', get_the_author_meta( 'ID' ) ); ?>" rel="author">
 					<?php printf( __( '微博', 'twentyeleven' ), get_the_author() ); ?></a>
 				</li>
 				<li class="author-link">

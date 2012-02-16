@@ -1,6 +1,6 @@
 <?php
 /**
- * The Sidebar containing the main widget area.
+ * The Center widget area.
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
@@ -12,12 +12,8 @@ $current_layout = $options['theme_layout'];
 
 if ( 'content' != $current_layout ) :
 ?>
-
-	<?php wp_reset_query(); ?><!-- Reset query before invoking conditional tags. -->
-
-	<div id="secondary" class="widget-area regular-sidebar" role="complementary">
-		
-		<?php if ( ! dynamic_sidebar( 'sidebar-main' ) ) : ?>
+	<div id="secondary" class="widget-area homepage-sidebar" role="complementary">
+		<?php if ( ! dynamic_sidebar( 'sidebar-home' ) ) : ?>
 
 			<aside id="archives" class="widget">
 				<h3 class="widget-title"><?php _e( 'Archives', 'twentyeleven' ); ?></h3>
@@ -34,7 +30,9 @@ if ( 'content' != $current_layout ) :
 					<?php wp_meta(); ?>
 				</ul>
 			</aside>
-
+			
+			Hello home sidebar.
 		<?php endif; // end sidebar widget area ?>
 	</div><!-- #secondary .widget-area -->
 <?php endif; ?>
+

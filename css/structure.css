@@ -4,7 +4,6 @@
 ----------------------------------------------- */
 
 #bodywrapper {
-	background: url("http://d.thumbs.redditmedia.com/oAjfK3YFDjXXpZYi.png") repeat;
 }
 #topwrapper {
 /*
@@ -14,7 +13,7 @@
 */
 }
 #page {
-	margin: 0 auto 30px;
+	margin: 150px auto 30px;
 	max-width: 978px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -24,9 +23,6 @@
 }
 
 #branding hgroup {
-	margin: 0 20px;
-}
-#access div {
 	margin: 0 20px;
 }
 div.animeblock {
@@ -91,9 +87,7 @@ div.animeblock:hover {
 }
 #centercol {
 	border: 6px solid #EDE8EA;
-/*
 	min-height: 500px;
-*/
 	text-align: center;
 	padding: 15px 0;
 }
