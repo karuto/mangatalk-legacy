@@ -126,11 +126,12 @@ function twentyeleven_setup() {
 	// We'll be using post thumbnails for custom header images on posts and pages.
 	// We want them to be the size of the header image that we just defined
 	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
-	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
+	// set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
 
 	// Add Twenty Eleven's custom image sizes
-	add_image_size( 'large-feature', HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true ); // Used for large feature (header) images
-	add_image_size( 'small-feature', 500, 300 ); // Used for featured posts if a large-feature doesn't exist
+	// KM: This is completely a waste. Get rid of it.
+	// add_image_size( 'large-feature', HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true ); // Used for large feature (header) images
+	// add_image_size( 'small-feature', 500, 300 ); // Used for featured posts if a large-feature doesn't exist
 
 	// Turn on random header image rotation by default.
 	add_theme_support( 'custom-header', array( 'random-default' => true ) );
@@ -196,26 +197,47 @@ function twentyeleven_setup() {
 endif; // twentyeleven_setup
 
 
+
+
+
 /* 
 	KM: Hacking Dashboards.
 */
-// example custom dashboard widget
-function custom_dashboard_widget() {
-	echo "<p>Dearest Client, Here&rsquo;s how to do that thing I told you about yesterday...</p>";
+
+function contact_helper_dashboard_widget_function() {
+	echo '<div id="admin-foreplay" style="font-size: 12px; line-height: 20px;">';
+	echo '<p><a href="http://mangatalk.net">欢迎来到漫言！</a><br />
+	站点现正处于 Beta 状态期间，如果您在使用中遇到 Bug、技术故障，或是有任何建议吐槽，请猛击<a href="http://www.douban.com/doumail/write?to=2129230">豆瓣联系 Karuto。</a></p><p>';
+	echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
 }
+// Create the function use in the action hook
 function add_custom_dashboard_widget() {
-	wp_add_dashboard_widget('custom_dashboard_widget', 'How to Do Something in WordPress', 'custom_dashboard_widget');
+	wp_add_dashboard_widget('contact_helper_dashboard_widget', '亲❤欢迎光临', 'contact_helper_dashboard_widget_function');
 }
+// Hoook into the 'wp_dashboard_setup' action to register our other functions
 add_action('wp_dashboard_setup', 'add_custom_dashboard_widget');
 
-function example_dashboard_widget_function() {
-	// Display whatever it is you want to show
-	echo "Hello World, I'm a great Dashboard Widget";
-} 
-function custom_colors() {
-   echo '<style type="text/css">#wphead{background:#ce5333}</style>';
+
+function guidelines_posting_widget_function() {
+	echo '<div id="post-foreplay" style="font-size: 12px; line-height: 20px;">';
+	echo '<p><a href="http://mangatalk.net">漫言</a>致力于为数以万计的读者们奉上最优雅的阅读体验。<br />
+	在撰文时，请您稍作举手之劳，共同营造这片净土：</p><p>';
+	echo "<li>给您的文章挑选一张好看的<b>特色图片</b>（页面右下方）；</li>";
+	echo "<li>再给您的文章写上一两行的<b>简短摘要</b>（页面正下方）；</li>";
+	echo "<li>填写相应的标签（漫评、资讯、译文、专题等，可填多项）；</li>";
+	echo "<li>若您的文中引用、参考了他人作品，请在文末标出参考来源。</li></p>";
+	echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
 }
-add_action('admin_head', 'custom_colors');
+// Create the function use in the action hook
+function example_add_dashboard_widgets() {
+	wp_add_dashboard_widget('guidelines_posting_widget', '撰文时的注意事项', 'guidelines_posting_widget_function');
+}
+// Hoook into the 'wp_dashboard_setup' action to register our other functions
+add_action('wp_dashboard_setup', 'example_add_dashboard_widgets' );
+
+
+
+
 
 // KM: REMOVE SHITS FROM ADMIN PANEL.
 // Create the function to use in the action hook
@@ -230,6 +252,15 @@ add_action('admin_head', 'custom_colors');
 // add_action('wp_dashboard_setup', 'example_remove_dashboard_widgets' );
 
 
+// KM: change external logo
+function my_logo() {
+	echo '<style type="text/css">
+		h1 a { background-image:url(http://i.imgur.com/rzsoh.png) !important; }
+	</style>';
+}
+add_action('login_head', 'my_logo');
+
+
 
 // 1. Remove the Admin Bar
 // WordPress 3.1 introduced a new Twitter-like admin menu bar.
@@ -238,7 +269,7 @@ add_filter( 'show_admin_bar', '__return_false' );
 
 // 2. Specify the Auto-save Interval
 define('AUTOSAVE_INTERVAL', 600); // 60 * 10, auto-saves every 10 minutes
-define('WP_POST_REVISIONS', 5); // Maximum 5 revisions per post
+define('WP_POST_REVISIONS', 3); // Maximum 5 revisions per post
 // define('WP_POST_REVISIONS', false); // Disable revisions
 
 // Remove the Visual Editor
@@ -254,12 +285,10 @@ function new_contactmethods( $contactmethods ) {
   return $contactmethods;
 } add_filter('user_contactmethods','new_contactmethods',10,1);
 
-// Create the function use in the action hook
-function example_add_dashboard_widgets() {
-	wp_add_dashboard_widget('example_dashboard_widget', 'Example Dashboard Widget', 'example_dashboard_widget_function');
-}
-// Hoook into the 'wp_dashboard_setup' action to register our other functions
-add_action('wp_dashboard_setup', 'example_add_dashboard_widgets' );
+
+
+
+
 
 
 // Disable the “please upgrade now” message
@@ -269,16 +298,27 @@ if ( !current_user_can( 'edit_users' ) ) {
 }
 
 
+
 //	Adding custom helper
 add_action('load-post-new.php','custom_help_page');
 add_action('load-page.php','custom_help_page');
+add_action('load-post.php','custom_help_page');
 function custom_help_page() {
   add_filter('contextual_help','custom_page_help');
 }
 function custom_page_help($help) {
-  echo $help; // Uncomment if you just want to append your custom Help text to the default Help text
-  echo "<h5>Custom Help text</h5>";
-  echo "<p> HTML goes here.</p>";
+	echo $help; // Uncomment if you just want to append your custom Help text to the default Help text
+	echo '<style type="text/css">
+		.update-nag { display:none !important; }
+		#post-foreplay a { text-decoration: none; }
+	</style>';
+	
+	echo '<div id="post-foreplay" style="margin-right: 25px; font-size: 12px; line-height: 18px; color: #555; border-bottom: 1px solid #e0e0e0;">';
+	echo '<p><a href="http://mangatalk.net">漫言</a>致力于为数以万计的读者们奉上最优雅的阅读体验。在撰文时，请您稍作举手之劳，共同营造这片净土：</p><p>';
+	echo "<li>给您的文章挑选一张好看的<b>特色图片</b>（页面右下方）、写上一两行的<b>简短摘要</b>（正下方）；</li>";
+	echo "<li>填写相应的标签（漫评、资讯、译文、专题等，可填多项）；</li>";
+	echo "<li>若您的文中引用、参考了他人作品，请在文末标出参考来源。</li></p>";
+	echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
 }
 
 
@@ -717,10 +757,10 @@ function my_post_image_html( $html, $post_id, $post_image_id ) {
 
 }
 
-if ( function_exists( 'add_theme_support' ) ) {
-	add_theme_support( 'post-thumbnails' );
-        set_post_thumbnail_size( 300, 200 );
-}
+// if ( function_exists( 'add_theme_support' ) ) {
+	// add_theme_support( 'post-thumbnails' );
+        // set_post_thumbnail_size( 300, 200 );
+// }
 
 // function get_the_thumb() {
 	// global $post, $posts;
