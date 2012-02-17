@@ -24,20 +24,25 @@
 <div id="supplementary" <?php twentyeleven_footer_sidebar_class(); ?>>
 
 	<?php if ( is_active_sidebar( 'footerbar-3' ) ) : ?>
-	<div id="first" class="widget-area column maincol" role="complementary">
+	<div id="footer-w1" class="widget-area column maincol" role="complementary">
+		<div class="footer-wbox">
 		<?php dynamic_sidebar( 'footerbar-3' ); ?>
+		</div>
 	</div><!-- #first .widget-area -->
 	<?php endif; ?>
 
 	<?php if ( is_active_sidebar( 'footerbar-4' ) ) : ?>
-	<div id="second" class="widget-area column maincol" role="complementary">
-		<?php dynamic_sidebar( 'footerbar-4' ); ?>
-	</div><!-- #second .widget-area -->
+	<div id="footer-w2" class="widget-area column maincol" role="complementary">
+		<div class="footer-wbox">
+		<?php dynamic_sidebar( 'footerbar-3' ); ?>
+		</div>	</div><!-- #second .widget-area -->
 	<?php endif; ?>
 
 	<?php if ( is_active_sidebar( 'footerbar-5' ) ) : ?>
-	<div id="third" class="widget-area column maincol" role="complementary">
+	<div id="footer-w3" class="widget-area column maincol" role="complementary">
+		<div class="footer-wbox">
 		<?php dynamic_sidebar( 'footerbar-5' ); ?>
+		</div>	</div><!-- #second .widget-area -->
 	</div><!-- #third .widget-area -->
 	<?php endif; ?>
 	

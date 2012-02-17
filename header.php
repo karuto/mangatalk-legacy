@@ -80,32 +80,25 @@
 
 <body <?php body_class(); ?>>
 <div id="bodywrapper">
+<!-- KM: This part was originally for "toggle" top panel, but is no longer used.
+
 <div id="bannerwrapper" class="clearfix">
+	<div id="toggle-panel"><div class="t-wrap framewrapper"><ul>
+		<li>Item 1</li><li>Item 2</li><li>Item 3</li>
+	</ul></div></div>
+	<div class="framewrapper"><a class="toggle-anchor">Anchor here.</a></div>
 
-	<div id="toggle-panel">
-		<div class="t-wrap framewrapper">
-			<ul>
-				<li>漫画手札</li>
-				<li>官方微博</li>
-				<li>订阅更新</li>
-			</ul></div>
-	</div>
-	<div class="framewrapper">
-		<a class="toggle-anchor">Anchor here.</a>
-	</div>
-
-<!--	<header>
-		<hgroup id="topbar">
-			<h1 id="site-title">
-				<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-			</h1>
-			<nav id="topmenu"></nav>
-		</hgroup>
-	</header>
+	<header><hgroup id="topbar">
+		<h1 id="site-title">
+			<span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
+		</h1><nav id="topmenu"></nav>
+	</hgroup></header>
+</div>
 -->
 
-</div><!-- #bannerwrapper -->
-
+<div id="logobox" >
+	<span id="logo">MangaTalk</span>
+</div>
 
 <div id="page" class="hfeed clearfix floatparentfix">
 <div id="topwrapper">

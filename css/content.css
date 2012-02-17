@@ -80,11 +80,11 @@
 /* =Content
 ----------------------------------------------- */
 
+.pspace {
+	letter-spacing: 1px;
+}
 .entry-content {
 	padding: 0 20px;
-}
-.entry-header {
-	padding: 0 0px 0px;
 }
 .entry-foreplay {
 	border-bottom: 1px solid #EDE8EA;
@@ -135,23 +135,38 @@
 }
 .entry-define { /* KM */
 	font-size: 12px;
+	padding: 2px 0;
 }
+.semi-focus,
 .less-focus { /* KM */
-	color: #999;	
-	font-size: 11px;
+	color: #777;	
 	font-weight: 500;
 }
+.less-focus {
+	font-size: 11px;
+}
+.semi-focus {
+	font-size: 12px;
+}
 .entry-meta {
+	color: #666;
 	clear: both;
+	margin-top: 40px;
 	padding: 20px;
 	font-size: 12px;
-	line-height: 18px;
+	line-height: 170%;
+	background: #fafafa;
+	border-top: 1px solid #EDE8EA;
 }
 .entry-meta a {
-	font-weight: bold;
+	font-weight: normal;
 }
 .single-author .entry-meta .by-author {
-	display: none;
+	display: none;	/* yeah great, but I won't be needing this. */
+}
+.author-desc {
+	width: 85%; 
+	padding: 2px 5px;
 }
 .maincol .entry-thumbnail { /* KM */
 	text-align: center;
@@ -245,7 +260,7 @@ dl.gallery-item {
 	border-bottom: 1px dotted #943A24;
 }
 .entry-content p {
-	test-shadow: 0 1px 0 #F9F6ED, 0 1px 0 rgba(0, 0, 0, .15);
+	text-shadow: 0 1px 0 #F9F6ED, 0 1px 0 rgba(0, 0, 0, .15);
 }
 
 
@@ -274,7 +289,7 @@ img.size-large {
 img.alignleft,
 img.alignright,
 img.aligncenter {
-	margin-bottom: 1.625em;
+	margin-bottom: 20px;
 }
 p img,
 .wp-caption {

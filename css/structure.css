@@ -3,17 +3,25 @@
 /* =Structure
 ----------------------------------------------- */
 
-#bodywrapper {
+#bodywrapper {}
+#topwrapper {}
+
+#logobox {
+	width: 978px;
+	margin: 0 auto 10px;
 }
-#topwrapper {
-/*
-	position: absolute;
-	height: 300px;
-	background: url("http://www.thedesigncubicle.com/wp-content/themes/tdc/img/tall-diag.png") repeat;
-*/
+#logo {
+	display: block;
+	margin: 30px 0 20px 15px;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+	text-shadow: 0 1px 1px rgba(206, 83, 51, .85);
+	text-transform: uppercase;
 }
+
 #page {
-	margin: 150px auto 30px;
+	margin: 0 auto 30px;
 	max-width: 978px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -22,10 +30,7 @@
 	background-color: #fff;
 }
 
-#branding hgroup {
-	margin: 0 20px;
-}
-div.animeblock {
+div.animeblock {	/* Nah, forget about it. */
 	-moz-transition: background-color 1s linear;    /* FF3.7+ */
 	-o-transition: background-color 1s linear;      /* Opera 10.5 */
 	-webkit-transition: background-color 1s linear; /* Saf3.2+, Chrome */
@@ -118,13 +123,17 @@ div.animeblock:hover {
 	width: 301px; /* 326-15-10 */
 }
 .homepage-sidebar {
-	padding: 15px 15px 10px 10px;
+	padding: 20px 15px 10px 10px;
 }
 .regular-sidebar {
 	padding: 20px 5px 20px 20px;
 }
-
-
+.main-more {
+	text-align: center;
+	color: #ce5333;
+	font-size: 25px/150%;
+	margin: 0 auto 20px;
+}
 
 
 
@@ -159,32 +168,15 @@ div.animeblock:hover {
 	border-top: 8px solid #CCC5C2;	
 }
 #supplementary {
-	padding: 1.625em 7.6%;
-	width: 978px;
+	padding: 20px 0;
+	width: 978px;	/* 978 - 20*2 = 938 */
 	margin: 0 auto;
 	overflow: hidden;
 }
-
-/* Two Footer Widget Areas */
-#supplementary.two .widget-area {
-	float: left;
-	margin-right: 3.7%;
-	width: 48.1%;
-}
-#supplementary.two .widget-area + .widget-area {
-	margin-right: 0;
-}
-
-/* Three Footer Widget Areas */
-#supplementary.three .widget-area {
-/*
-	float: left;
-	margin-right: 3.7%;
-	width: 30.85%;
-*/
-}
-#supplementary.three .widget-area + .widget-area + .widget-area {
-	margin-right: 0;
+.footer-wbox {
+	width: 306px;
+	margin: 0 auto;
+	border-top: 1px solid #CCC5C2;
 }
 
 /* Site Generator Line */

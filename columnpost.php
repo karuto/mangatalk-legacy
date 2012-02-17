@@ -15,7 +15,20 @@
 		
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 				<h6 class="entry-prompt"><?php comments_number( '0 NOTES', '1 NOTE', '% NOTES' ); ?><br />
-				<span class="entry-define">文章</span></h6>
+				<span class="entry-define">
+				<?php 
+				 if ( has_tag( 'trans') )
+					echo '译文';
+			    else if ( has_tag( 'news') )
+					echo '资讯';
+				else if ( has_tag( 'featured') )
+					echo '专题';
+				else
+					echo '文章';
+				 
+				
+				?>
+				</span></h6>
 			</h1><!-- .entry-title -->
 			
 		</header><!-- .entry-header -->

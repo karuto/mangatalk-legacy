@@ -14,29 +14,28 @@ get_header(); ?>
 	<div id="author-info" class="author-fix floatparentfix">
 	
 		<header id="titlebar" class="page-header roboto">
-			<h1 class="page-title">	<?php printf( __( 'Archives of %s', 'twentyeleven' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
+			<h1 class="page-title">	<?php printf( __( '%s 的漫言文集', 'twentyeleven' ), '<span class="author-top"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
 		</header><!-- #titlebar -->
 	
 		<div id="author-avatar">
 			<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyeleven_author_bio_avatar_size', 68 ) ); ?>
 		</div><!-- #author-avatar -->
-		<div id="author-description" class="roboto">
+		<div id="author-description">
 			
-
-			<ul id="author-link">
+			<ul id="author-link" class="roboto">
 				<li class="author-block">
-				巢穴
+				出没
 				</li>
 				<li class="author-link">
 				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
 					<?php printf( __( '%s 的漫言文集', 'twentyeleven' ), get_the_author() ); ?></a>
 				</li>
 				<li class="author-link">
-				<a href="<?php echo esc_url( the_author_meta( 'user_url', get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+				<a href="<?php echo esc_url( the_author_meta( 'douban', get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
 					<?php printf( __( '豆瓣', 'twentyeleven' ), get_the_author() ); ?></a>
 				</li>
 				<li class="author-link">
-				<a href="<?php the_author_meta( 'user_url', get_the_author_meta( 'ID' ) ); ?>" rel="author">
+				<a href="<?php the_author_meta( 'weibo', get_the_author_meta( 'ID' ) ); ?>" rel="author">
 					<?php printf( __( '微博', 'twentyeleven' ), get_the_author() ); ?></a>
 				</li>
 				<li class="author-link">
@@ -44,11 +43,11 @@ get_header(); ?>
 					<?php printf( __( '邮箱', 'twentyeleven' ), get_the_author() ); ?></a>
 				</li>
 			</ul><!-- #author-link	-->				
-			<div class="author-block">简介</div>
-			<?php the_author_meta( 'description' ); ?>
+			<div class="floatl author-block roboto">简介</div>
+			<div class="floatl author-desc pspace"><?php the_author_meta( 'description' ); ?></div>
 			
-
 		</div><!-- #author-description -->
+		
 	</div><!-- #entry-author-info -->
 	
 		

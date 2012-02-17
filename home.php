@@ -19,7 +19,7 @@ get_header(); ?>
 -->			
 			<div class="column maincol">
 				<div id="leftcol">
-				<?php $my_query = new WP_Query('tag=featured&posts_per_page=2');
+				<?php $my_query = new WP_Query('tag=news&posts_per_page=2');
 				while ($my_query->have_posts()) : 
 					$my_query->the_post();
 					$do_not_duplicate[] = $post->ID; ?>
@@ -49,7 +49,7 @@ get_header(); ?>
 				
 			<div class="column maincol">
 				<div id="rightcol">			
-				<?php $my_query = new WP_Query('tag=news&posts_per_page=2');
+				<?php $my_query = new WP_Query('tag=featured&posts_per_page=2');
 				while ($my_query->have_posts()) : 
 					$my_query->the_post();
 					$do_not_duplicate[] = $post->ID; ?>
@@ -75,7 +75,7 @@ get_header(); ?>
 		<?php endwhile; endif; ?>
 		
 		</div><!-- .mainlist-home -->
-		<?php twentyeleven_content_nav( 'nav-below' ); /* KM: Modify this to a static shit later. */?>
+		<div class="main-more">阅读更多文章</div>
 		
 		</div><!-- #mainlist -->
 

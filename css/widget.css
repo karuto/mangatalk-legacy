@@ -52,7 +52,7 @@
 /* =Widget: Center Column News Hub
 ----------------------------------------------- */
 #newshub {
-	margin: 10px 0;
+	margin: 0;
 }
 #centerbar .newsunit a {
 	font-size: 15px;
@@ -80,6 +80,10 @@
 .social-unit a:hover,
 .newsnote:hover {
 	color: #000;
+}
+.newsmore {
+	color: #ce5333;
+	margin: 0;
 }
 #centerbar .newsmore {
 	width: 70px;
@@ -121,7 +125,13 @@
 }
 .widget {
 	clear: both;
+	/* for general sidebar */
 	margin: 0 15px 40px 0;
+}
+#supplementary .widget,
+.homepage-sidebar .widget {
+	/* for homepage sidebar */
+	margin: 0 0 40px;
 }
 #centerbar .widget {
 	margin-left: 15px;

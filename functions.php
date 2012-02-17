@@ -217,6 +217,18 @@ function custom_colors() {
 }
 add_action('admin_head', 'custom_colors');
 
+// KM: REMOVE SHITS FROM ADMIN PANEL.
+// Create the function to use in the action hook
+
+// function example_remove_dashboard_widgets() {
+	// remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+	// remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+// } 
+
+// Hoook into the 'wp_dashboard_setup' action to register our function
+
+// add_action('wp_dashboard_setup', 'example_remove_dashboard_widgets' );
+
 
 
 // 1. Remove the Admin Bar
@@ -239,11 +251,8 @@ function new_contactmethods( $contactmethods ) {
   unset($contactmethods['yim']); // Remove Yahoo IM
   unset($contactmethods['aim']); // Remove AIM
   unset($contactmethods['jabber']); // Remove Jabber
-
-return $contactmethods;
-}
-
-add_filter('user_contactmethods','new_contactmethods',10,1);
+  return $contactmethods;
+} add_filter('user_contactmethods','new_contactmethods',10,1);
 
 // Create the function use in the action hook
 function example_add_dashboard_widgets() {

@@ -4,7 +4,7 @@
 
 #bannerwrapper {
 	background-color: #777;
-	margin: 0 auto 75px;
+	margin: 0 auto;
 /*	border-top: 5px solid #CCC5C2; */
 }
 .framewrapper {
@@ -61,8 +61,7 @@ a.toggle-anchor {
 	padding: 0 0 0;
 	width: 326px;
 	float: left;
-	vertical-align: center;
-	
+	vertical-align: center;	
 }
 #site-title a {
 	padding-left: 20px;
@@ -178,7 +177,8 @@ a.toggle-anchor {
 }
 .feature-meta {
 	position: absolute;
-	padding: 20px 20px;
+	/*	padding: 20px 20px;	*/
+	padding: 20px 15px;	/* KM: proper vertical alignment: whole page 15px */
 	z-index: 3;
 }
 .feature-meta h2 {
@@ -213,6 +213,7 @@ a.toggle-anchor {
 #access li {
 	float: left;
 	position: relative;
+	background: url("../images/menusep.png") no-repeat right;
 }
 #access a {
 	text-align: center;
@@ -222,16 +223,14 @@ a.toggle-anchor {
 	text-shadow: 0 1px 1px rgba(206, 83, 51, .85);
 	display: block;
 	line-height: 200%;
-	padding: 3px 18px 0;
+	padding: 3px 18px 0px;
 	text-decoration: none;
 }
 #access #menu-item-103 a {
 	/* KM: Hacking for logo menu, though not recommended. */
-	font-size: 35px;
-	text-transform: uppercase;
 }
 #access li:first-child {
-/* KM: For pixel-perfect alignment with vertical elements */
+	/* KM: Left-most menu item, For pixel-perfect alignment. */
 	padding-left: 2px;
 }
 #access a:hover {
@@ -261,11 +260,11 @@ a.toggle-anchor {
 }
 #access li:hover > a,
 #access a:focus {
-	background: #f9f9f9; /* Show a solid color for older browsers */
-	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
-	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
-	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
+	background: #ce5333; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#ce5333, #8E3930);
+	background: -o-linear-gradient(#ce5333, #8E3930);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ce5333), to(#8E3930)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#ce5333, #8E3930);
 	color: #373737;
 }
 #access ul li:hover > ul {
