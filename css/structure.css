@@ -137,7 +137,7 @@ div.animeblock:hover {
 	width: 301px; /* 326-15-10 */
 }
 .homepage-sidebar {
-	padding: 20px 15px 10px 10px;
+	padding: 30px 15px 10px 10px;
 }
 .regular-sidebar {
 	padding: 20px 5px 20px 20px;
@@ -148,6 +148,7 @@ div.animeblock:hover {
 	font-weight: bold;
 	text-align: center;
 	color: #ce5333;
+	background-color: #FAFAFA;
 	border: 1px dashed #e0e0e0;
 }
 .mainlist-button {

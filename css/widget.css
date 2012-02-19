@@ -47,7 +47,11 @@
 .funit-title a {
 	line-height: 10px;
 }
-
+.featuremore {
+	border-top: none;
+	padding: 5px 0;
+	margin: 0 0 0px;
+}
 
 /* =Widget: Center Column News Hub
 ----------------------------------------------- */
@@ -83,7 +87,7 @@
 }
 .newsmore {
 	border-top: none;
-	padding: 10px 0;	
+	padding: 5px 0;	
 	margin: -10px 0 40px;
 	color: #ce5333;
 }

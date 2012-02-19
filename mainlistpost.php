@@ -12,8 +12,7 @@
 		
 		<div class="mainlist-thumbnail floatl">
 
-			<?php 
-				if ( has_post_thumbnail() ) :
+			<?php if ( has_post_thumbnail() ) :
 					// $w = get_option('thumbnail_size_w') / 2;
 					// $h = get_option('thumbnail_size_h') /2;
 					the_post_thumbnail( thumbnail );
@@ -43,7 +42,16 @@
 
 			<!-- KM: Consider clean this search part later. -->
 			<div class="entry-summary">
-				<?php the_excerpt(); ?>
+				<?php if ($post->post_excerpt!==''): ?>
+					<?php the_excerpt(); ?>
+				<?php else : ?>
+					<?php echo '<p>';
+					echo mb_strimwidth(strip_tags($post->post_content),0,200,'......');
+					// KM: If no excerpts specified, trim 200 words for default display.
+					// KM: Below: Manually ouput "read more". Yeah I know, but I can take it. :/
+					?>
+					</p><div class="author-block"><a href="<?php the_permalink();?>">阅读全文 ｜ Read More</a></div>				
+				<?php endif; ?>
 			</div><!-- .entry-summary -->
 
 		</div><!-- .mainlist-content -->
