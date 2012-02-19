@@ -11,13 +11,17 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 		
 		<div class="mainlist-thumbnail floatl">
+
 			<?php 
-				if ( has_post_thumbnail() ) {
-				$w = get_option('thumbnail_size_w') / 2;
-				$h = get_option('thumbnail_size_h') /2;
-				the_post_thumbnail( thumbnail );
-				} 
+				if ( has_post_thumbnail() ) :
+					$w = get_option('thumbnail_size_w') / 2;
+					$h = get_option('thumbnail_size_h') /2;
+					the_post_thumbnail( thumbnail );
+			 ?>
+			<?php else : 
+					echo'<img width="150" height="150" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" class="attachment-thumbnail wp-post-image">';
 			?>
+			<?php endif; ?>
 		</div><!-- .entry-thumbnail -->
 		
 		<?php wp_reset_query(); ?><!-- Reset query before invoking conditional tags. -->

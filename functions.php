@@ -207,7 +207,7 @@ endif; // twentyeleven_setup
 function contact_helper_dashboard_widget_function() {
 	echo '<div id="admin-foreplay" style="font-size: 12px; line-height: 20px;">';
 	echo '<p><a href="http://mangatalk.net">欢迎来到漫言！</a><br />
-	站点现正处于 Beta 状态期间，如果您在使用中遇到 Bug、技术故障，或是有任何建议吐槽，请猛击<a href="http://www.douban.com/doumail/write?to=2129230">豆瓣联系 Karuto。</a></p><p>';
+	站点现正处于 Beta 状态期间，如果您在使用中遇到 Bug、技术故障，或是有任何建议吐槽，请猛击<a href="http://www.douban.com/doumail/write?to=2129230">豆瓣联系技术人员</a>。</p><p>';
 	echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
 }
 // Create the function use in the action hook
@@ -224,7 +224,7 @@ function guidelines_posting_widget_function() {
 	在撰文时，请您稍作举手之劳，共同营造这片净土：</p><p>';
 	echo "<li>给您的文章挑选一张好看的<b>特色图片</b>（页面右下方）；</li>";
 	echo "<li>再给您的文章写上一两行的<b>简短摘要</b>（页面正下方）；</li>";
-	echo "<li>填写相应的标签（漫评、资讯、译文、专题等，可填多项）；</li>";
+	echo "<li>填写相应的标签（漫评、资讯、访谈、专题等，可填多项）；</li>";
 	echo "<li>若您的文中引用、参考了他人作品，请在文末标出参考来源。</li></p>";
 	echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
 }
@@ -316,7 +316,7 @@ function custom_page_help($help) {
 	echo '<div id="post-foreplay" style="margin-right: 25px; font-size: 12px; line-height: 18px; color: #555; border-bottom: 1px solid #e0e0e0;">';
 	echo '<p><a href="http://mangatalk.net">漫言</a>致力于为数以万计的读者们奉上最优雅的阅读体验。在撰文时，请您稍作举手之劳，共同营造这片净土：</p><p>';
 	echo "<li>给您的文章挑选一张好看的<b>特色图片</b>（页面右下方）、写上一两行的<b>简短摘要</b>（正下方）；</li>";
-	echo "<li>填写相应的标签（漫评、资讯、译文、专题等，可填多项）；</li>";
+	echo "<li>填写相应的标签（漫评、资讯、访谈、专题等，可填多项）；</li>";
 	echo "<li>若您的文中引用、参考了他人作品，请在文末标出参考来源。</li></p>";
 	echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
 }

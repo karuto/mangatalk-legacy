@@ -1,7 +1,7 @@
 /*
-Theme Name: Manga Talk
+Theme Name: MangaTalk
 Theme URI: http://mangatalk.net
-Author: Karuto Z
+Author: Karuto
 Author URI: http://karu.me/
 Description: Elegant yet coherent theme for the MangaTalk team.
 Version: 0.15498
@@ -64,7 +64,7 @@ body, input, textarea {
 }
 body {
 	background-color: #f4f1ef;
-	background: url(images/mtbg.png) repeat;
+	background: url(http://i.imgur.com/FV2MV.png) repeat;
 	padding: 0;
 }
 
