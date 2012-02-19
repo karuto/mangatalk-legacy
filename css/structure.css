@@ -120,16 +120,17 @@ div.animeblock:hover {
 	text-align: center;
 }
 .gallery-box{width:100%;margin:0;}
-.gallery-content {height: 160px;}
+.gallery-content {height: 175px;}
 	.gallery-imglist{float:left;width:858px;height:100%;background-color: #fff; overflow:hidden;position:relative;}
-	.gallery-imglist ul{position:absolute;width:2012px;overflow:hidden;margin:20px 0;}
+	.gallery-imglist ul{position:absolute;width:2012px;overflow:hidden;margin:0px 0;}
 	.gallery-imglist ul li{display:inline;float:left;margin:0px;width:250px;}
 	.gallery-imglist a{display:block;float:none;line-height:16px;margin:0;text-align:center;width:250px;}
-	.gallery-imglist .img{display:block;height:120px;width:250px;overflow:hidden;}
+	.gallery-imglist .img{display:block;height:150px;width:250px;overflow:hidden;}
+	.gallery-unit {font-size: 12px; padding: 5px 0 0;}
 .gallery-content .button{display:block;float:left;width:60px;height:100%;cursor:pointer;}
 /* KM TODO: Hardcoded, change this later! */
-.gallery-content .left{background:url(http://i.imgur.com/cQxxg.png);}
-.gallery-content .right{background:url(http://i.imgur.com/cQxxg.png);}
+.gallery-content .left{background: url("../images/gallery-bl.png") no-repeat center;}
+.gallery-content .right{background: url("../images/gallery-br.png") no-repeat center;}
 
 
 #secondary {

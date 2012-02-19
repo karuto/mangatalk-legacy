@@ -68,11 +68,11 @@ get_header(); ?>
 	<span id="gallery-left" class="left button"></span>
 		<div id="gallery-list" class="gallery-imglist">
 		<ul>
-		<li><a href="#1" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#">atrl-1</a></li>
-		<li><a href="#2" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#">atrl-2</a></li>
-		<li><a href="#3" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#">atrl-3</a></li>
-		<li><a href="#4" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#">atrl-4</a></li>
-		<li><a href="#5" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#">atrl-5</a></li>
+		<li><a href="#1" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#" class="gallery-unit">『新刊标题其之一』</a></li>
+		<li><a href="#2" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#" class="gallery-unit">『新刊标题其之二』</a></li>
+		<li><a href="#3" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#" class="gallery-unit">『新刊标题其之三』</a></li>
+		<li><a href="#4" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#" class="gallery-unit">『新刊标题其之四』</a></li>
+		<li><a href="#5" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#" class="gallery-unit">『新刊标题其之五』</a></li>
 		</ul>
 	</div>
 	<span id="gallery-right" class="right button"></span>

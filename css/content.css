@@ -155,8 +155,9 @@
 	padding: 20px;
 	font-size: 12px;
 	line-height: 170%;
-	background: #fafafa;
+	background: url("../images/bg_meta.jpg") repeat;
 	border-top: 1px solid #EDE8EA;
+	border-bottom: 1px solid #EDE8EA;
 }
 .entry-meta a {
 	font-weight: normal;
@@ -409,8 +410,7 @@ object {
 #author-info {
 	font-size: 12px;
 	overflow: hidden;
-	background: #FEF5F5;
-	border-top: 1px solid #EDE8EA;
+	background: url("../images/bg_auth.jpg") repeat;
 	border-bottom: 1px solid #EDE8EA;
 	padding: 0 0 10px 0;
 	margin-bottom: 10px;
@@ -464,7 +464,7 @@ object {
 	display: inline-block;
 	padding: 2px 10px;
 	margin: 0 3px 0 0;
-	background-color: #EDE8EA;
+	background: url("../images/bg_meta.jpg") repeat;
 /*	border-radius: 2px;	*/
 }
 #author-link li:hover {
