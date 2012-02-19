@@ -14,8 +14,8 @@
 
 			<?php 
 				if ( has_post_thumbnail() ) :
-					$w = get_option('thumbnail_size_w') / 2;
-					$h = get_option('thumbnail_size_h') /2;
+					// $w = get_option('thumbnail_size_w') / 2;
+					// $h = get_option('thumbnail_size_h') /2;
 					the_post_thumbnail( thumbnail );
 			 ?>
 			<?php else : 

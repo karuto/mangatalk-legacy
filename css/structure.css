@@ -112,13 +112,25 @@ div.animeblock:hover {
 	width: 100%;
 	border-right: none;
 }
+/* Below for gallery */
 #gallery {
 	width: 100%;
 	padding: 0;
 	border-bottom: 1px solid #EDE8EA;
 	text-align: center;
-/*	background-color: #ce5333;*/
 }
+.gallery-box{width:100%;margin:0;}
+.gallery-content {height: 160px;}
+	.gallery-imglist{float:left;width:858px;height:100%;background-color: #fff; overflow:hidden;position:relative;}
+	.gallery-imglist ul{position:absolute;width:2012px;overflow:hidden;margin:20px 0;}
+	.gallery-imglist ul li{display:inline;float:left;margin:0px;width:250px;}
+	.gallery-imglist a{display:block;float:none;line-height:16px;margin:0;text-align:center;width:250px;}
+	.gallery-imglist .img{display:block;height:120px;width:250px;overflow:hidden;}
+.gallery-content .button{display:block;float:left;width:60px;height:100%;cursor:pointer;}
+/* KM TODO: Hardcoded, change this later! */
+.gallery-content .left{background:url(http://i.imgur.com/cQxxg.png);}
+.gallery-content .right{background:url(http://i.imgur.com/cQxxg.png);}
+
 
 #secondary {
 	float: right;
@@ -130,20 +142,23 @@ div.animeblock:hover {
 .regular-sidebar {
 	padding: 20px 5px 20px 20px;
 }
-#mainlist-more {
+
+
+.more-button {
+	font-weight: bold;
 	text-align: center;
 	color: #ce5333;
+	border: 1px dashed #e0e0e0;
+}
+.mainlist-button {
 	font-size: 25px/150%;
 	margin: -15px 15px 30px;
 	padding: 10px 0;	
-	border: 1px dashed #e0e0e0;
 	border-top: 3px double #EDE8EA;
 }
-#mainlist-more a {
-	width: 100%;
-	height: 100%;
+a .more-button:hover {
+	background-color: #FCEDDE;
 }
-
 
 
 

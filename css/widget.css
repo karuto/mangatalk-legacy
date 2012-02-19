@@ -82,8 +82,10 @@
 	color: #000;
 }
 .newsmore {
+	border-top: none;
+	padding: 10px 0;	
+	margin: -10px 0 40px;
 	color: #ce5333;
-	margin: 0;
 }
 #centerbar .newsmore {
 	width: 70px;
