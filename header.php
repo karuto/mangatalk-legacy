@@ -54,7 +54,6 @@
 <script type="text/javascript" src=
 "https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
-<script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/galleria/galleria-1.2.6.min.js"></script>
 
 
 
@@ -97,7 +96,7 @@
 -->
 
 <div id="logobox" >
-	<span id="logo">MangaTalk</span>
+	<a href="http://mangatalk.net"><span id="logo">MangaTalk</span></a>
 </div>
 
 <div id="page" class="hfeed clearfix floatparentfix">

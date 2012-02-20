@@ -21,29 +21,33 @@ get_header(); ?>
 			<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyeleven_author_bio_avatar_size', 68 ) ); ?>
 		</div><!-- #author-avatar -->
 		<div id="author-description">
-			
+	
 			<ul id="author-link" class="roboto">
-				<li class="author-block">
+				<li class="meta-leadblock">
 				出没
 				</li>
-				<li class="author-link">
 				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-					<?php printf( __( '%s 的漫言文集', 'twentyeleven' ), get_the_author() ); ?></a>
-				</li>
-				<li class="author-link">
+				<li class="meta-unitblock">
+					<?php printf( __( '%s 的漫言文集', 'twentyeleven' ), get_the_author() ); ?>
+				</li></a>
+				
 				<a href="<?php echo esc_url( the_author_meta( 'douban', get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-					<?php printf( __( '豆瓣', 'twentyeleven' ), get_the_author() ); ?></a>
-				</li>
-				<li class="author-link">
+				<li class="meta-unitblock">
+					<?php printf( __( '豆瓣', 'twentyeleven' ), get_the_author() ); ?>
+				</li></a>
+				
 				<a href="<?php the_author_meta( 'weibo', get_the_author_meta( 'ID' ) ); ?>" rel="author">
-					<?php printf( __( '微博', 'twentyeleven' ), get_the_author() ); ?></a>
-				</li>
-				<li class="author-link">
+				<li class="meta-unitblock">
+					<?php printf( __( '微博', 'twentyeleven' ), get_the_author() ); ?>
+				</li></a>
+				
 				<a href="mailto:<?php the_author_meta( 'user_email', get_the_author_meta( 'ID' ) ); ?>" rel="author">
-					<?php printf( __( '邮箱', 'twentyeleven' ), get_the_author() ); ?></a>
-				</li>
-			</ul><!-- #author-link	-->				
-			<div class="floatl author-block roboto">简介</div>
+				<li class="meta-unitblock">				
+					<?php printf( __( '邮箱', 'twentyeleven' ), get_the_author() ); ?>
+				</li></a>
+				
+			</ul><!-- #author-link -->
+			<div class="floatl meta-leadblock roboto">简介</div>
 			<div class="floatl author-desc pspace"><?php the_author_meta( 'description' ); ?></div>
 			
 		</div><!-- #author-description -->

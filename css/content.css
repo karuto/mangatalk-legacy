@@ -55,24 +55,24 @@
 	border-bottom: none;
 }
 
-#top3 .entry-summary .author-block {
+#top3 .entry-summary .meta-leadblock {
 	display: none;
 }
 #top3 .entry-summary {
 
 }
-.entry-summary .author-block {
+.entry-summary .meta-leadblock {
 	float: right;
 	margin: 0 0 10px;
 	border-right: 5px solid #ce5333;
 	/* border-radius: 2px; */
 	background: #666;
 }
-.entry-summary .author-block:hover {
+.entry-summary .meta-leadblock:hover {
 	background: #ce5333;
 	border-right: 5px solid #444;
 }
-.entry-summary .author-block a{
+.entry-summary .meta-leadblock a{
 	color: white;
 }
 
@@ -151,7 +151,7 @@
 .entry-meta {
 	color: #666;
 	clear: both;
-	margin-top: 40px;
+	margin-top: 20px;
 	padding: 20px;
 	font-size: 12px;
 	line-height: 170%;
@@ -431,7 +431,7 @@ object {
 	box-shadow: 0 1px 2px #bbb;
 	padding: 3px;
 }
-.author-block {
+.meta-leadblock {
 	display: inline-block;
 	clear: right;
 	color: #fff;
@@ -456,16 +456,19 @@ object {
 #author-link {
 	margin: 5px 0 ;
 }
-.author-link a {
-	color: #444;
+a .meta-unitblock {
 	font-size: 12px;
-}
-.author-link {
 	display: inline-block;
 	padding: 2px 10px;
 	margin: 0 3px 0 0;
+	background: url("../images/bg_auth.jpg") repeat;
+}
+#author-link a .meta-unitblock {
 	background: url("../images/bg_meta.jpg") repeat;
-/*	border-radius: 2px;	*/
+}
+a .meta-unitblock:hover {
+	background: #ce5333;
+	color: #fff;
 }
 #author-link li:hover {
 	background-color: #ce5333;
