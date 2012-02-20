@@ -407,6 +407,9 @@ object {
 }
 
 /* Author Info */
+#vias-refs {
+	margin: 0 0 15px;
+}
 #author-info {
 	font-size: 12px;
 	overflow: hidden;
@@ -439,6 +442,12 @@ object {
 	padding: 2px 8px;
 	margin: 0 5px 0 0;
 }
+#vias-refs .meta-leadblock,
+#vias-refs a .meta-unitblock {
+	font-size: 11px;
+	padding: 0 8px;
+	margin: 0 5px 0 0;
+}
 #author-description {
 	float: left;
 	width: 515px; /* 652-114 = 538; 538-20 = 518; */
@@ -454,7 +463,7 @@ object {
 	color: #ce5333;
 }
 #author-link {
-	margin: 5px 0 ;
+	margin: 5px 0;
 }
 a .meta-unitblock {
 	font-size: 12px;
