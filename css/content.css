@@ -591,104 +591,13 @@ blockquote.pull {
 ----------------------------------------------- */
 
 .error404 #main #searchform {
-	background: #f9f9f9;
+	background: url("../images/bg_meta.jpg") repeat;
 	border: 1px solid #ddd;
 	border-width: 1px 0;
 	margin: 0 -8.9% 1.625em;
 	overflow: hidden;
 	padding: 1.625em 8.9%;
 }
-.error404 #main #s {
-	width: 95%;
-}
-.error404 #main .widget {
-	clear: none;
-	float: left;
-	margin-right: 3.7%;
-	width: 30.85%;
-}
-.error404 #main .widget_archive {
-	margin-right: 0;
-}
-.error404 #main .widget_tag_cloud {
-	float: none;
-	margin-right: 0;
-	width: 100%;
-}
-.error404 .widgettitle {
-	font-size: 10px;
-	letter-spacing: 0.1em;
-	line-height: 2.6em;
-	text-transform: uppercase;
-}
-
-
-
-/* Recent Posts */
-section.recent-posts {
-	padding: 0 0 1.625em;
-}
-section.recent-posts .hentry {
-	border: none;
-	margin: 0;
-}
-section.recent-posts .other-recent-posts {
-	border-bottom: 1px solid #ddd;
-	list-style: none;
-	margin: 0;
-}
-section.recent-posts .other-recent-posts li {
-	padding: 0.3125em 0;
-	position: relative;
-}
-section.recent-posts .other-recent-posts .entry-title {
-	border-top: 1px solid #ddd;
-	font-size: 17px;
-}
-section.recent-posts .other-recent-posts a[rel="bookmark"] {
-	color: #373737;
-	float: left;
-	max-width: 84%;
-}
-section.recent-posts .other-recent-posts a[rel="bookmark"]:after {
-	content: '-';
-	color: transparent;
-	font-size: 11px;
-}
-section.recent-posts .other-recent-posts a[rel="bookmark"]:hover {
-}
-section.recent-posts .other-recent-posts .comments-link a,
-section.recent-posts .other-recent-posts .comments-link > span {
-	border-bottom: 2px solid #999;
-	bottom: -2px;
-	color: #444;
-	display: block;
-	font-size: 10px;
-	font-weight: 500;
-	line-height: 2.76333em;
-	padding: 0.3125em 0 0.3125em 1em;
-	position: absolute;
-	right: 0;
-	text-align: right;
-	text-transform: uppercase;
-	z-index: 1;
-}
-section.recent-posts .other-recent-posts .comments-link > span {
-	border-color: #bbb;
-	color: #888;
-}
-section.recent-posts .other-recent-posts .comments-link a:hover {
-	color: #1982d1;
-	border-color: #1982d1;
-}
-section.recent-posts .other-recent-posts li:after {
-	clear: both;
-	content: '.';
-	display: block;
-	height: 0;
-	visibility: hidden;
-}
-
 
 /* =Attachments
 ----------------------------------------------- */
