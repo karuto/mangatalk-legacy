@@ -50,7 +50,7 @@
 					// KM: If no excerpts specified, trim 200 words for default display.
 					// KM: Below: Manually ouput "read more". Yeah I know, but I can take it. :/
 					?>
-					</p><div class="author-block"><a href="<?php the_permalink();?>">阅读全文 ｜ Read More</a></div>				
+					</p><div class="readmore"><a href="<?php the_permalink();?>">阅读全文 ｜ Read More</a></div>				
 				<?php endif; ?>
 			</div><!-- .entry-summary -->
 
