@@ -33,6 +33,12 @@
 
 
 <div id="mainlist">
+<div id="scroll">
+	<div id="up_scroll"></div>
+	<div id="comt_scroll"></div>
+	<div id="down_scroll"></div>
+	<div id="hidescroll"></div>
+</div>
 <div class="mainpost floatparentfix">
 	
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -12,7 +12,7 @@ get_header(); ?>
 <div class="mainpage floatparentfix">
 
 <header class="entry-header entry-foreplay">
-	<h1 class="entry-title">Oopsy, 404 LOL</h1>
+	<h1 class="entry-title">Oopsy, 404!</h1>
 </header><!-- .entry-header -->
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
