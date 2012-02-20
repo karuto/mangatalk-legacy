@@ -225,7 +225,7 @@ function guidelines_posting_widget_function() {
 	echo "<li>给您的文章挑选一张好看的<b>特色图片</b>（页面右下方）；</li>";
 	echo "<li>再给您的文章写上一两行的<b>简短摘要</b>（页面正下方）；</li>";
 	echo "<li>填写相应的标签（漫评、资讯、访谈、专题等，可填多项）；</li>";
-	echo "<li>若您的文中引用、参考了他人作品，请在文末标出参考来源。</li></p>";
+	echo "<li>若您的文中引用、参考了他人作品，请在文末 Custom Field 中使用 source 添加外部来源。</li></p>";
 	echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
 }
 // Create the function use in the action hook
@@ -234,6 +234,29 @@ function example_add_dashboard_widgets() {
 }
 // Hoook into the 'wp_dashboard_setup' action to register our other functions
 add_action('wp_dashboard_setup', 'example_add_dashboard_widgets' );
+
+
+//	Adding custom helper
+add_action('load-post-new.php','custom_help_page');
+add_action('load-page.php','custom_help_page');
+add_action('load-post.php','custom_help_page');
+function custom_help_page() {
+  add_filter('contextual_help','custom_page_help');
+}
+function custom_page_help($help) {
+	echo $help; // Uncomment if you just want to append your custom Help text to the default Help text
+	echo '<style type="text/css">
+		.update-nag { display:none !important; }
+		#post-foreplay a { text-decoration: none; }
+	</style>';
+	
+	echo '<div id="post-foreplay" style="margin-right: 25px; font-size: 12px; line-height: 18px; color: #555; border-bottom: 1px solid #e0e0e0;">';
+	echo '<p><a href="http://mangatalk.net">漫言</a>致力于为数以万计的读者们奉上最优雅的阅读体验。在撰文时，请您稍作举手之劳，共同营造这片净土：</p><p>';
+	echo "<li>给您的文章挑选一张好看的<b>特色图片</b>（页面右下方）、写上一两行的<b>简短摘要</b>（正下方）；</li>";
+	echo "<li>填写相应的标签（漫评、资讯、访谈、专题等，可填多项）；</li>";
+	echo "<li>若您的文中引用、参考了他人作品，请在文末 Custom Field 中使用 source 添加外部来源。</li></p>";
+	echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
+}
 
 
 
@@ -261,19 +284,36 @@ function my_logo() {
 add_action('login_head', 'my_logo');
 
 
+// KM: The following function automatically removes attachment links around images.
+add_filter( 'the_content', 'attachment_image_link_remove_filter' );
+function attachment_image_link_remove_filter( $content ) {
+    $content =
+        preg_replace(
+            array('{<a(.*?)(wp-att|wp-content\/uploads)[^>]*><img}',
+                '{ wp-image-[0-9]*" /></a>}'),
+            array('<img','" />'),
+            $content
+        );
+    return $content;
+}
+
 
 // 1. Remove the Admin Bar
 // WordPress 3.1 introduced a new Twitter-like admin menu bar.
 // If you don’t like it, you can disable it by putting the following in functions.php:
 add_filter( 'show_admin_bar', '__return_false' );
 
+
 // 2. Specify the Auto-save Interval
+// KM Update: these don't seem to work. Hmm.
 define('AUTOSAVE_INTERVAL', 600); // 60 * 10, auto-saves every 10 minutes
 define('WP_POST_REVISIONS', 3); // Maximum 5 revisions per post
 // define('WP_POST_REVISIONS', false); // Disable revisions
 
+
 // Remove the Visual Editor
 add_filter('user_can_richedit' , create_function('' , 'return false;') , 50);
+
 
 // Change the Contact Info Form
 function new_contactmethods( $contactmethods ) {
@@ -286,11 +326,6 @@ function new_contactmethods( $contactmethods ) {
 } add_filter('user_contactmethods','new_contactmethods',10,1);
 
 
-
-
-
-
-
 // Disable the “please upgrade now” message
 if ( !current_user_can( 'edit_users' ) ) {
   add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
@@ -299,27 +334,7 @@ if ( !current_user_can( 'edit_users' ) ) {
 
 
 
-//	Adding custom helper
-add_action('load-post-new.php','custom_help_page');
-add_action('load-page.php','custom_help_page');
-add_action('load-post.php','custom_help_page');
-function custom_help_page() {
-  add_filter('contextual_help','custom_page_help');
-}
-function custom_page_help($help) {
-	echo $help; // Uncomment if you just want to append your custom Help text to the default Help text
-	echo '<style type="text/css">
-		.update-nag { display:none !important; }
-		#post-foreplay a { text-decoration: none; }
-	</style>';
-	
-	echo '<div id="post-foreplay" style="margin-right: 25px; font-size: 12px; line-height: 18px; color: #555; border-bottom: 1px solid #e0e0e0;">';
-	echo '<p><a href="http://mangatalk.net">漫言</a>致力于为数以万计的读者们奉上最优雅的阅读体验。在撰文时，请您稍作举手之劳，共同营造这片净土：</p><p>';
-	echo "<li>给您的文章挑选一张好看的<b>特色图片</b>（页面右下方）、写上一两行的<b>简短摘要</b>（正下方）；</li>";
-	echo "<li>填写相应的标签（漫评、资讯、访谈、专题等，可填多项）；</li>";
-	echo "<li>若您的文中引用、参考了他人作品，请在文末标出参考来源。</li></p>";
-	echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
-}
+
 
 
 

@@ -104,7 +104,7 @@
 <div id="page" class="hfeed clearfix floatparentfix">
 
 <style>
-#scroll {	position: absolute;	top: 50%;left: 62%;	display: block;
+#scroll {	position: absolute;	top: 50%;margin: 0 0 0 -30px;	display: block;
 }
 #up_scroll {
 background: url(http://www.ididi.net/wp-content/themes/ididi/images/huadong.gif) no-repeat;

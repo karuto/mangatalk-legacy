@@ -25,6 +25,9 @@
 	width: 440px; /* 622-156-14 = 452-2 = 450(for the beauty) */
 	margin: 0 0 0 14px;
 }
+.mainlist-thumbnail {
+	width: 155px;
+}
 .mainlist-thumbnail img { /* KM */
 	border: 1px solid #E2E2E2;
 	padding: 2px;
@@ -150,7 +153,7 @@
 .entry-meta {
 	color: #666;
 	clear: both;
-	margin-top: 20px;
+	margin-top: 40px;
 	padding: 20px;
 	font-size: 12px;
 	line-height: 170%;
@@ -285,7 +288,7 @@ img[class*="attachment-"] {
 }
 img.size-full,
 img.size-large {
-	max-width: 100%;
+	max-width: 97.5%;
 	width: auto; /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
@@ -687,4 +690,21 @@ blockquote.pull {
 }
 #nav-single .nav-next {
 	padding-left: .5em;
+}
+
+
+
+
+.icenter {	/* Added for in-post images */	
+	text-align: center; 
+}
+.ileft {	/* Added for in-post images */	
+	float: left;
+	margin-right: 10px;
+	display: inline-block;
+}
+.iright {	/* Added for in-post images */
+	float: right;
+	margin-left: 10px; 
+	display: inline-block;
 }
