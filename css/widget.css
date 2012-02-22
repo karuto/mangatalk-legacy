@@ -47,6 +47,10 @@
 .funit-title a {
 	line-height: 10px;
 }
+.funit-title h6 a {
+	font-weight: normal;
+	color: #666;
+}
 .featuremore {
 	border-top: none;
 	padding: 5px 0;

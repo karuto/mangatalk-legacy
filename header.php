@@ -104,32 +104,7 @@
 <div id="page" class="hfeed clearfix floatparentfix">
 
 <style>
-#scroll {	position: absolute;	top: 50%;margin: 0 0 0 -30px;	display: block;
-}
-#up_scroll {
-background: url(http://www.ididi.net/wp-content/themes/ididi/images/huadong.gif) no-repeat;
-position: relative;
-cursor: pointer;
-height: 42px;
-width: 32px;
-margin: 10px 0;
-}
-#comt_scroll {
-background: url(http://www.ididi.net/wp-content/themes/ididi/images/huadong.gif) no-repeat center -45px;
-position: relative;
-cursor: pointer;
-height: 32px;
-width: 32px;
-margin: 10px 0;
-}
-#down_scroll {
-background: url(http://www.ididi.net/wp-content/themes/ididi/images/huadong.gif) no-repeat center -78px;
-position: relative;
-cursor: pointer;
-height: 42px;
-width: 32px;
-margin: 10px 0;
-}
+
 </style>
 
 

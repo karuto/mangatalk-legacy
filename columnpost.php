@@ -23,6 +23,8 @@
 					echo '资讯';
 				else if ( has_tag( 'trans') )
 					echo '译文';
+				else if ( has_tag( 'love') )
+					echo '漫评';
 				else
 					echo '文章';
 				 

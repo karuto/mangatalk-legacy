@@ -67,6 +67,10 @@ body {
 }
 
 
+
+
+
+
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	/* clear: both; */
@@ -119,7 +123,6 @@ em, i {
 	font-style: italic;
 }
 blockquote {
-	font-family: Georgia, "Bitstream Charter", serif;
 	font-style: normal;
 	font-weight: normal;
 	padding: 0 0 0 20px;
@@ -269,4 +272,30 @@ a:hover {
 	text-decoration: none;
 	top: 0;
 	left: 7.6%;
+}
+
+
+
+
+
+
+
+#scroll {	
+	position: absolute;	top: 50%; margin: 0 0 0 -37px;	display: block;
+}
+.scroll_unit {
+	position: relative;
+	cursor: pointer;
+	height: 32px;
+	width: 32px;
+	margin: 10px 0;
+}
+#up_scroll {
+	background: url(images/scroll.png) no-repeat;
+}
+#comt_scroll {
+	background: url(images/scroll.png) no-repeat center -40px;
+}
+#down_scroll {
+	background: url(images/scroll.png) no-repeat center -78px;
 }

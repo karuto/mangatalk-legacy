@@ -16,12 +16,13 @@ if ( 'content' != $current_layout ) :
 	<?php wp_reset_query(); ?><!-- Reset query before invoking conditional tags. -->
 
 	<div id="secondary" class="widget-area regular-sidebar" role="complementary">
-<div id="scroll">
-	<div id="up_scroll"></div>
-	<div id="comt_scroll"></div>
-	<div id="down_scroll"></div>
-	<div id="hidescroll"></div>
-</div>
+	<!-- KM: Scroll Panel -->
+	<div id="scroll">
+		<div id="up_scroll" class="scroll_unit"></div>
+		<div id="comt_scroll" class="scroll_unit"></div>
+		<div id="down_scroll" class="scroll_unit"></div>
+		<div id="hidescroll"></div>
+	</div>
 		<?php if ( ! dynamic_sidebar( 'sidebar-main' ) ) : ?>
 
 			<aside id="archives" class="widget">
