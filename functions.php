@@ -334,6 +334,31 @@ if ( !current_user_can( 'edit_users' ) ) {
 
 
 
+// Serve favicon
+// add a favicon to your
+function blog_favicon() {
+echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('wpurl').'/favicon.ico" />';
+}
+add_action('wp_head', 'blog_favicon');
+
+/*
+	KM: Hacking RSS / Feed output.
+*/
+function mangatalk_rss($content) {
+	global $wp_query;
+	// $a = $wp_query->post->post_author->;
+	$a = $GLOBALS['wp_query']->query_vars['author_name'];
+	
+	$rssmeta = '<br /><br />Written by '.$a.'MangaTalk. All rights reserved.';
+	if (is_feed()) {
+		$content = $content.$rssmeta;
+	}
+	return $content;
+}
+add_filter('the_excerpt_rss', 'mangatalk_rss');
+add_filter('the_content', 'mangatalk_rss');
+
+
 
 
 
@@ -805,4 +830,3 @@ function my_post_image_html( $html, $post_id, $post_image_id ) {
 	// }
 	// return $first_img;
 // }
-

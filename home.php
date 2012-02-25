@@ -19,7 +19,7 @@ get_header(); ?>
 -->			
 	<div class="column maincol">
 		<div id="leftcol">
-		<?php $my_query = new WP_Query('tag=news&posts_per_page=2');
+		<?php $my_query = new WP_Query('tag=trans&posts_per_page=2');
 		while ($my_query->have_posts()) : 
 			$my_query->the_post();
 			$do_not_duplicate[] = $post->ID; ?>
@@ -31,7 +31,7 @@ get_header(); ?>
 	
 	<div class="column maincol">
 		<div id="midcol">
-		<?php $my_query = new WP_Query('tag=trans&posts_per_page=1');
+		<?php $my_query = new WP_Query('tag=news&posts_per_page=1');
 		while ($my_query->have_posts()) : 
 			$my_query->the_post();
 			$do_not_duplicate[] = $post->ID; ?>
@@ -49,7 +49,7 @@ get_header(); ?>
 		
 	<div class="column maincol">
 		<div id="rightcol">			
-		<?php $my_query = new WP_Query('tag=featured&posts_per_page=2');
+		<?php $my_query = new WP_Query('tag=love&posts_per_page=2');
 		while ($my_query->have_posts()) : 
 			$my_query->the_post();
 			$do_not_duplicate[] = $post->ID; ?>
@@ -78,6 +78,40 @@ get_header(); ?>
 	<span id="gallery-right" class="right button"></span>
 	</div><!-- .gallery-content -->
 		
+	<script type="text/javascript">	// KM: JS for slideshow.
+	$(function(){
+	var obj=$("#gallery-list ul");
+	var object=$("#gallery-list ul li");
+	var num= 1;	// #num of pictures per scroll
+	var time = Math.ceil($(object).length/num);
+	var width= $(".gallery-imglist ul li").width();
+	// alert(width);
+	var n=0;
+	// $(object).clone().appendTo(obj);
+	// KM: I don't get the purpose of this append above. Doesn't actually do anything.
+	$("#gallery-right").click(function(){
+	if(!$(obj).is(":animated")){
+	  if(n==time){n=0;$(obj).css({left:0});};
+	  $(obj).animate({left: "-="+width}, "slow");
+	  n++;
+	}
+	});
+	$("#gallery-left").click(function(){
+	if(!$(obj).is(":animated")){
+	  if(n==0){n=time;$(obj).css({left:-time*width})};
+	  $(obj).animate({left: "+="+width}, "slow");
+	  n--;
+	}
+	});
+	// This is for auto scrolling.
+	$("#gallery-cont").hover(function(){
+	clearInterval(change);
+	},function(){
+	// The following line is originally for #right click, but modified for better performance.
+	change= setInterval(function(){$("#gallery-left").click()} , 5000);
+	}).trigger("mouseleave");
+	})
+	</script>
 </div><!-- .gallery-box -->		
 </div><!-- #gallery -->
 

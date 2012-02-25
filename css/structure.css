@@ -97,7 +97,6 @@ div.animeblock:hover {
 }
 #centercol {
 	border: 6px solid #EDE8EA;
-	min-height: 500px;
 	text-align: center;
 	padding: 15px 0;
 }
@@ -181,9 +180,9 @@ a .more-button:hover {
 	margin-left: 1.625em;
 }
 .aligncenter {
+	text-align: center;
 	clear: both;
 	display: block;
-	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 }

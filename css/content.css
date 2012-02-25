@@ -177,7 +177,8 @@
 	padding: 2px 0 10px 0;
 }
 #top3 .entry-summary {
-	padding: 5px 0 10px;
+	margin: 8px 0 10px;
+	
 }
 .entry-summary {	/* KM */
 	font-size: 12px;
@@ -278,7 +279,6 @@ dl.gallery-item {
 	display: block;
 	height: 10px;
 }
-
 
 /* Images */
 .entry-content img,

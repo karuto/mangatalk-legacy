@@ -58,7 +58,7 @@ Tags: editor-style
 }
 body, input, textarea {
 	color: #444;
-	font: 14px/175% 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+	font: 14px/175% "Helvetica Neue", Helvetica, Arial, "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, sans-serif;
 	font-weight: 300;
 }
 body {

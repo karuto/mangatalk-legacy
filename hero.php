@@ -6,7 +6,7 @@
 			<div class="feature-meta"><h2 class="feature-title">
 			漫画手札年度漫画大赏专题
 			</h2></div>
-			<img height="350" src="https://dl-web.dropbox.com/get/%E5%AE%87%E5%AE%99%E5%85%84%E5%BC%9F/%E6%9C%AA%E6%A0%87%E9%A2%98-3%E5%89%AF%E6%9C%AC.jpg?w=65548f95" style="positon:absolute; top:0px;" />
+			<img height="350" src="http://i.imgur.com/mR0FE.jpg" style="positon:absolute; top:0px;" />
 			
 		</div><!-- .image-window -->
 	</div><!-- #feature0 -->

@@ -36,7 +36,7 @@
 				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Click to Read %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 				</h1><!-- .entry-title -->
 				
-				<h6 class="entry-define less-focus roboto">Written By <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php the_author() ?></a> on <?php echo get_the_date(); ?> <b class="red">+</b> <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Click to Read %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php comments_number( '<span class="red">0 notes</span>', '<span class="red">1 note</span>', '<span class="red">% notes</span>' ); ?><br /></a></h6>
+				<h6 class="entry-define less-focus roboto">Written By <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php the_author_meta( 'display_name' ) ?></a> on <?php echo get_the_date(); ?> <b class="red">+</b> <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Click to Read %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php comments_number( '<span class="red">0 notes</span>', '<span class="red">1 note</span>', '<span class="red">% notes</span>' ); ?><br /></a></h6>
 				
 			</header><!-- .entry-header -->
 
