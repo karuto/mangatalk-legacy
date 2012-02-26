@@ -156,21 +156,21 @@ a.toggle-anchor {
 	width: 100%;
 	height: 100%;
 	content: "";
-	box-shadow: inset 0 0 150px rgba(0,0,0,0.4);
+	box-shadow: inset 0 0 150px rgba(0,0,0,0.7);
 	pointer-events: none;
 	z-index: 1; 
 }
  .rainbow3::before{
-	background: rgba(206, 81, 59, 0.4); /* red */
+	background: rgba(206, 81, 59, 0.5); /* red */
 }
  .rainbow2::before{
-	background: rgba(192, 224, 168, 0.4); /* green */
+	background: rgba(192, 224, 168, 0.5); /* green */
 }
  .rainbow1::before{
-	background: rgba(255, 204, 51, 0.4); /* orange */
+	background: rgba(255, 204, 51, 0.5); /* orange */
 }
  .rainbow4::before{
-	background: rgba(173, 164, 225, 0.4); /* purple */
+	background: rgba(173, 164, 225, 0.5); /* purple */
 }
 .hero-feature img {
 	z-index: 1;
