@@ -8,7 +8,7 @@
  */
 ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix floatparentfix'); ?>>
 		
 		<div class="mainlist-thumbnail floatl">
 

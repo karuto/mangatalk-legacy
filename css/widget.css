@@ -129,6 +129,7 @@
 	border-bottom: 1px dashed #EDE8EA;
 	padding: 0 0 7px;
 	display: block;
+	overflow: hidden; /* KM: Fix IE Collapse */
 }
 .social-img img {
 	float: left;
