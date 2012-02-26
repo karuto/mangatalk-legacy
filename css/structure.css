@@ -209,6 +209,7 @@ a .more-button:hover {
 .footer-wbox {
 	width: 306px;
 	margin: 0 auto;
+	padding: 5px 0 0;
 	border-top: 1px solid #CCC5C2;
 }
 

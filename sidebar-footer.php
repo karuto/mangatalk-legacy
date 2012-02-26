@@ -34,7 +34,7 @@
 	<?php if ( is_active_sidebar( 'footerbar-4' ) ) : ?>
 	<div id="footer-w2" class="widget-area column maincol" role="complementary">
 		<div class="footer-wbox">
-		<?php dynamic_sidebar( 'footerbar-3' ); ?>
+		<?php dynamic_sidebar( 'footerbar-4' ); ?>
 		</div>	</div><!-- #second .widget-area -->
 	<?php endif; ?>
 

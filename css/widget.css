@@ -146,6 +146,9 @@
 
 /* =General Widgets Settings
 ----------------------------------------------- */
+footer .widget {
+	color: #fff;
+}
 .widget-area {
 	font-size: 12px;
 }
@@ -191,6 +194,14 @@
 	border-bottom: 1px dotted #ce5333;
 	text-decoration: none;
 }
+.widget .half-ul {
+	width: 50%; 
+	margin: 0; 
+	padding: 0; 
+	float: left; 
+	display: block;
+}
+
 
 /* Search Widget */
 .widget_search form {
