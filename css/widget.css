@@ -133,7 +133,7 @@
 .social-img img {
 	float: left;
 	width: 40px;
-	-webkit-filter: grayscale(1);
+	margin: 2px 0 0;
 }
 .social-title {
 	display: block;
@@ -147,7 +147,7 @@
 /* =General Widgets Settings
 ----------------------------------------------- */
 footer .widget {
-	color: #fff;
+	 color: #FCEDDE;
 }
 .widget-area {
 	font-size: 12px;
