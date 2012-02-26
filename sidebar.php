@@ -18,9 +18,9 @@ if ( 'content' != $current_layout ) :
 	<div id="secondary" class="widget-area regular-sidebar" role="complementary">
 	<!-- KM: Scroll Panel -->
 	<div id="scroll">
-		<div id="up_scroll" class="scroll_unit"></div>
-		<div id="comt_scroll" class="scroll_unit"></div>
-		<div id="down_scroll" class="scroll_unit"></div>
+		<div title="回到顶部" id="up_scroll" class="scroll_unit"></div>
+		<div title="分享 / 评论" id="comt_scroll" class="scroll_unit"></div>
+		<div title="回到底部" id="down_scroll" class="scroll_unit"></div>
 		<div id="hidescroll"></div>
 	</div>
 		<?php if ( ! dynamic_sidebar( 'sidebar-main' ) ) : ?>

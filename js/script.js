@@ -61,7 +61,7 @@ $(function(){
     $('#comt_scroll').click(function() {
         $body.animate({
 			// for better user experience, go to the block ABOVE the comment area.
-            scrollTop: $('#author-info').offset().top
+            scrollTop: $('#social-block').offset().top
         },
         400)
     });

@@ -161,6 +161,14 @@
 	border-top: 1px solid #EDE8EA;
 	border-bottom: 1px solid #EDE8EA;
 }
+#social-block {
+	color: #666;
+	font-weight: bold;
+	clear: both;
+	padding: 5px 20px 15px;
+	border-bottom: 1px solid #EDE8EA;
+	background: url("../images/bg_meta.jpg") repeat;
+}
 .entry-meta a {
 	font-weight: normal;
 }
@@ -422,7 +430,6 @@ object {
 	background: url("../images/bg_auth.jpg") repeat;
 	border-bottom: 1px solid #EDE8EA;
 	padding: 0 0 10px 0;
-	margin-bottom: 10px;
 }
 .author-fix {
 	width: 100%;
