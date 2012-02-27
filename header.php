@@ -56,18 +56,24 @@
 <script type="text/javascript" src=
 "https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 
+<!--[if IE 6]>
+<script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/popup.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/popup.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/popup.js"></script>
+<![endif]-->
 
-<?php wp_reset_query(); ?><!-- Reset query before invoking conditional tags. -->
-<?php if (is_home() || $_SERVER["REQUEST_URI"] == '/' || $_SERVER["REQUEST_URI"] == '/index.php') : ?>
-	<script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/popup.js"></script>
-<?php endif; ?>
 
-
-<script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
-
+<!--  KM: IE9 is fine, but give prompt for IE 8 and below. 
+	  KM: lt = lessthan, so the following should work. -->
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
+
+<script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 
 <?php
 	/* We add some JavaScript to pages with the comment form
@@ -105,6 +111,8 @@
 
 <div id="logobox" class="floatparentfix clearfix">
 	<a href="http://mangatalk.net"><span id="logo">Manga<span style="color:darkRed;">Talk</span></span></a>
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+
 	<?php
 	if ( is_user_logged_in() ) {
 		$backend = home_url('/').'wp-admin';
@@ -118,6 +126,7 @@
 		echo '</span>';
 	}
 	?>
+<!--<![endif]-->	
 </div>
 
 
@@ -128,7 +137,7 @@
 
 	<header id="branding" role="banner">
 	
-		<nav id="access" class="clearfix" role="navigation">
+		<nav id="access" class="clearfix floatparentfix" role="navigation">
 			<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
 			<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
 			<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>

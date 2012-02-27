@@ -58,7 +58,7 @@ Tags: editor-style
 }
 body, input, textarea {
 	color: #444;
-	font: 14px/175% "Helvetica Neue", Helvetica, Arial, "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, sans-serif;
+	font: 14px/175% "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", FreeSans, STHeiti, sans-serif;
 	font-weight: 300;
 }
 body {
@@ -278,7 +278,7 @@ a:hover {
 
 
 
-
+/* KM: Below for scrolling navigation panel accompanied with JS. */
 
 #scroll {	
 	position: absolute;	top: 50%; margin: 0 0 0 -37px;	display: block;
@@ -298,4 +298,55 @@ a:hover {
 }
 #down_scroll {
 	background: url(images/scroll.png) no-repeat center -78px;
+}
+
+
+
+
+/* KM: Below for user-friendly IE pop-up accompanied with JS. */
+
+#backgroundPopup{  /* KM: SEMI-TRANSPARENT OVERLAY */
+	display:none;  
+	position:fixed;  
+	_position:absolute; /* hack for internet explorer 6*/  
+	height:100%;  
+	width:100%;  
+	top:0;  
+	left:0;  
+	background:#000000;  
+	border:1px solid #cecece;  
+	z-index:1;  
+}  
+#popupContact{  
+	display:none;  
+	position:fixed;  
+	_position:absolute; /* hack for internet explorer 6*/  
+	width:400px;  
+	background:#FFFFFF;  
+	border:2px solid #cecece;  
+	z-index:2;  
+	padding:15px;  
+	font-size:13px;  
+}  
+#popupContact h1{  
+	text-align:center;  
+	color:#CE5333;  
+	font-size:15px;
+	font-weight:700;  
+	border-bottom:3px double #D3D3D3;  
+	padding-bottom:10px;  
+	margin-bottom:20px;  
+}  
+#popupContactClose{  
+	display:block;  
+	position:absolute;  
+	color:#ce5333;  
+	font-size:18px;  
+	font-weight:700;  
+	right:10px;  
+	top:5px;  
+}
+#contactArea a:hover {
+	background: darkRed;
+	border-bottom: none;
 }
