@@ -97,8 +97,21 @@
 </div>
 -->
 
-<div id="logobox" >
-	<a href="http://mangatalk.net"><span id="logo">MangaTalk</span></a>
+<div id="logobox" class="floatparentfix clearfix">
+	<a href="http://mangatalk.net"><span id="logo">Manga<span style="color:darkRed;">Talk</span></span></a>
+	<?php
+	if ( is_user_logged_in() ) {
+		$backend = home_url('/').'wp-admin';
+		echo '<span style="margin: 30px 0 0 0; float: right; padding: 3px 10px; background-color: #444;">';
+		echo '<a style="color:#fff" href="'.$backend.'">管理后台</a>';
+		echo '</span>';
+	} else {
+		$backend = home_url('/').'wp-admin';
+		echo '<span style="margin: 30px 0 0 0; float: right; padding: 3px 10px; background-color: #ce5333;">';
+		echo '<a style="color:#fff" href="'.$backend.'">作者登入</a>';
+		echo '</span>';
+	}
+	?>
 </div>
 
 
