@@ -275,9 +275,11 @@ function custom_page_help($help) {
 // add_action('wp_dashboard_setup', 'example_remove_dashboard_widgets' );
 
 
-// KM: change external logo
+// KM: change external logo, adding styles to admin panel
 function my_logo() {
 	echo '<style type="text/css">
+		body { background:url(http://i.imgur.com/FV2MV.png) repeat !important; }
+		.login #nav a, .login #backtoblog a { text-decoration: none; color: #ce5333; }
 		h1 a { background-image:url(http://i.imgur.com/rzsoh.png) !important; }
 	</style>';
 }
