@@ -55,9 +55,15 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <script type="text/javascript" src=
 "https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+
+
+<?php wp_reset_query(); ?><!-- Reset query before invoking conditional tags. -->
+<?php if (is_home() || $_SERVER["REQUEST_URI"] == '/' || $_SERVER["REQUEST_URI"] == '/index.php') : ?>
+	<script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/popup.js"></script>
+<?php endif; ?>
+
+
 <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
-
-
 
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -117,12 +123,6 @@
 
 
 <div id="page" class="hfeed clearfix floatparentfix">
-
-<style>
-
-</style>
-
-
 
 <div id="topwrapper">
 

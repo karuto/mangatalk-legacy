@@ -32,7 +32,8 @@ $(function(){
 	// The following line is originally for #right click, but modified for better performance.
 	change= setInterval(function(){$("#gallery-left").click()} , 5000);
 	}).trigger("mouseleave");
-})
+});
+
 
 $(function(){
  var s = $('#scroll').offset().top;
@@ -65,4 +66,6 @@ $(function(){
         },
         400)
     });
-})
+});
+
+

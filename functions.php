@@ -371,7 +371,7 @@ function mangatalk_rss($content) {
 	// $a = $wp_query->post->post_author->;
 	$a = $GLOBALS['wp_query']->query_vars['author_name'];
 	
-	$rssmeta = '<br /><br />Written by '.$a.'MangaTalk. All rights reserved.';
+	$rssmeta = '<br /><br />本文源自 <a href="http://mangatalk.net">'.$a.'漫言 | MangaTalk </a>。 All rights reserved.';
 	if (is_feed()) {
 		$content = $content.$rssmeta;
 	}
