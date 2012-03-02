@@ -1,6 +1,14 @@
 /* JavaScript handling */
 
-//$(document).ready();	// KM: JS for slideshow gallery in homepage.
+$(document).ready(function(){
+   $("#waitforit").click(function(event){
+     alert("井上雄彦特集将在本周末正式推出，此为预告，敬请期待。");
+   });
+});
+
+
+//$(document).ready();
+	// KM: JS for slideshow gallery in homepage.
 $(function(){
 	var obj=$("#gallery-list ul");
 	var object=$("#gallery-list ul li");
@@ -67,5 +75,6 @@ $(function(){
         400)
     });
 });
+
 
 

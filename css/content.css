@@ -10,13 +10,19 @@
 .mainlist-regular { /* KM */
 	padding: 0px 20px 0px;	/* Actual width: 652-20-20 = 612 */
 }
-#mainlist-single-column article,
 #mainlist article {	/* KM */
 	margin: 20px 0 15px 0;
 	padding: 0 0 10px 0; 
 }
+#mainlist-single-column article {
+	margin: 0 0 15px 0;
+	padding: 0 0 10px 0; 
+}
 #mainlist .entry-summary p {
 	margin-bottom: 10px;
+}
+#mainlist-single-column article .normal {
+	padding: 0 40px;
 }
 .mainlist-content-home { /* KM */
 	width: 450px; /* 622-156-14 = 452-2 = 450(for the beauty) */
@@ -88,6 +94,9 @@
 .entry-content {
 	padding: 0 20px;
 }
+.format-aside .entry-content {
+	padding: 0;
+}
 .entry-foreplay {
 	border-bottom: 1px solid #EDE8EA;
 	margin: 10px 0 0 0;
@@ -151,6 +160,50 @@
 .semi-focus {
 	font-size: 12px;
 }
+.sp-img {
+	overflow: hidden;
+	background: #fff;	
+	margin-bottom: 30px;
+}
+.sp-img img {
+	border: none;
+	width: 326px;
+	max-height: 100%;
+	float: left;
+	padding: 0;
+	margin: 0 20px 0 0; 
+}
+.sp-img .inner {
+	float: left;
+	max-width: 550px;
+	display: block;
+}
+.sp-date {
+	border-bottom: solid 1px #ce5333;
+	background: E7E0E0;
+}
+.sp-date .d {
+	padding: 5px 10px;
+	background: #ce5333;
+	color: #fff;
+}
+.sp-timeline {
+	float: right;
+	width: 326px;
+	margin: 0 0 30px 20px;
+	font-size: 12px;
+	background: #E0E0E0;
+}
+.sp-timeline p {
+	padding: 20px;
+}
+
+
+
+
+
+
+
 .entry-meta {
 	color: #666;
 	clear: both;
@@ -198,13 +251,17 @@
 	color: #444;
 	line-height: 150%;
 }
+#mainlist-single-column .entry-content h2 {
+	color: #ce5333;
+	font-style: normal;
+}
+
 .entry-content h2,
 .comment-content h2 {
 	font-size: 20px;
 	font-weight: 900;
 	font-style: italic;
 	border-bottom: 1px dashed #E6E6E6;
-
 }
 .entry-content table,
 .comment-content table {
@@ -366,6 +423,7 @@ img#wpstats {
 }
 
 /* Image borders */
+
 img[class*="align"],
 img[class*="wp-image-"],
 .entry-content img,

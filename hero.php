@@ -2,7 +2,7 @@
 <div class="hero-set">
 
 	<div id="feature0" class="feature-box hero-feature feature-big feature0 grid_4 column">
-		<a href="#">
+		<a id="waitforit" href="#">
 		<div class="image-window shadowbox rainbow1" style="height:350px; width:326px;">
 			<div class="feature-meta"><h2 class="feature-title">
 			井上雄彦『浪客行』、三月神之归来

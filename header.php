@@ -118,17 +118,14 @@
 <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
 
 	<?php
-	if ( is_user_logged_in() ) {
-		$backend = home_url('/').'wp-admin';
 		echo '<span style="margin: 30px 0 0 0; float: right; padding: 3px 10px; background-color: #444;">';
-		echo '<a style="color:#fff" href="'.$backend.'">管理后台</a>';
+		echo '<a href="http://weibo.com/mgtalk" style="color:#fff">关注微博</a>';
 		echo '</span>';
-	} else {
-		$backend = home_url('/').'wp-admin';
+
 		echo '<span style="margin: 30px 0 0 0; float: right; padding: 3px 10px; background-color: #ce5333;">';
-		echo '<a style="color:#fff" href="'.$backend.'">作者登入</a>';
+		echo '<a href="http://feed.mangatalk.net/" style="color:#fff">订阅更新</a>';
 		echo '</span>';
-	}
+	
 	?>
 <!--<![endif]-->	
 </div>

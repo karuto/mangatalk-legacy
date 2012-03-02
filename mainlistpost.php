@@ -17,8 +17,8 @@
 					// $h = get_option('thumbnail_size_h') /2;
 					the_post_thumbnail( thumbnail );
 			 ?>
-			<?php else : 
-					echo'<img width="150" height="150" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" class="attachment-thumbnail wp-post-image">';
+			<?php else : // change default thumbnail here
+					echo'<img width="150" height="150" src="http://mangatalk.net/mt-uploads/2012/02/20110321-003-150x150.jpg" class="attachment-thumbnail wp-post-image">';
 			?>
 			<?php endif; ?>
 		</div><!-- .entry-thumbnail -->

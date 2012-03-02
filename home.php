@@ -68,11 +68,12 @@ get_header(); ?>
 	<span id="gallery-left" class="left button"></span>
 		<div id="gallery-list" class="gallery-imglist">
 		<ul>
-		<li><a href="#1" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#" class="gallery-unit">『新刊标题其之一』</a></li>
-		<li><a href="#2" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#" class="gallery-unit">『新刊标题其之二』</a></li>
-		<li><a href="#3" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#" class="gallery-unit">『新刊标题其之三』</a></li>
-		<li><a href="#4" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#" class="gallery-unit">『新刊标题其之四』</a></li>
-		<li><a href="#5" class="img"><img alt="atrl-" src="http://karu.me/wp-content/uploads/2011/06/20110101-003.jpg" /></a><a href="#" class="gallery-unit">『新刊标题其之五』</a></li>
+		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1443675101/" target=_BLANK class="img"><img alt="atrl-" src="http://i.imgur.com/pEZXP.jpg" /></a><a href="#" class="gallery-unit">『輪るピングドラム』下篇</a></li>
+		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1442178698/" target=_BLANK  class="img"><img alt="atrl-" src="http://i.imgur.com/Z36Y9.jpg" /></a><a href="#" class="gallery-unit">『楽園 Le Paradis』第八号</a></li>
+		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1437680394/" target=_BLANK  class="img"><img alt="atrl-" src="http://i.imgur.com/3kpRu.jpg" /></a><a href="#" class="gallery-unit">『女神异闻录 4』漫画版</a></li>
+		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1442118960/" target=_BLANK  class="img"><img alt="atrl-" src="http://i.imgur.com/ITnH4.jpg" /></a><a href="#" class="gallery-unit">『危险调查员』第八卷</a></li>
+		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1440370609/" target=_BLANK  class="img"><img alt="atrl-" src="http://i.imgur.com/wR8lF.jpg" /></a><a href="#" class="gallery-unit">『初恋的始末』单行本</a></li>
+
 		</ul>
 	</div>
 	<span id="gallery-right" class="right button"></span>

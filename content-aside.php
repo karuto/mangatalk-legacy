@@ -20,7 +20,7 @@
 		$tag_list = get_the_tag_list( '', __( ', ', 'twentyeleven' ) );
 	?>
 	
-	<h1 class="entry-title"><?php the_title(); ?> Aside</h1>
+	<h1 class="entry-title"><?php the_title(); ?></h1>
 
 	
 	<?php if ( 'post' == get_post_type() ) : ?>
