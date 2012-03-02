@@ -114,7 +114,7 @@
 -->
 
 <div id="logobox" class="floatparentfix clearfix">
-	<a href="http://mangatalk.net"><span id="logo">漫言 Manga<span style="color:darkRed;">Talk </span></span></a>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span id="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/mg-logo.png"></img></span></a>
 <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
 
 	<?php
