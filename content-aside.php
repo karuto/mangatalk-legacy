@@ -1,12 +1,15 @@
 <?php
 /**
- * The template for displaying content in the single.php template
+ * The template for displaying posts in the Aside Post Format on index and archive pages
+ *
+ * Learn more: http://codex.wordpress.org/Post_Formats
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
 ?>
+
 
 <header class="entry-header entry-foreplay">
 	<?php 
@@ -17,7 +20,7 @@
 		$tag_list = get_the_tag_list( '', __( ', ', 'twentyeleven' ) );
 	?>
 	
-	<h1 class="entry-title"><?php the_title(); ?></h1>
+	<h1 class="entry-title"><?php the_title(); ?> Aside</h1>
 
 	
 	<?php if ( 'post' == get_post_type() ) : ?>
@@ -31,8 +34,7 @@
 	<?php endif; ?>
 </header><!-- .entry-header -->
 
-
-<div id="mainlist">
+<div id="mainlist-single-column">
 <div class="mainpost floatparentfix">
 	
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

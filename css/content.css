@@ -10,6 +10,7 @@
 .mainlist-regular { /* KM */
 	padding: 0px 20px 0px;	/* Actual width: 652-20-20 = 612 */
 }
+#mainlist-single-column article,
 #mainlist article {	/* KM */
 	margin: 20px 0 15px 0;
 	padding: 0 0 10px 0; 
@@ -171,13 +172,6 @@
 }
 .entry-meta a {
 	font-weight: normal;
-}
-.single-author .entry-meta .by-author {
-	display: none;	/* yeah great, but I won't be needing this. */
-}
-.author-desc {
-	width: 85%; 
-	padding: 2px 5px;
 }
 .maincol .entry-thumbnail { /* KM */
 	text-align: center;
@@ -461,9 +455,14 @@ object {
 	padding: 0 8px;
 	margin: 0 5px 0 0;
 }
+#mainlist #author-description {
+	width: 515px; /* 652-114 = 538; 538-20 = 518; */
+}
+#mainlist-single-column #author-description {
+	width: 840px; /* 978-114 = 864; 864-20 = 844; */
+}
 #author-description {
 	float: left;
-	width: 515px; /* 652-114 = 538; 538-20 = 518; */
 /*	margin-left: 114px;	*/
 	margin: 20px 20px 20px 0;
 	line-height: 180%;
@@ -475,6 +474,17 @@ object {
 	margin: 0;
 	color: #ce5333;
 }
+.single-author .entry-meta .by-author {
+	display: none;	/* yeah great, but I won't be needing this. */
+}
+.author-desc {
+	width: 85%; 
+	padding: 2px 5px;
+}
+#mainlist-single-column .author-desc {
+	width: 90%;
+}
+
 #author-link {
 	margin: 5px 0;
 }
@@ -487,6 +497,10 @@ a .meta-unitblock {
 }
 #author-link a .meta-unitblock {
 	background: url("../images/bg_meta.jpg") repeat;
+}
+#author-link a .meta-unitblock:hover {
+	background-image: none;
+	background-color: #ce5333;
 }
 a .meta-unitblock:hover {
 	background: #ce5333;

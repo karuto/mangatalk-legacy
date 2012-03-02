@@ -14,7 +14,7 @@ get_header(); ?>
 	
 	<header id="titlebar" class="page-header roboto">
 		<h1 class="page-title"><?php
-			printf( __( 'Tag Archives: %s', 'twentyeleven' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+			printf( __( 'Topic Archives: %s', 'twentyeleven' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 		?></h1>
 		<?php
 			$tag_description = tag_description();

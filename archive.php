@@ -25,7 +25,7 @@ get_header(); ?>
 			<?php elseif ( is_year() ) : ?>
 				<?php printf( __( 'Archives of %s', 'twentyeleven' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentyeleven' ) ) . '</span>' ); ?>
 			<?php else : ?>
-				<?php _e( 'Archives', 'twentyeleven' ); ?>
+				<?php _e( 'All Articles', 'twentyeleven' ); ?>
 			<?php endif; ?>
 		</h1>
 	</header><!-- #titlebar -->	

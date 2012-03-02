@@ -56,6 +56,12 @@
 <script type="text/javascript" src=
 "https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 
+<!-- KM: For GR Subscribe as domain feature. -->
+<link rel="alternate" type="application/rss+xml" title="订阅 漫言 MangaTalk (RSS 2.0)" href="http://feed.mangatalk.net/" />
+
+
+<!--  KM: IE9 is fine, but give prompt for IE 8 and below.
+	  KM: And also remember to place popup.js before script.js to prevent loading failure. -->
 <!--[if IE 6]>
 <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/popup.js"></script>
 <![endif]-->
@@ -67,8 +73,6 @@
 <![endif]-->
 
 
-<!--  KM: IE9 is fine, but give prompt for IE 8 and below. 
-	  KM: lt = lessthan, so the following should work. -->
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
@@ -110,7 +114,7 @@
 -->
 
 <div id="logobox" class="floatparentfix clearfix">
-	<a href="http://mangatalk.net"><span id="logo">Manga<span style="color:darkRed;">Talk</span></span></a>
+	<a href="http://mangatalk.net"><span id="logo">漫言 Manga<span style="color:darkRed;">Talk </span></span></a>
 <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
 
 	<?php
@@ -128,6 +132,9 @@
 	?>
 <!--<![endif]-->	
 </div>
+
+
+
 
 
 

@@ -20,13 +20,23 @@ get_header(); ?>
 	</nav>
 -->
 
-	<?php get_template_part( 'content', 'single' ); ?>
+	<?php 
+		$format = get_post_format();
+		if ( $format == 'aside' )
+			get_template_part( 'content', 'aside' ); 
+		else 
+			get_template_part( 'content', 'single' ); 
+	?>
+
 	<?php comments_template( '', true ); ?>
 
 <?php endwhile; // end of the loop. ?>
 
-</div><!-- .mainlist-regular -->
+</div><!-- .mainpost -->
 </div><!-- #mainlist -->
-
-<?php get_sidebar(); ?>
+<?php 
+	$format = get_post_format();
+	if ( false === $format )
+		get_sidebar();
+?>
 <?php get_footer(); ?>

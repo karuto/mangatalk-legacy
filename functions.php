@@ -101,7 +101,7 @@ function twentyeleven_setup() {
 	register_nav_menu( 'primary', __( 'Primary Menu', 'twentyeleven' ) );
 
 	// Add support for a variety of post formats
-//	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
+	add_theme_support( 'post-formats', array( 'aside' ) );
 //	KM: Sorry, no use for now, thus disabled.
 
 	// Add support for custom backgrounds
