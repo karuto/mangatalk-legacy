@@ -66,13 +66,38 @@ get_header(); ?>
 <div class="gallery-box">
 	<div id="gallery-cont" class="gallery-content">
 	<span id="gallery-left" class="left button"></span>
-		<div id="gallery-list" class="gallery-imglist">
+	<div id="gallery-list" class="gallery-imglist">
 		<ul>
-		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1443675101/" target=_BLANK class="img"><img alt="atrl-" src="http://i.imgur.com/pEZXP.jpg" /></a><a href="#" class="gallery-unit">『輪るピングドラム』下篇</a></li>
-		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1442178698/" target=_BLANK  class="img"><img alt="atrl-" src="http://i.imgur.com/Z36Y9.jpg" /></a><a href="#" class="gallery-unit">『楽園 Le Paradis』第八号</a></li>
-		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1437680394/" target=_BLANK  class="img"><img alt="atrl-" src="http://i.imgur.com/3kpRu.jpg" /></a><a href="#" class="gallery-unit">『女神异闻录 4』漫画版</a></li>
-		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1442118960/" target=_BLANK  class="img"><img alt="atrl-" src="http://i.imgur.com/ITnH4.jpg" /></a><a href="#" class="gallery-unit">『危险调查员』第八卷</a></li>
-		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1440370609/" target=_BLANK  class="img"><img alt="atrl-" src="http://i.imgur.com/wR8lF.jpg" /></a><a href="#" class="gallery-unit">『初恋的始末』单行本</a></li>
+		
+		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1456042815/" target=_BLANK  class="img">
+		<div class="image-window shadowbox rainbow3" style="height:150px; width:250px;">
+			<img alt="atrl-" src="http://i.imgur.com/bPbK8.jpg" />
+		</div><!-- .image-window --></a>
+		<a href="#gallery" class="gallery-unit">篠原千絵『夢の雫、黄金の鳥籠』</a></li>
+		
+		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1456231607/" target=_BLANK class="img">
+		<div class="image-window shadowbox rainbow4" style="height:150px; width:250px;">
+			<img alt="atrl-" src="http://i.imgur.com/sLWMG.jpg" />
+		</div><!-- .image-window --></a>
+		<a href="#gallery" class="gallery-unit">『子連れ狼 第6巻 愛蔵版』</a></li>
+		
+		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1456082538/" target=_BLANK class="img">
+		<div class="image-window shadowbox rainbow1" style="height:150px; width:250px;">
+			<img alt="atrl-" src="http://i.imgur.com/ucsaL.jpg" />
+		</div><!-- .image-window --></a>
+		<a href="#gallery" class="gallery-unit">『マコちゃんのリップクリーム』</a></li>
+		
+		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1456122758/" target=_BLANK  class="img">
+		<div class="image-window shadowbox rainbow2" style="height:150px; width:250px;">
+			<img alt="atrl-" src="http://i.imgur.com/c9eqj.jpg" />
+		</div><!-- .image-window --></a>
+		<a href="#gallery" class="gallery-unit">天野こずえ『蓝海少女』</a></li>
+		
+		<li><a href="http://site.douban.com/widget/photos/1951351/photo/1451946340/" target=_BLANK  class="img">
+		<div class="image-window shadowbox rainbow2" style="height:150px; width:250px;">
+			<img alt="atrl-" src="http://i.imgur.com/66uWX.jpgg" />
+		</div><!-- .image-window --></a>
+		<a href="#gallery" class="gallery-unit">『新·恐怖宠物店』最新卷</a></li>
 
 		</ul>
 	</div>

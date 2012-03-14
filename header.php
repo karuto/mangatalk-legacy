@@ -8,7 +8,9 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
+
 <!--[if IE 6]>
 <html id="ie6" <?php language_attributes(); ?>>
 <![endif]-->
@@ -50,18 +52,21 @@
 
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon"/>
 
+<!-- KM: For Google Reader's "Subscribe as domain" feature. -->
+<link rel="alternate" type="application/rss+xml" title="订阅 漫言 MangaTalk (RSS 2.0)" href="http://feed.mangatalk.net/" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<script type="text/javascript" src=
-"https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 
-<!-- KM: For GR Subscribe as domain feature. -->
-<link rel="alternate" type="application/rss+xml" title="订阅 漫言 MangaTalk (RSS 2.0)" href="http://feed.mangatalk.net/" />
-
+<!-- KM: Media Queries compatability for IE8-. -->
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
 
 <!--  KM: IE9 is fine, but give prompt for IE 8 and below.
-	  KM: And also remember to place popup.js before script.js to prevent loading failure. -->
+	  KM: And also remember to place popup.js before script.js to prevent loading failure.
+-->
 <!--[if IE 6]>
 <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/popup.js"></script>
 <![endif]-->
@@ -94,6 +99,10 @@
 	wp_head();
 ?>
 </head>
+
+
+
+
 
 <body <?php body_class(); ?>>
 <div id="bodywrapper">

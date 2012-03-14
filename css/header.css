@@ -160,6 +160,14 @@ a.toggle-anchor {
 	pointer-events: none;
 	z-index: 1; 
 }
+.image-window::hover:before,
+.shadowbox::hover:before{
+	box-shadow: none;
+}
+
+ .rainbow4::before{
+	background: rgba(173, 164, 225, 0.5); /* purple */
+}
  .rainbow3::before{
 	background: rgba(206, 81, 59, 0.5); /* red */
 }
@@ -168,9 +176,6 @@ a.toggle-anchor {
 }
  .rainbow1::before{
 	background: rgba(255, 204, 51, 0.5); /* orange */
-}
- .rainbow4::before{
-	background: rgba(173, 164, 225, 0.5); /* purple */
 }
 .hero-feature img {
 	z-index: 1;

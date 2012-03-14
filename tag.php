@@ -13,8 +13,8 @@ get_header(); ?>
 <div id="mainlist">
 	
 	<header id="titlebar" class="page-header roboto">
-		<h1 class="page-title"><?php
-			printf( __( 'Topic Archives: %s', 'twentyeleven' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+		<h1 class="page-title"><a href="<?php echo home_url(); ?>">漫言首页 &raquo; </a><?php
+			printf( __( '%s文集', 'twentyeleven' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 		?></h1>
 		<?php
 			$tag_description = tag_description();

@@ -198,6 +198,13 @@ endif; // twentyeleven_setup
 
 
 
+/* KM: Exclude pages from search results. */
+function SearchFilter($query) {
+	if ($query->is_search) {
+		$query->set('post_type', 'post');
+	}	return $query;
+}
+add_filter('pre_get_posts','SearchFilter');
 
 
 /* 
@@ -207,12 +214,13 @@ endif; // twentyeleven_setup
 function contact_helper_dashboard_widget_function() {
 	echo '<div id="admin-foreplay" style="font-size: 12px; line-height: 20px;">';
 	echo '<p><a href="http://mangatalk.net">欢迎来到漫言！</a><br />
-	站点现正处于 Beta 状态期间，如果您在使用中遇到 Bug、技术故障，或是有任何建议吐槽，请猛击<a href="http://www.douban.com/doumail/write?to=2129230">豆瓣联系技术人员</a>。</p><p>';
+	站点现正处于 Beta 公开测试期间，如果您在使用中遇到 Bug、技术故障，或是有任何建议吐槽，请务必来信<a href="mailto:iamkaruto@gmail.com">联系技术人员</a>。</p><p>';
+	echo '<a href="http://mangatalk.net/changelog/">Log #15527 - You can now browse MangaTalk via Android / iPhone.</a></p><p>';
 	echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
 }
 // Create the function use in the action hook
 function add_custom_dashboard_widget() {
-	wp_add_dashboard_widget('contact_helper_dashboard_widget', '亲❤欢迎光临', 'contact_helper_dashboard_widget_function');
+	wp_add_dashboard_widget('contact_helper_dashboard_widget', '感谢您登入漫言！', 'contact_helper_dashboard_widget_function');
 }
 // Hoook into the 'wp_dashboard_setup' action to register our other functions
 add_action('wp_dashboard_setup', 'add_custom_dashboard_widget');
@@ -220,12 +228,11 @@ add_action('wp_dashboard_setup', 'add_custom_dashboard_widget');
 
 function guidelines_posting_widget_function() {
 	echo '<div id="post-foreplay" style="font-size: 12px; line-height: 20px;">';
-	echo '<p><a href="http://mangatalk.net">漫言</a>致力于为数以万计的读者们奉上最优雅的阅读体验。<br />
-	在撰文时，请您稍作举手之劳，共同营造这片净土：</p><p>';
-	echo "<li>给您的文章挑选一张好看的<b>特色图片</b>（页面右下方）；</li>";
-	echo "<li>再给您的文章写上一两行的<b>简短摘要</b>（页面正下方）；</li>";
-	echo "<li>填写相应的标签（漫评、资讯、访谈、专题等，可填多项）；</li>";
-	echo "<li>若您的文中引用、参考了他人作品，请在文末 Custom Field 中使用 source 添加外部来源。</li></p>";
+	echo '<p>亲爱的作者：在撰文之前，请您抽出几分钟，阅读<strong><a href="http://mangatalk.net/author-faq/" style="color:#ce5333;">『漫言发文答疑指南』</a></strong>，相信能解答您的大部分问题。</p><p>
+	
+	<a href="http://mangatalk.net">漫言</a>自诞生以来，便致力于为数以万计的读者们奉上最优雅的阅读体验。
+	还望您也能稍尽一方之力、共同来维护这片净土。^ ^</p><p>';
+
 	echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
 }
 // Create the function use in the action hook
@@ -251,10 +258,11 @@ function custom_page_help_by_K($help) {
 	</style>';
 	
 	echo '<div id="post-foreplay" style="margin-right: 25px; font-size: 12px; line-height: 18px; color: #555; border-bottom: 1px solid #e0e0e0;">';
-	echo '<p><a href="http://mangatalk.net">漫言</a>致力于为数以万计的读者们奉上最优雅的阅读体验。在撰文时，请您稍作举手之劳，共同营造这片净土：</p><p>';
-	echo "<li>给您的文章挑选一张好看的<b>特色图片</b>（页面右下方）、写上一两行的<b>简短摘要</b>（正下方）；</li>";
-	echo "<li>填写相应的标签（漫评、资讯、访谈、专题等，可填多项）；</li>";
-	echo "<li>若您的文中引用、参考了他人作品，请在文末 Custom Field 中使用 source 添加外部来源。</li></p>";
+	echo '<p>亲爱的作者：在撰文之前，请您抽出几分钟，阅读<strong><a href="http://mangatalk.net/author-faq/" style="color:#ce5333;">『漫言发文答疑指南』</a></strong>，相信能解答您的大部分问题。</p><p>
+	
+	<a href="http://mangatalk.net">漫言</a>自诞生以来，便致力于为数以万计的读者们奉上最优雅的阅读体验。
+	还望您也能稍尽一方之力、共同来维护这片净土。^ ^</p><p>';
+
 	echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
 }
 
@@ -564,7 +572,7 @@ function twentyeleven_widgets_init() {
 /*	register_widget( 'Twenty_Eleven_Ephemera_Widget' );*/
 
 	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'twentyeleven' ),
+		'name' => __( 'Universal Sidebar', 'twentyeleven' ),
 		'id' => 'sidebar-main',
 		'description' => __( 'General sidebar that will appear everywhere besides homepage', 'twentyeleven' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -584,7 +592,7 @@ function twentyeleven_widgets_init() {
 	) );
 	
 		register_sidebar( array(
-		'name' => __( 'Center Column Area', 'twentyeleven' ),
+		'name' => __( 'News Hub', 'twentyeleven' ),
 		'id' => 'sidebar-center',
 		'description' => __( 'The area for the homepage center column, display minimal amount of information', 'twentyeleven' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -593,18 +601,18 @@ function twentyeleven_widgets_init() {
 		'after_title' => '</h3>',
 	) );
 	
-	register_sidebar( array(
-		'name' => __( 'Showcase Sidebar', 'twentyeleven' ),
-		'id' => 'sidebar-2',
-		'description' => __( 'The sidebar for the optional Showcase Template', 'twentyeleven' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
+	// register_sidebar( array(
+		// 'name' => __( 'Showcase Sidebar', 'twentyeleven' ),
+		// 'id' => 'sidebar-2',
+		// 'description' => __( 'The sidebar for the optional Showcase Template', 'twentyeleven' ),
+		// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		// 'after_widget' => "</aside>",
+		// 'before_title' => '<h3 class="widget-title">',
+		// 'after_title' => '</h3>',
+	// ) );
 
 	register_sidebar( array(
-		'name' => __( 'Footer Area One', 'twentyeleven' ),
+		'name' => __( 'Footer 1', 'twentyeleven' ),
 		'id' => 'footerbar-3',
 		'description' => __( 'An optional widget area for your site footer', 'twentyeleven' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -614,7 +622,7 @@ function twentyeleven_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Footer Area Two', 'twentyeleven' ),
+		'name' => __( 'Footer 2', 'twentyeleven' ),
 		'id' => 'footerbar-4',
 		'description' => __( 'An optional widget area for your site footer', 'twentyeleven' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -624,7 +632,7 @@ function twentyeleven_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Footer Area Three', 'twentyeleven' ),
+		'name' => __( 'Footer 3', 'twentyeleven' ),
 		'id' => 'footerbar-5',
 		'description' => __( 'An optional widget area for your site footer', 'twentyeleven' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -645,8 +653,8 @@ function twentyeleven_content_nav( $nav_id ) {
 	if ( $wp_query->max_num_pages > 1 ) : ?>
 		<nav id="<?php echo $nav_id; ?>">
 			<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
-			<div class="nav-previous roboto"><?php next_posts_link( __( '<span class="meta-nav roboto">&larr;</span> Older posts', 'twentyeleven' ) ); ?></div>
-			<div class="nav-next roboto"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav roboto">&rarr;</span>', 'twentyeleven' ) ); ?></div>
+			<div class="nav-previous roboto"><?php next_posts_link( __( '<span class="meta-nav roboto">&larr;</span> 更旧的文章 | Older', 'twentyeleven' ) ); ?></div>
+			<div class="nav-next roboto"><?php previous_posts_link( __( 'Newer | 更新的文章 <span class="meta-nav roboto">&rarr;</span>', 'twentyeleven' ) ); ?></div>
 		</nav><!-- #nav-above -->
 	<?php endif;
 }

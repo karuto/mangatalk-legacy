@@ -18,14 +18,15 @@ get_header(); ?>
 	
 	<header id="titlebar" class="page-header roboto">
 		<h1 class="page-title">
+			<a href="<?php echo home_url(); ?>">漫言首页 &raquo; </a>
 			<?php if ( is_day() ) : ?>
-				<?php printf( __( 'Archives of %s', 'twentyeleven' ), '<span>' . get_the_date() . '</span>' ); ?>
+				<?php printf( __( '%s 文集', 'twentyeleven' ), '<span>' . get_the_date() . '</span>' ); ?>
 			<?php elseif ( is_month() ) : ?>
-				<?php printf( __( 'Archives of %s', 'twentyeleven' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyeleven' ) ) . '</span>' ); ?>
+				<?php printf( __( '%s 年文集', 'twentyeleven' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyeleven' ) ) . '</span>' ); ?>
 			<?php elseif ( is_year() ) : ?>
-				<?php printf( __( 'Archives of %s', 'twentyeleven' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentyeleven' ) ) . '</span>' ); ?>
+				<?php printf( __( '%s 年文集', 'twentyeleven' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentyeleven' ) ) . '</span>' ); ?>
 			<?php else : ?>
-				<?php _e( 'All Articles', 'twentyeleven' ); ?>
+				<?php _e( '过往文集', 'twentyeleven' ); ?>
 			<?php endif; ?>
 		</h1>
 	</header><!-- #titlebar -->	
@@ -53,7 +54,8 @@ get_header(); ?>
 				?>
 			<?php endwhile; ?>
 
-			<?php twentyeleven_content_nav( 'nav-below' ); /* Display navigation to next/previous pages when applicable */?>
+			<?php twentyeleven_content_nav( 'nav-below' ); 
+			/* Display navigation to next/previous pages when applicable */?>
 
 		<?php else : ?>
 

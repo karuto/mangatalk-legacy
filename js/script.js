@@ -1,10 +1,10 @@
 /* JavaScript handling */
 
-$(document).ready(function(){
-   $("#waitforit").click(function(event){
-     alert("井上雄彦特集将在本周末正式推出，此为预告，敬请期待。");
-   });
-});
+// $(document).ready(function(){
+   // $("#waitforit").click(function(event){
+     // alert("井上雄彦特集将在本周末正式推出，此为预告，敬请期待。");
+   // });
+// });
 
 
 //$(document).ready();
@@ -12,7 +12,7 @@ $(document).ready(function(){
 $(function(){
 	var obj=$("#gallery-list ul");
 	var object=$("#gallery-list ul li");
-	var num= 1;	// #num of pictures per scroll
+	var num= 2;	// #num of pictures per scroll
 	var time = Math.ceil($(object).length/num);
 	var width= $(".gallery-imglist ul li").width();
 	// alert(width);

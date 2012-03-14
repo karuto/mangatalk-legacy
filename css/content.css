@@ -51,7 +51,7 @@
 #titlebar h1 { /* KM */
 	padding: 0 20px;
 	color: #ce5333;
-	font-size: 22px;
+	font-size: 27px;
 }
 .hentry,
 .no-results {
@@ -430,6 +430,10 @@ img[class*="wp-image-"],
 #content .gallery .gallery-icon img {/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
 	border: 1px solid #ddd;
 	padding: 6px;
+}
+#mainlist-single-column .entry-content img {
+	border: 0px solid #ddd;
+
 }
 #content .gallery .gallery-icon img
 .wp-caption img {
