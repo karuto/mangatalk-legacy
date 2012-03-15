@@ -31,6 +31,10 @@
 <div id="backgroundPopup"></div>  
 
 
+
+
+
+
 <footer id="colophon" class="clearfix" role="contentinfo">
 		<?php
 			/* A sidebar in the footer? Yep. You can can customize

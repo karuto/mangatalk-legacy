@@ -83,6 +83,7 @@
 <![endif]-->
 
 <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.tipsy.js"></script>
 
 <?php
 	/* We add some JavaScript to pages with the comment form

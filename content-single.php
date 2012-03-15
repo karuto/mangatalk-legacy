@@ -139,4 +139,9 @@
 	</footer>
 </article><!-- #post-<?php the_ID(); ?> -->
 
-
+<!-- KM: Load Tipsy. -->
+<script type="text/javascript" charset="utf-8">
+	$(function() {
+		$('.note').tipsy({fade: true});
+	});
+</script>
