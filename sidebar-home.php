@@ -12,7 +12,7 @@ $current_layout = $options['theme_layout'];
 
 if ( 'content' != $current_layout ) :
 ?>
-	<div id="secondary" class="widget-area homepage-sidebar" role="complementary">
+	<div id="secondary" class="floatr widget-area homepage-sidebar" role="complementary">
 		<?php if ( ! dynamic_sidebar( 'sidebar-home' ) ) : ?>
 
 			<aside id="archives" class="widget">

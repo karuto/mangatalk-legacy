@@ -1,0 +1,686 @@
+@charset "UTF-8";
+/*------------------------------------*\
+	CONTENTS
+\*------------------------------------*/
+/*
+RESET
+SHARED
+CLEARFIX
+MAIN
+NAV
+MEDIA
+ISLAND
+TYPE
+IMAGES
+TABLES
+MISC
+*/
+
+
+
+
+
+/*------------------------------------*\
+	$RESET
+\*------------------------------------*/
+/*
+A more considered reset; more of a restart... 
+*/
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,
+a,abbr,address,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strong,sub,sup,tt,var,
+b,u,i,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+	margin:0;
+	padding:0;
+}
+article,aside,details,figcaption,figure,footer,
+header,hgroup,menu,nav,section{
+	display:block;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+strong,b,mark{
+	font-weight:bold;
+	font-style:inherit;
+}
+em,i,cite,q,address,dfn,var{
+	font-style:italic;
+	font-weight:inherit;
+}
+abbr[title],dfn[title]{
+	cursor:help;
+	border-bottom:1px dotted;
+}
+ins{
+	border-bottom:1px solid;
+}
+a,u,ins{
+	text-decoration:none;
+}
+del,s{
+	text-decoration:line-through;
+}
+pre,code,samp,kbd{
+	font-family:monospace;
+}
+small{
+	font-size:0.75em;
+}
+img{
+	border:none;
+	font-style:italic;
+}
+input,
+select,option,optgroup,
+textarea{
+	font:inherit;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$SHARED
+\*------------------------------------*/
+/* Common margin-bottom for vertical rhythm. */
+h1,h2,h3,h4,h5,h6,
+ul,ol,dl,
+p,
+table,
+form,
+pre,
+hr,
+.source{
+	margin-bottom:Xpx;
+	margin-bottom:Xrem;
+}
+
+/* Default indentation value for lists etc. */
+ul,ol,dd{
+	margin-left:Xem;
+}
+
+label,
+.text-input,
+textarea,
+.btn{
+	cursor:pointer;
+}
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus{
+	cursor:text;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$CLEARFIX
+\*------------------------------------*/
+/*
+Big up @necolas: nicolasgallagher.com/micro-clearfix-hack
+*/
+.cf:before,
+.cf:after{
+	content:"";
+	display:table;
+}
+.cf:after{
+	clear:both;
+}
+.cf{
+	zoom:1;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$MAIN
+\*------------------------------------*/
+html{
+	font-size:62.5%; /* 10px base size */
+	overflow-y:scroll;
+	line-height:1.5; /* A safe and comfortable default for body copy at any size. */
+}
+body {
+	background: url(../images/denim.png) repeat;
+	background-color: #f4f1ef;
+	color: #444;
+	font: 1.4rem/1.75 "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", FreeSans, sans-serif;
+	font: 14px/175% "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", FreeSans, sans-serif;
+	font-weight: 300;
+}
+.bodywrapper {
+	background-color: #eef0f2;	/* Better CSS fallback, close enough */
+	background-repeat:repeat;
+	background-image: url(http://i.imgur.com/FV2MV.png);
+	padding-bottom: 50px;
+	padding-bottom: 5rem;
+}
+
+
+
+
+/*------------------------------------*\
+	$TOP / NAV
+\*------------------------------------*/
+.logobox {
+	background: url(http://i.imgur.com/dqudD.png) no-repeat;
+}
+	#logo {
+		float: left;
+		width: 50%;
+		padding: 25px 0 8px 15px;
+		padding: 2.5rem 0 0.8rem 1.5rem;
+	}
+
+#page {
+	background-color: #fff;
+	box-shadow:0 1px 3px rgba(0,0,0,.35);
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px;
+}
+.topmenu {
+	clear: both;
+	width: 100%;
+	border-top: 2px solid #ce5333;
+}
+.topmenu .menu {
+	list-style: none;
+}
+	.topmenu .menu-item {	/* The <li> elements within .topmenu */
+		float: left;
+		position: relative;
+		background: url("../images/menusep.png") no-repeat right;
+		font-weight: bold;
+	}
+	.topmenu li:first-child {
+		padding-left: 2px;
+		padding-left: 0.2rem;
+	}
+		.topmenu  a {
+			display: block;
+			color: #eee;
+			text-shadow: 0 1px 1px rgba(206, 83, 51, .85);
+			font-weight: bold;
+			font-size: 15px;
+			font-size: 1.5rem;
+			line-height: 2;
+			padding: 3px 18px 0;
+			padding: 0.3rem 1.8rem 0;
+		}
+			.topmenu a:hover {
+				border-bottom: none;
+			}
+			
+			
+			
+			
+/*------------------------------------*\
+	$HOMEPAGE TOP3
+\*------------------------------------*/
+#top3 {
+	background:url('http://i.imgur.com/6jMtk.jpg') center repeat-y;
+	border-bottom: 1px solid #EDE8EA;
+}
+.maincol {	/* Abstract representation of mainpage columns. */
+	width: 326px;
+	width: 32.6rem;
+	overflow: hidden;
+}
+	#leftcol {
+		width: 301px;
+		width: 30.1rem;
+		padding-left: 15px;
+		padding-left: 1.5rem;
+		padding-right: 10px;
+		padding-right: 1rem;
+	}
+	#midcol {	
+		border-left: 1px solid #EDE8EA;
+		border-right: 1px solid #EDE8EA;
+		width: 298px;
+		width: 29.8rem;
+		padding-left: 13px;
+		padding-left: 1.3rem;
+		padding-right: 13px;
+		padding-right: 1.3rem;
+	}
+	#centercol {
+		border: 6px solid #EDE8EA;
+		text-align: center;
+		padding: 15px 0;
+		padding: 1.5rem 0;
+	}
+	#rightcol {
+		width: 301px;
+		width: 30.1rem;
+		padding-left: 10px;
+		padding-left: 1rem;
+		padding-right: 15px;
+		padding-right: 1.5rem;
+	}	
+	#leftcol article, #rightcol article {
+		margin-bottom: 10px;
+		margin-bottom: 1rem;
+	}		
+.summary-header {
+	padding: 15px 0 12px;
+	padding: 1.5rem 0 1.2rem;
+}		
+	.summary-header:hover {	
+		border-bottom: none;
+	}
+	#top3 .beta{	/* The entry title. */
+		width: 75%;
+		margin-right: 15px;
+		margin-right: 1.5rem;	
+	}
+		#top3 .beta:hover {
+			border-bottom: 1px dotted #ce5333;		
+		}
+	.entry-prompt { /* The red block on the right. */
+		margin: 0; 
+		padding: 4px 0 2px; 
+		width: 20%; 
+		color: white; 
+		background-color: #ce5333; 
+		text-align: center; 
+	}		
+		.entry-prompt:hover {
+			background-color: darkRed; 
+		}
+		.entry-prompt .zeta {
+			line-height: 18px;
+			line-height: 1.8rem;
+		}
+		.entry-prompt .delta {
+			line-height: 21px;
+			line-height: 2.1rem;
+		}
+	#top3 .wp-post-image {	/* The entry thumbnail image. */
+		width: 100%;
+	}
+	.entry-summary p {	/* The summary paragraph beneath thumbnail. */
+		line-height: 21px;
+		line-height: 2.1rem;	
+	}
+	#top3 .entry-summary {
+		padding-bottom: 25px;
+		padding-bottom: 2.5rem;	
+	}
+		#top3 .readmore { /* The auto-attached mini-block after summary. */
+			display: none;
+		}	
+	.hentry {
+		border-bottom: 3px double #EDE8EA;
+	}
+		.hentry:last-child, .no-results { 
+			border-bottom: none; 
+		}
+
+
+
+/*------------------------------------*\
+	$GALLERIA
+\*------------------------------------*/
+#gallery {
+	width: 100%;
+	padding: 0;
+	border-bottom: 1px solid #EDE8EA;
+	text-align: center;
+}
+.gallery-box{width:100%;margin:0;}
+.gallery-content {height: 175px;}
+	.gallery-imglist{float:left;width:858px;height:100%;background-color: #fff; overflow:hidden;position:relative;}
+	.gallery-imglist ul{position:absolute;width:2012px;overflow:hidden;margin:0px 0;}
+	.gallery-imglist ul li{display:inline;float:left;margin:0px;width:250px;}
+	.gallery-imglist a{display:block;float:none;line-height:16px;margin:0;text-align:center;width:250px;}
+	.gallery-imglist .img{display:block;height:150px;width:250px;overflow:hidden;}
+	.gallery-unit {font-size: 12px; padding: 5px 0 0;}
+.gallery-content .button{display:block;float:left;width:60px;height:100%;cursor:pointer;}
+/* KM TODO: Hardcoded, change this later! */
+.gallery-content .left{background: url("../images/gallery-bl.png") no-repeat center;}
+.gallery-content .right{background: url("../images/gallery-br.png") no-repeat center;}
+
+	
+
+/*------------------------------------*\
+	$MAINLIST
+\*------------------------------------*/
+
+.mainlist {
+	width: 651px;
+	width: 65.1rem;
+	border-right: 1px solid #EDE8EA;
+	overflow: hidden;
+}
+	.mainlist-home {
+		padding: 10px 15px 0px;
+	}
+	.mainlist-regular {
+		padding: 0px 20px 0px;
+	}
+	.mainlist-content-home {
+		width: %69.124424;
+		margin: 0 0 0 14px;
+	}
+	.mainlist .hentry {	/* individual posts in .mainlist */
+		margin: 20px 0 15px 0;
+		padding: 0 0 10px 0;
+	}	
+		.mainlist-thumbnail {	/* the wrapper div, not image itself. */
+			width: 155px;
+		}
+		.mainlist-thumbnail .wp-post-image {	/* actual thumbnail image. */
+			border: 1px solid #E2E2E2;
+			padding: 2px;
+		}
+		.mainlist .epsilon {	/* prompt line in .mainlist */
+			color: #777;
+			line-height: 2.7;
+		}
+	.readmore {	/* The auto-attached mini-block after summary. */
+		float: right;
+		margin: 0 0 10px;
+		border-right: 5px solid #CE5333;
+		padding: 2px 10px;
+		background: #666;
+	}
+		.readmore:hover { 
+			background: #ce5333; 
+			border-right: 5px solid #444;
+		}
+		.readmore-link { 
+			color: white; 
+		}
+
+		
+/*------------------------------------*\
+	$SIDEBAR
+\*------------------------------------*/
+#secondary {
+	float: right;
+	width: 301px;
+}
+.homepage-sidebar {
+	padding: 30px 15px 10px 10px;
+}	
+.widget-area {
+	font-size: 12px;
+}
+.widget {
+	clear: both;
+	margin: 0 15px 40px 0;	/* for general sidebar */
+}
+#supplementary .widget,
+.homepage-sidebar .widget {
+	margin: 0 0 40px;	/* for homepage sidebar */
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+/*------------------------------------*\
+	$MISC
+\*------------------------------------*/
+.accessibility				{ position:absolute; left:-99999px; }
+[dir=rtl] .accessibility	{ left:auto; right:-99999px; }
+
+.clearfix {
+	display: block;
+}
+	.clearfix::after {
+		clear: both;
+		content: '.';
+		visibility: hidden;
+		height: 0;
+		display: block;
+	}
+
+/*
+Helper class to carry brand colours etc as per speakerdeck.com/u/csswizardry/p/breaking-good-habits?slide=31
+*/
+.brand{
+	color:;
+}
+.semi-focus, .less-focus { color: #777;	font-weight: 500; }
+.less-focus { font-size: 11px; }
+.semi-focus { font-size: 12px; }
+.pspace { letter-spacing: 1px; }
+.roboto {
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+::selection, ::-moz-selection, ::-webkit-selection {
+    background:#CE5333;
+    color:#FFF;
+}
+.denim {		/* for all elements needs to have denim bg. */
+	background-color: #464646; 
+	background: url("../images/denim.png") repeat;
+}
+
+
+
+
+.blocky {
+	display: block;
+}
+.fullwidth {
+	display: block;
+	width: 100%;
+	clear: both;
+}
+.maxwidth {
+	width: 978px;
+	width: 97.8rem;
+	max-width: 978px;
+	max-width: 97.8rem;
+}
+.middle {	/* for center floating elements. */
+	margin: 0 auto;
+}
+.morebottom {
+	padding-bottom: 10px;
+}
+.floatl {
+	float: left;
+}
+.floatr {
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+	$TYPE
+\*------------------------------------*/
+/*--- SCALE ---*/
+/*
+As per csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+*/
+
+/* Large */
+giga.{
+	font-size:Xpx;
+	font-size:Xrem;
+	line-height:;
+}
+mega.{	/* Used for mega title headers in SINGLE POST PAGE */
+	color: black;
+	font-size: 36px;
+	font-size: 3.6rem;
+	font-weight: bold;
+	line-height: 1.15;
+	padding-bottom: 5px;
+}
+kilo.{	/* Used for page headers (archive & search pages), only 1 per page! */
+	font-size: 27px;
+	font-size: 2.7rem;
+	font-weight: bold;
+	line-height:;
+}
+
+/* Headings */
+/* Generic heading class, as per: jsfiddle.net/csswizardry/yFQDP */
+.hN{
+	text-decoration: none;	
+	line-height: 1.75;
+}
+
+h1,.alpha{
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+h2,.beta{	/* Used for post titles IN A LISTVIEW */
+	color: #444;	
+	font-size: 15px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-shadow: 0 2px 1px rgba(154, 0, 11, .15);
+}
+h3,.gamma{	/* */
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight: normal;
+}
+h4,.delta{	/* Used for entry summaries */
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-weight: normal;
+}
+h5,.epsilon{ /* Used for entry prompt in mainlist */
+	font-size: 11px;
+	font-size: 1.1rem;
+	font-weight: normal;
+}
+h6,.zeta{	/* Used for entry prompt in top3 */
+	font-size: 11px;
+	font-size: 1.1rem;
+	font-weight: normal;
+}
+
+/* Small */
+small,.milli{
+	font-size:Xpx;
+	font-size:Xrem;
+	line-height:;
+}
+
+/*--- LINKS ---*/
+a, .red {
+	color: #ce5333;
+	text-decoration: none;
+}
+a:focus, a:active, a:hover {
+	border-bottom: 1px dotted #ce5333;
+	text-decoration: none;
+}
+
+/*--- LISTS ---*/
+li > ul,
+li > ol{
+	margin-bottom:0;
+}
+
+/*--- QUOTES ---*/
+/*
+Big up @boblet: html5doctor.com/blockquote-q-cite
+*/
+q{ quotes:"‘" "’" "“" "”"; }
+
+q:before{ content:"‘"; content:open-quote; }
+q:after{ content:"’"; content:close-quote; }
+
+q q:before{ content: "“"; content: open-quote; }
+q q:after{ content: "”"; content: close-quote; }
+
+blockquote{ quotes: "“" "”"; }
+blockquote p:before{ content: "“"; content: open-quote; }
+blockquote p:after{ content: ""; content: no-close-quote; }
+blockquote p:last-of-type:after{ content: "”"; content: close-quote; }
+
+blockquote{
+	text-indent:-0.4em;
+}
+.source{
+	display:block;
+	text-indent:0;
+	margin-top:-Xpx;
+	margin-top:-Xrem;
+}
+.source:before{
+	content:"—";
+}
+
+
+
+
+
+/*------------------------------------*\
+	$IMAGES
+\*------------------------------------*/
+img{
+	/* max-width:100%; /* Well, generally good practice but does not work with hero. */
+	height:auto;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$TABLES
+\*------------------------------------*/
+table{
+	width:100%;
+}
+
+
+
+
+

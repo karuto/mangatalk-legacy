@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<div id="mainlist">
+<div class="mainlist floatl floatparentfix clearfix">
 	
 	<header id="titlebar" class="page-header roboto">
 		<h1 class="page-title">

@@ -14,10 +14,10 @@
 
 get_header(); ?>
 
-<div id="top3" class="primary clearfix">
+<div id="top3" class="fullwidth clearfix">
 <!--			<div class="columnbanner">资讯</div>
 -->			
-	<div class="column maincol">
+	<div class="floatl maincol">
 		<div id="leftcol">
 		<?php $my_query = new WP_Query('tag=trans&posts_per_page=2');
 		while ($my_query->have_posts()) : 
@@ -29,7 +29,7 @@ get_header(); ?>
 		</div><!-- #leftcol -->
 	</div>
 	
-	<div class="column maincol">
+	<div class="floatl maincol">
 		<div id="midcol">
 		<?php $my_query = new WP_Query('tag=news&posts_per_page=1');
 		while ($my_query->have_posts()) : 
@@ -47,7 +47,7 @@ get_header(); ?>
 	</div>
 	
 		
-	<div class="column maincol">
+	<div class="floatl maincol">
 		<div id="rightcol">			
 		<?php $my_query = new WP_Query('tag=love&posts_per_page=2');
 		while ($my_query->have_posts()) : 
@@ -142,23 +142,20 @@ get_header(); ?>
 </div><!-- #gallery -->
 
 
-<div id="mainlist" class="floatparentfix clearfix">
-<!--<div class="mainlist-widget" style="margin: 20px 15px 0px;">
-<div class="wtitle1">社交网络</div><span class="wtitle2 roboto">Social Networks</span>
-<div class="wsep clearfix"></div></div>-->
-<div class="mainlist-home floatparentfix">
+<div class="mainlist floatl floatparentfix clearfix">
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); 
-	if( in_array($post->ID, $do_not_duplicate) ) continue; ?>
-		<?php get_template_part( 'mainlistpost'); ?>
-<?php endwhile; endif; ?>
-
-</div><!-- .mainlist-home -->
-<a href="index.php?cat=1" class="button"><div class="mainlist-button more-button">阅读更多文章</div></a>
+	<div class="mainlist-home floatparentfix">
+	<?php if (have_posts()) : while (have_posts()) : the_post(); 
+		if( in_array($post->ID, $do_not_duplicate) ) continue; ?>
+			<?php get_template_part( 'mainlistpost'); ?>
+	<?php endwhile; endif; ?>
+	</div><!-- .mainlist-home -->
+	
+	<a href="index.php?cat=1" class="button">
+		<div class="mainlist-button more-button">阅读更多文章</div>
+	</a>
 
 </div><!-- #mainlist -->
-
-
 
 <?php get_sidebar('home'); ?><!-- KM: Customize widgets for this column. -->
 <?php get_footer(); ?>

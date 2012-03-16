@@ -15,7 +15,7 @@ if ( 'content' != $current_layout ) :
 
 	<?php wp_reset_query(); ?><!-- Reset query before invoking conditional tags. -->
 
-	<div id="secondary" class="widget-area regular-sidebar" role="complementary">
+	<div id="secondary" class="floatr widget-area regular-sidebar" role="complementary">
 	<!-- KM: Scroll Panel -->
 	<div id="scroll">
 		<div title="回到顶部" id="up_scroll" class="scroll_unit"></div>

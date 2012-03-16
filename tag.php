@@ -10,7 +10,7 @@
 get_header(); ?>
 
 
-<div id="mainlist">
+<div class="mainlist floatl floatparentfix clearfix">
 	
 	<header id="titlebar" class="page-header roboto">
 		<h1 class="page-title"><a href="<?php echo home_url(); ?>">漫言首页 &raquo; </a><?php
@@ -61,7 +61,7 @@ get_header(); ?>
 
 			
 	</div><!-- .mainlist-regular -->
-</div><!-- #mainlist -->
+</div><!-- .mainlist -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

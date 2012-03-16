@@ -1,0 +1,107 @@
+/* =Feature
+-------------------------------------------------------------- */
+
+#hero {
+	position: relative;
+	height: 350px;
+	z-index: 1;
+}
+#hero,
+.grid_8,
+.clearfix,
+.hero-set {
+	overflow-y: visible;
+}
+.feature-box {
+	overflow: hidden;
+}
+.hero-set {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 350px;
+}
+.feature-big {
+	height: 350px;
+}
+.feature-small {
+	height: 175px;
+}
+.hero-set,
+.hero-feature {
+	display: block;
+	cursor: pointer;
+}
+.column {
+	float: left;
+	display: block;
+}
+.grid_4 {
+	width: 326px;
+}
+.grid_8 {
+	width: 652px;
+}
+.image-window, .shadowbox{
+	position: relative;
+}
+.image-window {
+	overflow: hidden;
+}
+.hero-feature .shadowbox:: before {
+	box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+	z-index: 1;
+}
+.image-window::before,
+.shadowbox::before,
+#quickline ::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	box-shadow: inset 0 0 150px rgba(0,0,0,0.7);
+	pointer-events: none;
+	z-index: 1; 
+}
+.image-window::hover:before,
+.shadowbox::hover:before{
+	box-shadow: none;
+}
+
+ .rainbow4::before{
+	background: rgba(173, 164, 225, 0.5); /* purple */
+}
+ .rainbow3::before{
+	background: rgba(206, 81, 59, 0.5); /* red */
+}
+ .rainbow2::before{
+	background: rgba(192, 224, 168, 0.5); /* green */
+}
+ .rainbow1::before{
+	background: rgba(255, 204, 51, 0.5); /* orange */
+}
+.hero-feature img {
+	z-index: 1;
+}
+.feature-meta {
+	position: absolute;
+	/*	padding: 20px 20px;	*/
+	padding: 20px 15px;	/* KM: proper vertical alignment: whole page 15px */
+	z-index: 3;
+}
+.feature-meta h2 {
+	font-weight: bold;
+	color: #fff;
+	font-size:  30px;
+	line-height: 33px;
+    text-shadow: 1px 1px 2px Black, 0 2px 1px Darkred;
+}
+#quickline {
+	background-color: #999;
+	height: 2px;
+}

@@ -225,3 +225,355 @@ a .more-button:hover {
 	line-height: 1em;
 	text-align: center;
 }
+
+
+
+
+
+/*************************** STYLE.CSS *************************/
+
+/* =Global
+----------------------------------------------- */
+.clearfix {
+	display: block;
+}
+.clearfix::after {
+	clear: both;
+	content: '.';
+	visibility: hidden;
+	height: 0;
+	display: block;
+}
+.floatl {
+	float: left;
+}
+.floatr {
+	float: right;
+}
+.floatparentfix { /* fixing collapse in IE */
+	overflow: hidden;
+}
+::selection {
+    background:#CE5333;
+    color:#FFF;
+}
+::-moz-selection {
+    background:#CE5333;
+    color:#FFF;
+}
+::-webkit-selection {
+    background:#CE5333;
+    color:#FFF;
+}
+.roboto {
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+body, input, textarea {
+	color: #444;
+	font: 14px/175% "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", FreeSans, sans-serif;
+	font-weight: 300;
+}
+body {
+	background-color: #f4f1ef;
+	background: url(images/denim.png) repeat;
+}
+/*
+@media screen and (min-width: 900px) {
+  body {
+    background: #666;
+  }
+}
+*/
+
+
+
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	/* clear: both; */
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.625em;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 1.625em;
+}
+ul, ol {
+	margin: 0 0 1.625em 2.5em;
+}
+ul {
+	list-style: none;
+}
+ol {
+	list-style-type: decimal;
+}
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+}
+dl {
+	margin: 0 1.625em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin-bottom: 1.625em;
+}
+strong {
+	font-weight: bold;
+}
+em, i {
+	font-style: italic;
+}
+blockquote {
+	font-style: normal;
+	font-weight: normal;
+	padding: 0 0 0 20px;
+	color: darkRed;
+	margin: 2em 0;
+	border-left: 5px solid #ce5333;
+}
+#mainlist-single-column blockquote .big{
+	font-style: italic;
+	font-weight: bold;
+	color: #ce5333;
+	font-size: 18px;
+	line-height: 160%;
+}
+
+blockquote em, blockquote i, blockquote cite {
+	font-style: normal;
+}
+/*	I don't understand WTH is this for.
+blockquote cite {
+	color: #666;
+	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+*/
+pre {
+	background: #f4f4f4;
+	font: 13px "Courier 10 Pitch", Courier, monospace;
+	line-height: 1.5;
+	margin-bottom: 1.625em;
+	overflow: auto;
+	padding: 0.75em 1.625em;
+}
+code, kbd {
+	font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym, dfn, cite {
+	padding: 0 0 3px;
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+abbr:after {
+	content: '';
+	border-bottom: none;
+	
+}
+.note a {
+	color: white;
+	background: #CE5333;
+	font-style: normal;
+	text-decoration: none;
+	text-shadow: none;
+	text-align: justify;
+	padding: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+	margin-left: 3px;
+	margin-right: 3px;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+}
+abbr:hover, acronym:hover, dfn:hover, cite:hover {
+	color: #ce5333;
+	border-bottom: 1px dotted #ce5333;
+	cursor: help;
+}
+address {
+	display: block;
+	margin: 0 0 1.625em;
+}
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 10px;
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+
+
+/* Forms */
+input[type=text],
+input[type=password],
+textarea {
+	background: #fafafa;
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	border: 1px solid #ddd;
+	color: #888;
+}
+input[type=text]:focus,
+textarea:focus {
+	color: #373737;
+}
+textarea {
+	padding-left: 3px;
+	width: 98%;
+}
+input[type=text] {
+	padding: 3px;
+}
+input#s {
+	background: url(images/search.png) no-repeat 5px 6px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-size: 14px;
+	height: 22px;
+	line-height: 1.2em;
+	padding: 4px 10px 4px 28px;
+}
+input#searchsubmit {
+	display: none;
+}
+
+/* Links */
+.red,
+a {
+	color: #ce5333;
+	text-decoration: none;
+}
+a:focus,
+a:active,
+a:hover {
+	border-bottom: 1px dotted #ce5333;
+	text-decoration: none;
+}
+
+/* Assistive text: no idea WTH are these used for. */
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+#access a.assistive-text:active,
+#access a.assistive-text:focus {
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	color: #1982d1;
+	clip: auto !important;
+	font-size: 12px;
+	position: absolute;
+	text-decoration: none;
+	top: 0;
+	left: 7.6%;
+}
+
+
+
+
+
+/* KM: Below for scrolling navigation panel accompanied with JS. */
+
+#scroll {	
+	position: absolute;	top: 50%; margin: 0 0 0 -37px;	display: block;
+}
+.scroll_unit {
+	position: relative;
+	cursor: pointer;
+	height: 32px;
+	width: 32px;
+	margin: 10px 0;
+}
+#up_scroll {
+	background: url(images/scroll.png) no-repeat;
+}
+#comt_scroll {
+	background: url(images/scroll.png) no-repeat center -40px;
+}
+#down_scroll {
+	background: url(images/scroll.png) no-repeat center -78px;
+}
+
+
+
+
+/* KM: Below for user-friendly IE pop-up accompanied with JS. */
+
+#backgroundPopup{  /* KM: SEMI-TRANSPARENT OVERLAY */
+	display:none;  
+	position:fixed;  
+	_position:absolute; /* hack for internet explorer 6*/  
+	height:100%;  
+	width:100%;  
+	top:0;  
+	left:0;  
+	background:#000000;  
+	border:1px solid #cecece;  
+	z-index:1;  
+}  
+#popupContact{  
+	display:none;  
+	position:fixed;  
+	_position:absolute; /* hack for internet explorer 6*/  
+	width:400px;  
+	background:#FFFFFF;  
+	border:2px solid #cecece;  
+	z-index:2;  
+	padding:15px;  
+	font-size:13px;  
+}  
+#popupContact h1{  
+	text-align:center;  
+	color:#CE5333;  
+	font-size:15px;
+	font-weight:700;  
+	border-bottom:3px double #D3D3D3;  
+	padding-bottom:10px;  
+	margin-bottom:20px;  
+}  
+#popupContactClose{  
+	display:block;  
+	position:absolute;  
+	color:#ce5333;  
+	font-size:18px;  
+	font-weight:700;  
+	right:10px;  
+	top:5px;  
+}
+#contactArea a:hover {
+	background: darkRed;
+	border-bottom: none;
+}

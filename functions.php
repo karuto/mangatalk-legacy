@@ -525,7 +525,7 @@ add_filter( 'excerpt_length', 'twentyeleven_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function twentyeleven_continue_reading_link() {
-	return ' <div class="readmore"><a href="'. esc_url( get_permalink() ) . '">' . __( '阅读全文 ｜ Read More', 'twentyeleven' ) . '</a></div>';
+	return ' <div class="readmore"><a class="readmore-link" href="'. esc_url( get_permalink() ) . '">' . __( '阅读全文 ｜ Read More', 'twentyeleven' ) . '</a></div>';
 }
 
 /**
