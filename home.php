@@ -14,29 +14,39 @@
 
 get_header(); ?>
 
+<<<<<<< HEAD
 <div id="top3" class="fullwidth clearfix">
 <!--			<div class="columnbanner">资讯</div>
 -->			
 	<div class="floatl maincol">
+=======
+<div id="top3" class="primary clearfix">
+
+	<div class="column maincol">
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 		<div id="leftcol">
 		<?php $my_query = new WP_Query('tag=trans&posts_per_page=2');
 		while ($my_query->have_posts()) : 
 			$my_query->the_post();
 			$do_not_duplicate[] = $post->ID; ?>
 			<!-- Do stuff... -->
-			<?php get_template_part( 'columnpost'); ?>
+			<?php get_template_part('columnpost'); ?>
 		<?php endwhile; ?>
 		</div><!-- #leftcol -->
 	</div>
 	
 	<div class="floatl maincol">
 		<div id="midcol">
+<<<<<<< HEAD
 		<?php $my_query = new WP_Query('tag=news&posts_per_page=1');
+=======
+		<?php $my_query = new WP_Query('tag=love&posts_per_page=1');
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 		while ($my_query->have_posts()) : 
 			$my_query->the_post();
 			$do_not_duplicate[] = $post->ID; ?>
 			<!-- Do stuff... -->
-			<?php get_template_part( 'columnpost'); ?>
+			<?php get_template_part('columnpost'); ?>
 		<?php endwhile; ?>		
 		</div><!-- #midcol -->
 		
@@ -49,12 +59,16 @@ get_header(); ?>
 		
 	<div class="floatl maincol">
 		<div id="rightcol">			
+<<<<<<< HEAD
 		<?php $my_query = new WP_Query('tag=love&posts_per_page=2');
+=======
+		<?php $my_query = new WP_Query('tag=trans&posts_per_page=2');
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 		while ($my_query->have_posts()) : 
 			$my_query->the_post();
 			$do_not_duplicate[] = $post->ID; ?>
 			<!-- Do stuff... -->
-			<?php get_template_part( 'columnpost'); ?>
+			<?php get_template_part('columnpost'); ?>
 		<?php endwhile; ?>	
 		</div><!-- #rightcol -->
 		
@@ -62,6 +76,7 @@ get_header(); ?>
 	
 </div><!-- #top3 -->
 
+<<<<<<< HEAD
 <div id="gallery" class="clearfix floatparentfix">
 <div class="gallery-box">
 	<div id="gallery-cont" class="gallery-content">
@@ -143,6 +158,19 @@ get_header(); ?>
 
 
 <div class="mainlist floatl floatparentfix clearfix">
+=======
+<div id="midholder" class="floatparentfix clearfix" style="height: 70px; background-color: #eef0f2; background-repeat:repeat; background-image: url(http://i.imgur.com/FV2MV.png);">
+	
+</div>
+
+<div id="mainlist" class="floatparentfix clearfix">
+<div class="mainlist-home floatparentfix">
+
+<?php if (have_posts()) : while (have_posts()) : the_post(); 
+	if( in_array($post->ID, $do_not_duplicate) ) continue; ?>
+		<?php get_template_part( 'mainlistpost'); ?>
+<?php endwhile; endif; ?>
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 
 	<div class="mainlist-home floatparentfix">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); 

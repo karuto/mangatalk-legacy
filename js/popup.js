@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿/***************************/
+=======
+/***************************/
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 //@Author: Adrian "yEnS" Mato Gondelle
 //@website: www.yensdesign.com
 //@email: yensamg@gmail.com

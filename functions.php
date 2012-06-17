@@ -205,6 +205,32 @@ function SearchFilter($query) {
 	}	return $query;
 }
 add_filter('pre_get_posts','SearchFilter');
+<<<<<<< HEAD
+=======
+
+/* KM: Snippet for redirecting to random article button.
+Credit: http://www.wpbeginner.com/wp-tutorials/how-to-redirect-users-to-a-random-post-in-wordpress */
+add_action('init','random_add_rewrite');
+function random_add_rewrite() {
+	global $wp;
+	$wp->add_query_var('random');
+	add_rewrite_rule('random/?$', 'index.php?random=1', 'top');
+}
+add_action('template_redirect','random_template');
+function random_template() {
+   if (get_query_var('random') == 1) {
+	   $posts = get_posts('post_type=post&orderby=rand&numberposts=1');
+	   foreach($posts as $post) {
+			   $link = get_permalink($post);
+	   }
+	   wp_redirect($link,307);
+	   exit;
+   }
+}
+
+
+
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 
 
 /* 
@@ -525,7 +551,11 @@ add_filter( 'excerpt_length', 'twentyeleven_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function twentyeleven_continue_reading_link() {
+<<<<<<< HEAD
 	return ' <div class="readmore"><a class="readmore-link" href="'. esc_url( get_permalink() ) . '">' . __( '阅读全文 ｜ Read More', 'twentyeleven' ) . '</a></div>';
+=======
+	return ' <div class="readmore"><a href="'. esc_url( get_permalink() ) . '">' . __( '阅读全文 ｜ Read More', 'twentyeleven' ) . '</a></div>';
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 }
 
 /**

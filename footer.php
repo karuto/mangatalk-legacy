@@ -31,6 +31,7 @@
 <div id="backgroundPopup"></div>  
 
 
+<<<<<<< HEAD
 
 
 
@@ -45,6 +46,23 @@
 		?>
 		<!--<div id="site-generator">Hello world.</div>-->		
 <?php wp_footer(); ?>
+=======
+
+
+
+
+<footer id="colophon" class="clearfix" role="contentinfo">
+	<?php
+		/* A sidebar in the footer? Yep. You can can customize
+		 * your footer with three columns of widgets.
+		 */
+		if ( ! is_404() )
+			get_sidebar( 'footer' );
+	?>
+	<!--<div id="site-generator">Hello world.</div>-->		
+	<?php wp_footer(); ?>
+
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 </footer><!-- #colophon -->
 
 

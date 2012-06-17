@@ -165,6 +165,7 @@ footer .widget {
 }
 #centerbar .widget {
 	margin-left: 15px;
+	margin-bottom: 15px;
 }
 .widget-title {
 	color: #666;
@@ -306,3 +307,28 @@ section.ephemera .entry-title a span {
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 }
+<<<<<<< HEAD
+=======
+
+
+/* Hacking styles for Chinese translation widget */
+#wpcc_widget_inner {
+	display: inline;
+}
+
+/* Manual hacking for weibo plugin, the default options suck */
+.weiboShow_main_height {
+    background: #F7F7F7;
+}
+#weibo_head {
+    display: none;
+}
+
+/* Fixing styles for WordPress Related Post */
+.related_block .related_post {
+	margin: 0;
+}
+.related_post_title {
+	margin: 15px 0px;
+}
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.

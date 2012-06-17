@@ -15,7 +15,11 @@ if ( 'content' != $current_layout ) :
 
 	<?php wp_reset_query(); ?><!-- Reset query before invoking conditional tags. -->
 
+<<<<<<< HEAD
 	<div id="secondary" class="floatr widget-area regular-sidebar" role="complementary">
+=======
+	<div id="secondary" class="widget-area regular-sidebar" role="complementary">
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 	<!-- KM: Scroll Panel -->
 	<div id="scroll">
 		<div title="回到顶部" id="up_scroll" class="scroll_unit"></div>

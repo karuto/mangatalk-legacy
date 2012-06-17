@@ -1,5 +1,6 @@
 /* =Main List
 ----------------------------------------------- */
+<<<<<<< HEAD
 #main {	clear: both; padding: 0;}
 .mainlist-home { padding: 10px 15px 0px;		/* Actual width: 652-15-15 = 622 */}
 .mainlist-regular { padding: 0px 20px 0px;	/* Actual width: 652-20-20 = 612 */}
@@ -22,16 +23,120 @@
 .entry-summary .readmore a{ color: white; }
 .entry-summary .readmore:hover { background: #ce5333; border-right: 5px solid #444;}
 #top3 .entry-summary .readmore { display: none; }
+=======
+#main {
+	clear: both;
+	padding: 0;
+}
+.mainlist-home { /* KM */
+	padding: 10px 15px 0px;	/* Actual width: 652-15-15 = 622 */
+}
+.mainlist-regular { /* KM */
+	padding: 0px 20px 0px;	/* Actual width: 652-20-20 = 612 */
+}
+#mainlist article {	/* KM */
+	margin: 20px 0 15px 0;
+	padding: 0 0 10px 0; 
+}
+#mainlist-single-column article {
+	margin: 0 0 15px 0;
+	padding: 0 0 10px 0; 
+}
+#mainlist .entry-summary p {
+	margin-bottom: 10px;
+}
+#mainlist-single-column article .normal,
+#mainlist-single-column .related_block {
+	padding: 0 40px;
+}
+.mainlist-content-home { /* KM */
+	width: 450px; /* 622-156-14 = 452-2 = 450(for the beauty) */
+	margin: 0 0 0 14px;
+}
+.mainlist-content-regular { /* KM */
+	width: 440px; /* 622-156-14 = 452-2 = 450(for the beauty) */
+	margin: 0 0 0 14px;
+}
+.mainlist-thumbnail {
+	width: 155px;
+}
+.mainlist-thumbnail img { /* KM */
+	border: 1px solid #E2E2E2;
+	padding: 2px;
+	/* So the actual width: 1+2+150+2+1 = 156px */
+}
+#titlebar { /* KM */
+	width: 100%;
+	margin: 0;
+	padding: 20px 0 0 0;
+	line-height: 250%;
+	font-weight: bold;
+	text-shadow: 0 1px 0 rgba(154, 0, 11, .15);
+}
+#titlebar h1 { /* KM */
+	padding: 0 20px;
+	color: #ce5333;
+	font-size: 27px;
+}
+.hentry,
+.no-results {
+	border-bottom: 3px double #EDE8EA;
+	margin: 0 0 0px;
+	padding: 0 0 0px;
+	position: relative;
+}
+.hentry:last-child,
+.no-results {
+	border-bottom: none;
+}
+
+#top3 .entry-summary .readmore {
+	display: none;
+}
+.entry-summary .readmore {
+	float: right;
+	margin: 0 0 10px;
+	border-right: 5px solid #ce5333;
+	padding: 2px 10px;
+	/* border-radius: 2px; */
+	background: #666;
+}
+.entry-summary .readmore:hover {
+	background: #ce5333;
+	border-right: 5px solid #444;
+}
+.entry-summary .readmore a{
+	color: white;
+}
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 
 
 /* =Content
 ----------------------------------------------- */
 
+<<<<<<< HEAD
+=======
+.pspace {
+	letter-spacing: 1px;
+}
+.entry-content {
+	padding: 0 20px;
+}
+.format-aside .entry-content {
+	padding: 0;
+}
+.entry-foreplay {
+	border-bottom: 1px solid #EDE8EA;
+	margin: 10px 0 0 0;
+	padding: 20px;
+}
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 .blog .sticky .entry-header .entry-meta {	/* WTF IS THIS? */
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
 }
+<<<<<<< HEAD
 
 /* Entry-related stuff, everything before actual content 
 ----------------------------------------------- */
@@ -137,6 +242,235 @@ dl.gallery-item { margin: 0; }	/* da fck is dis? */
 
 
 
+=======
+.entry-title { /* KM */
+	color: #444;
+	font-size: 15px;
+	line-height: 170%;
+}
+#top3 .entry-title { /* KM */
+	width: 75%;
+	margin: 0 10px 0 0;
+	float: left;
+	clear: right;
+}
+#top3 .entry-title { /* KM */
+	margin-top: 15px;
+}
+#author-description h2,
+.entry-title,
+.entry-title a { /* KM */
+	color: #444;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 2px 1px rgba(154, 0, 11, .15);
+}
+.entry-title a:hover,
+.entry-title a:focus,
+.entry-title a:active {
+	color: #ce5333;
+}
+.entry-prompt { /* KM */
+	font-size: 11px;
+	margin: 16px 0 0 0;
+	padding: 2px 0;
+	float: right;
+	width: 20%;
+	background: #ce5333;
+	color: white;
+	text-align: center;
+	line-height: 1.8em;
+}
+.entry-define { /* KM */
+	font-size: 12px;
+	padding: 2px 0;
+}
+.semi-focus,
+.less-focus { /* KM */
+	color: #777;	
+	font-weight: 500;
+}
+.less-focus {
+	font-size: 11px;
+}
+.semi-focus {
+	font-size: 12px;
+}
+.sp-img {
+	overflow: hidden;
+	background: #fff;	
+	margin-bottom: 30px;
+}
+.sp-img img {
+	border: none;
+	width: 326px;
+	max-height: 100%;
+	float: left;
+	padding: 0;
+	margin: 0 20px 0 0; 
+}
+.sp-img .inner {
+	float: left;
+	max-width: 550px;
+	display: block;
+}
+.sp-date {
+	border-bottom: solid 1px #ce5333;
+	background: E7E0E0;
+}
+.sp-date .d {
+	padding: 5px 10px;
+	background: #ce5333;
+	color: #fff;
+}
+.sp-timeline {
+	float: right;
+	width: 326px;
+	margin: 0 0 30px 20px;
+	font-size: 12px;
+	background: #E0E0E0;
+}
+.sp-timeline p {
+	padding: 20px;
+}
+
+
+
+
+
+
+
+.entry-meta {
+	color: #666;
+	clear: both;
+	margin-top: 40px;
+	padding: 20px;
+	font-size: 12px;
+	line-height: 170%;
+	background: url("../images/bg_meta.jpg") repeat;
+	border-top: 1px solid #EDE8EA;
+	border-bottom: 1px solid #EDE8EA;
+}
+.social-stuff {
+	font-weight: bold;
+	clear: both;
+}
+.entry-meta a {
+	font-weight: normal;
+}
+.maincol .entry-thumbnail { /* KM */
+	text-align: center;
+	margin: 0 auto 0;
+	padding: 2px 0 10px 0;
+}
+#top3 .entry-summary {
+	margin: 8px 0 10px;
+	
+}
+.entry-summary {	/* KM */
+	font-size: 12px;
+	line-height: 180%;
+}
+.entry-content h3{
+	font-size: 20px;
+}
+.entry-content h3,
+.comment-content h3,
+.entry-content h2,
+.comment-content h2 {
+	padding: 5px 0px;
+	margin-bottom: 20px;
+	color: #444;
+	line-height: 150%;
+}
+#mainlist-single-column .entry-content h2 {
+	color: #ce5333;
+	font-style: normal;
+}
+
+.entry-content h2,
+.comment-content h2 {
+	font-size: 20px;
+	font-weight: 900;
+	font-style: italic;
+	border-bottom: 1px dashed #E6E6E6;
+}
+.entry-content table,
+.comment-content table {
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 1.625em;
+	width: 100%;
+}
+.entry-content th,
+.comment-content th {
+	color: #666;
+	font-size: 10px;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	line-height: 2.6em;
+	text-transform: uppercase;
+}
+.entry-content td,
+.comment-content td {
+	border-top: 1px solid #ddd;
+	padding: 6px 10px 6px 0;
+}
+.entry-content #s {
+	width: 75%;
+}
+.comment-content ul,
+.comment-content ol {
+	margin-bottom: 1.625em;
+}
+.comment-content ul ul,
+.comment-content ol ol,
+.comment-content ul ol,
+.comment-content ol ul {
+	margin-bottom: 0;
+}
+dl.gallery-item {
+	margin: 0;
+}
+.page-link {
+	clear: both;
+	display: block;
+	margin: 0 0 1.625em;
+}
+.page-link a {
+	background: #eee;
+	color: #373737;
+	margin: 0;
+	padding: 2px 3px;
+	text-decoration: none;
+}
+.page-link a:hover {
+	background: #888;
+	color: #fff;
+	font-weight: bold;
+}
+.page-link span {
+	margin-right: 6px;
+}
+.entry-content .edit-link {
+	clear: both;
+	display: block;
+}
+.entry-content p a {
+	padding-bottom: 3px;
+	border-bottom: 1px dotted #ce5333;
+}
+.entry-content p a:hover {
+	color: #943A24;
+	border-bottom: 1px dotted #943A24;
+}
+.entry-content p {
+	text-shadow: 0 1px 0 #F9F6ED, 0 1px 0 rgba(0, 0, 0, .15);
+}
+.entry-content .space {
+	display: block;
+	height: 10px;
+}
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 
 /* Images */
 .entry-content img,
@@ -275,6 +609,104 @@ object {
 	background: #f7f7f7;
 }
 
+<<<<<<< HEAD
+=======
+/* Author Info */
+#vias-refs {
+	margin: 0 0 15px;
+}
+#author-info {
+	font-size: 12px;
+	overflow: hidden;
+	background: url("../images/bg_auth.jpg") repeat;
+	border-bottom: 1px solid #EDE8EA;
+	padding: 0 0 10px 0;
+}
+.author-fix {
+	width: 100%;
+}
+#author-avatar {
+	float: left;
+	padding: 20px;
+}
+#author-avatar img {
+	background: #fff;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 1px 2px #bbb;
+	-moz-box-shadow: 0 1px 2px #bbb;
+	box-shadow: 0 1px 2px #bbb;
+	padding: 3px;
+}
+.meta-leadblock {
+	display: inline-block;
+	clear: right;
+	color: #fff;
+	background-color: #ce5333;
+	padding: 2px 8px;
+	margin: 0 5px 0 0;
+}
+#vias-refs .meta-leadblock,
+#vias-refs a .meta-unitblock {
+	font-size: 11px;
+	padding: 0 8px;
+	margin: 0 5px 0 0;
+}
+#mainlist #author-description {
+	width: 515px; /* 652-114 = 538; 538-20 = 518; */
+}
+#mainlist-single-column #author-description {
+	width: 840px; /* 978-114 = 864; 864-20 = 844; */
+}
+#author-description {
+	float: left;
+/*	margin-left: 114px;	*/
+	margin: 20px 20px 20px 0;
+	line-height: 180%;
+}
+#author-description h2 {
+	display: inline-block;
+	clear: both;
+	font-size: 15px;
+	margin: 0;
+	color: #ce5333;
+}
+.single-author .entry-meta .by-author {
+	display: none;	/* yeah great, but I won't be needing this. */
+}
+.author-desc {
+	width: 85%; 
+	padding: 2px 5px;
+}
+#mainlist-single-column .author-desc {
+	width: 90%;
+}
+
+#author-link {
+	margin: 5px 0;
+}
+a .meta-unitblock {
+	font-size: 12px;
+	display: inline-block;
+	padding: 2px 10px;
+	margin: 0 3px 0 0;
+	background: url("../images/bg_auth.jpg") repeat;
+}
+#author-link a .meta-unitblock {
+	background: url("../images/bg_meta.jpg") repeat;
+}
+#author-link a .meta-unitblock:hover {
+	background-image: none;
+	background-color: #ce5333;
+}
+a .meta-unitblock:hover {
+	background: #ce5333;
+	color: #fff;
+}
+#author-link li:hover {
+	background-color: #ce5333;
+}
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 
 
 
@@ -485,10 +917,28 @@ blockquote.pull {
 
 
 
+<<<<<<< HEAD
 /* Added for in-post images */	
 .icenter { text-align: center; } 
 .ileft { float: left; margin-left: 10px; display: inline-block;} 
 .iright { float: right; margin-left: 10px; display: inline-block;} 
+=======
+
+.icenter {	/* Added for in-post images */	
+	text-align: center; 
+}
+.ileft {	/* Added for in-post images */	
+	float: left;
+	margin-right: 10px;
+	display: inline-block;
+}
+.iright {	/* Added for in-post images */
+	float: right;
+	margin-left: 10px; 
+	display: inline-block;
+}
+
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 
 
 /* jQuery.tipsy original css */

@@ -28,9 +28,17 @@
 		<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php the_author() ?></a>
 		on <?php echo get_the_date(); ?> 
 		<b class="red">+</b> 
+<<<<<<< HEAD
 		<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( '添加评论至 %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php comments_number( '<span class="red">0 notes</span>', '<span class="red">1 note</span>', '<span class="red">% notes</span>' ); ?></a>  
 		<?php the_tags( '<span style="">Tagged with ', '<span style="color:#ce5333"> | </span>', '</span>' ); ?>  
 		<?php edit_post_link( __( '- Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?><br /></h6>
+=======
+		<a href="<?php the_permalink(); ?>" rel="bookmark"><?php comments_number( '<span class="red">0 notes</span>', '<span class="red">1 note</span>', '<span class="red">% notes</span>' ); ?></a>  
+		<?php the_tags( '<span style="">Tagged with ', '<span style="color:#ce5333"> | </span>', '</span>' ); ?>  
+		<?php edit_post_link( __( '- Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
+		+ <strong><?php if(function_exists('wpcc_output_navi')) wpcc_output_navi(); ?></strong>
+<br /></h6>
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 	<?php endif; ?>
 </header><!-- .entry-header -->
 
@@ -41,10 +49,17 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+<<<<<<< HEAD
 		
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 		
 
+=======
+		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+		<div class="related_block clearfix">
+			<?php if(function_exists('wp_related_posts')) wp_related_posts(); ?>
+		</div>
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
@@ -73,8 +88,13 @@
 
 		<span class="pspace">
 		版权声明：本文采用<a href="http://creativecommons.org/licenses/by-nc-sa/2.5/deed.zh"> BY-NC-SA 中国大陆许可协议</a> 授权，可以自由转载，但转载时请务必<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><strong>以超链接形式</strong>标明本文原始出处</a>、<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">作者信息</a>及本声明，并且不得商用。任何违反协议的侵权行为将被追究法律责任。
+<<<<<<< HEAD
 		
 		</span>
+=======
+		</span>
+		<span class="pspace social-stuff"><?php if(function_exists('wp_sns_share')) echo wp_sns_share();?></span>
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 		<?php
 			// if ( '' != $tag_list ) {
 				// $utility_text = __( 'This entry was posted in %1$s and tagged %2$s by <a href="%6$s">%5$s</a>. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyeleven' );
@@ -135,10 +155,23 @@
 		</div><!-- #author-description -->
 	</div><!-- #entry-author-info -->
 	
+<<<<<<< HEAD
 	
 	<footer id="social-block">
 		<span class="pspace social-stuff"><?php echo wp_sns_share();?></span>
 	</footer>
 </article><!-- #post-<?php the_ID(); ?> -->
 
+=======
+</article><!-- #post-<?php the_ID(); ?> -->
+
+<!-- KM: Load Tipsy. -->
+<script type="text/javascript" charset="utf-8">
+	$(function() {
+		$('.note').tipsy({fade: true});
+	});
+</script>
+
+
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 

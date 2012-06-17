@@ -108,6 +108,7 @@
 <body <?php body_class(); ?>>
 <div class="bodywrapper">
 
+<<<<<<< HEAD
 <header class="logobox maxwidth middle floatparentfix clearfix">
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 		<span id="logo" class="blocky" ><img src="<?php echo get_template_directory_uri(); ?>/images/mg-logo.png" /></span>
@@ -129,6 +130,42 @@
 
 	<header class="topheader" role="banner">
 		<nav id="access" class="topmenu middle denim clearfix floatparentfix" role="navigation">
+=======
+<div id="logobox" class="floatparentfix clearfix">
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span id="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/mg-logo.png"></img></span></a>
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+
+	<?php
+		echo '<span style="margin: 30px 0 0 0; float: right; padding: 3px 10px; background-color: #444;">';
+		echo '<a href="http://weibo.com/mgtalk" style="color:#fff">关注微博</a>';
+		echo '</span>';
+
+		echo '<span style="margin: 30px 0 0 0; float: right; padding: 3px 10px; background-color: #ce5333;">';
+		echo '<a href="http://feed.mangatalk.net/" style="color:#fff">订阅更新</a>';
+		echo '</span>';
+	
+	?>
+<!--<![endif]-->	
+</div>
+
+
+
+
+
+
+<div id="page" class="hfeed clearfix floatparentfix">
+
+<div id="topwrapper">
+
+	<header id="branding" role="banner">
+	
+		<nav id="access" class="clearfix floatparentfix" role="navigation">
+			<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
+			<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
+			<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
+			<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to secondary content', 'twentyeleven' ); ?></a></div>
+			
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
 			
 			<?php /* Main navigation menu. */ wp_nav_menu(array( 'theme_location' => 'primary', 'sort_column' => 'menu_order', 'menu' => 'topmenu', 'container_id' => 'menubox') ); ?>
 			
@@ -141,4 +178,8 @@
 		
 	</header><!-- .topheader -->
 
+<<<<<<< HEAD
 	<div id="main" class="fullwidth clearfix">
+=======
+	<div id="main" class="clearfix">
+>>>>>>> Lots of modules have been updated since last commit (which was the public launch), mainly for sidebar widgets, content styles and such. Have deleted the slider gallery at homepage. Included 2 new plugins I wrote just in case.
